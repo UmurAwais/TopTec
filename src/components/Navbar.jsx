@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, Search as SearchIcon, Menu, ChevronDown, Package, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import logo from '../assets/Top Tec Logo.png';
 import AnnouncementBar from './AnnouncementBar';
 import Search from './Search';
@@ -35,15 +36,15 @@ const Navbar = () => {
   ];
 
   const navLinks = [
-    { name: 'Cleanroom Solutions', href: '#solutions' },
-    { name: 'HVACR Services', href: '#hvacr' },
-    { name: 'Pharma Engineering', href: '#engineering' },
-    { name: 'Scientific Research', href: '#research' },
-    { name: 'About TopTec', href: '#about' }
+    { name: 'Cleanroom Solutions', href: '/#solutions' },
+    { name: 'HVACR Services', href: '/#hvacr' },
+    { name: 'Pharma Engineering', href: '/#engineering' },
+    { name: 'Scientific Research', href: '/#research' },
+    { name: 'About TopTec', href: '/about' }
   ];
 
   return (
-    <header className="w-full fixed top-0 z-50 flex flex-col">
+    <header className="w-full fixed top-0 z-50 flex flex-col border-b border-gray-200">
       <AnnouncementBar isScrolled={isScrolled} />
 
       <nav className={`w-full transition-all duration-300 relative ${
@@ -59,23 +60,33 @@ const Navbar = () => {
         />
         <div className="w-full px-8 lg:px-16 flex justify-between items-center">
           <div className="flex items-center gap-10">
-            <motion.div 
-              whileTap={{ scale: 0.95 }}
+            <Link 
+              to="/"
               className="flex items-center cursor-pointer"
             >
               <img src={logo} alt="Top Tec" className="h-7 lg:h-9 w-auto" />
-            </motion.div>
+            </Link>
 
             {/* Google's Minimal Nav Links */}
             <div className="hidden lg:flex items-center">
               {navLinks.map((item) => (
-                <a 
-                  key={item.name}
-                  href={item.href}
-                  className="px-5 py-2 rounded-full cursor-pointer text-[14px] font-normal text-[#5f6368] hover:text-[#202124] hover:bg-gray-50 transition-all tracking-normal outline-none"
-                >
-                  {item.name}
-                </a>
+                item.href.startsWith('/') && !item.href.includes('#') ? (
+                  <Link 
+                    key={item.name}
+                    to={item.href}
+                    className="px-5 py-2 rounded-full cursor-pointer text-[14px] font-normal text-[#5f6368] hover:text-[#202124] hover:bg-gray-50 transition-all tracking-normal outline-none"
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a 
+                    key={item.name}
+                    href={item.href}
+                    className="px-5 py-2 rounded-full cursor-pointer text-[14px] font-normal text-[#5f6368] hover:text-[#202124] hover:bg-gray-50 transition-all tracking-normal outline-none"
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
             </div>
           </div>
@@ -177,13 +188,25 @@ const Navbar = () => {
                 <span className="text-[11px] font-bold text-[#4A93C4] uppercase tracking-wider">Main Links</span>
               </div>
               {navLinks.map((item) => (
-                <a 
-                  key={item.name} 
-                  href={item.href}
-                  className="p-4 text-lg font-medium text-[#202124] hover:bg-gray-50 rounded-xl cursor-copy transition-colors no-underline"
-                >
-                  {item.name}
-                </a>
+                item.href.startsWith('/') && !item.href.includes('#') ? (
+                  <Link 
+                    key={item.name} 
+                    to={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="p-4 text-lg font-medium text-[#202124] hover:bg-gray-50 rounded-xl cursor-pointer transition-colors no-underline block"
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a 
+                    key={item.name} 
+                    href={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="p-4 text-lg font-medium text-[#202124] hover:bg-gray-50 rounded-xl cursor-pointer transition-colors no-underline block"
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
               
               <div className="px-4 py-2 mt-4">
