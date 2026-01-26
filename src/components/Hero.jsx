@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Play, CheckCircle2, FlaskConical, Beaker, Activity } from 'lucide-react';
-import Button from './Button';
+import { CheckCircle2, FlaskConical, Beaker, Activity } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -17,59 +16,45 @@ const Hero = () => {
           
           {/* Left Content - SEO Optimized Editorial Layout */}
           <div className="lg:col-span-6">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-6xl lg:text-[92px] font-semibold text-[#202124] leading-[0.95] mb-8 tracking-[-0.04em]"
-            >
-              Engineered <br />
-              <span className="text-[#4A93C4]">Purity.</span>
-            </motion.h1>
-            
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-[#5f6368] text-lg lg:text-[18px] leading-relaxed mb-12 max-w-lg"
-            >
-              TopTec provides advanced Pharmaceutical Engineering and HVACR services. 
-              We design and manufacture ISO-compliant Cleanrooms that guarantee 
-              unmatched contamination control and environmental precision.
-            </motion.p>
-            
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-wrap items-center gap-4"
-            >
-              <button className="google-button-primary bg-[#4A93C4]! hover:bg-[#3b7ba8]! cursor-pointer transition-all active:scale-95 shadow-lg shadow-[#4A93C4]/20">
-                Explore Cleanroom Services
-              </button>
-              <button className="px-8 py-3 rounded-full border border-gray-200 text-[#3c4043] font-medium hover:bg-gray-50 transition-all cursor-pointer hover:border-gray-300 active:scale-95">
-                View Specialized Equipment
-              </button>
-            </motion.div>
-
-            {/* Google-style Trust Indicators - Keyword Rich */}
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
-              className="mt-16 flex flex-wrap items-center gap-x-8 gap-y-4 grayscale opacity-60"
+              transition={{ duration: 0.8 }}
             >
-              <div className="flex items-center gap-2 cursor-help group" title="Good Manufacturing Practice">
-                <FlaskConical size={20} className="group-hover:text-[#4A93C4] transition-colors" />
-                <span className="text-sm font-medium group-hover:text-[#202124] transition-colors">GMP Certified Design</span>
+              <h1 className="text-6xl lg:text-[92px] font-semibold text-[#202124] leading-[0.95] mb-8 tracking-[-0.04em]">
+                Engineered <br />
+                <span className="text-[#4A93C4]">Purity.</span>
+              </h1>
+              
+              <p className="text-[#5f6368] text-lg lg:text-[18px] leading-relaxed mb-12 max-w-lg">
+                TopTec provides advanced Pharmaceutical Engineering and HVACR services. 
+                We design and manufacture ISO-compliant Cleanrooms that guarantee 
+                unmatched contamination control and environmental precision.
+              </p>
+              
+              <div className="flex flex-wrap items-center gap-4">
+                <button className="google-button-primary bg-[#4A93C4]! hover:bg-[#3b7ba8]! cursor-pointer transition-all active:scale-95 shadow-lg shadow-[#4A93C4]/20">
+                  Explore Cleanroom Services
+                </button>
+                <button className="px-8 py-3 rounded-full border border-gray-200 text-[#3c4043] font-medium hover:bg-gray-50 transition-all cursor-pointer hover:border-gray-300 active:scale-95">
+                  View Specialized Equipment
+                </button>
               </div>
-              <div className="flex items-center gap-2 cursor-help group" title="ISO 14644-1 Standards">
-                <Beaker size={20} className="group-hover:text-[#4A93C4] transition-colors" />
-                <span className="text-sm font-medium group-hover:text-[#202124] transition-colors">ISO 7 & 8 Standards</span>
-              </div>
-              <div className="flex items-center gap-2 cursor-help group" title="Contamination Control">
-                <Activity size={20} className="group-hover:text-[#4A93C4] transition-colors" />
-                <span className="text-sm font-medium group-hover:text-[#202124] transition-colors">HEPA/ULPA Filtration</span>
+
+              {/* Google-style Trust Indicators - Keyword Rich */}
+              <div className="mt-16 flex flex-wrap items-center gap-x-8 gap-y-4 grayscale opacity-60">
+                <div className="flex items-center gap-2 cursor-help group" title="Good Manufacturing Practice">
+                  <FlaskConical size={20} className="group-hover:text-[#4A93C4] transition-colors" />
+                  <span className="text-sm font-medium group-hover:text-[#202124] transition-colors">GMP Certified Design</span>
+                </div>
+                <div className="flex items-center gap-2 cursor-help group" title="ISO 14644-1 Standards">
+                  <Beaker size={20} className="group-hover:text-[#4A93C4] transition-colors" />
+                  <span className="text-sm font-medium group-hover:text-[#202124] transition-colors">ISO 7 & 8 Standards</span>
+                </div>
+                <div className="flex items-center gap-2 cursor-help group" title="Contamination Control">
+                  <Activity size={20} className="group-hover:text-[#4A93C4] transition-colors" />
+                  <span className="text-sm font-medium group-hover:text-[#202124] transition-colors">HEPA/ULPA Filtration</span>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -77,19 +62,17 @@ const Hero = () => {
           {/* Right Asset - Product Card Style */}
           <div className="lg:col-span-6 relative">
             <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
               className="relative z-10 p-4 bg-white rounded-[48px] shadow-2xl border border-gray-100 overflow-hidden group cursor-pointer"
             >
-              <div className="aspect-[4/3] rounded-[36px] overflow-hidden bg-gray-50 relative">
-                {/* Product Image Mock */}
+              <div className="aspect-4/3 rounded-[36px] overflow-hidden bg-gray-50 relative">
                 <div 
                   className="w-full h-full bg-cover bg-center mix-blend-multiply transition-transform duration-700 group-hover:scale-105"
                   style={{ backgroundImage: `url('/hero_family.png')` }}
                 ></div>
                 
-                {/* Google UI Overlay */}
                 <div className="absolute bottom-6 left-6 right-6 p-6 bg-white/90 backdrop-blur-md rounded-3xl border border-white/50 flex items-center justify-between shadow-xl">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-2xl bg-[#4A93C4] flex items-center justify-center text-white">
@@ -106,11 +89,7 @@ const Hero = () => {
             </motion.div>
 
             {/* Floating "Material" Elements */}
-            <motion.div 
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-6 -right-6 p-6 bg-white rounded-[32px] shadow-lg border border-gray-100 z-20 flex flex-col gap-2 cursor-default"
-            >
+            <div className="absolute -top-6 -right-6 p-6 bg-white rounded-4xl shadow-lg border border-gray-100 z-20 flex flex-col gap-2 cursor-default">
               <div className="w-10 h-10 rounded-full bg-[#FBBC04] flex items-center justify-center text-white">
                 <FlaskConical size={20} />
               </div>
@@ -119,10 +98,11 @@ const Hero = () => {
                 <motion.div 
                   initial={{ width: 0 }}
                   animate={{ width: '92%' }}
+                  transition={{ duration: 1.5, ease: "easeOut" }}
                   className="h-full bg-[#FBBC04]"
                 />
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

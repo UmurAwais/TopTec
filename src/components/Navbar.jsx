@@ -1,23 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { X, Search as SearchIcon, Grid3X3, Menu } from 'lucide-react';
+import { X, Search as SearchIcon, Menu, ChevronDown, Package, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../assets/Top Tec Logo.png';
 import AnnouncementBar from './AnnouncementBar';
 import Search from './Search';
-import SolutionsGrid from './SolutionsGrid';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isGridOpen, setIsGridOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
       if (window.scrollY > 100) {
-        setIsGridOpen(false);
+        setIsProductsOpen(false);
         setIsSearchOpen(false);
       }
     };
@@ -25,25 +24,15 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (isGridOpen || isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => { document.body.style.overflow = 'unset'; };
-  }, [isGridOpen, isMobileMenuOpen]);
-
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape') {
-        setIsSearchOpen(false);
-        setIsGridOpen(false);
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  const productCategories = [
+    { title: 'TopTec Filters', href: '#filters' },
+    { title: 'TopTec Air', href: '#air' },
+    { title: 'TopTec Furniture', href: '#furniture' },
+    { title: 'TopTec Machine', href: '#machinery' },
+    { title: 'TopTec Science', href: '#science' },
+    { title: 'TopTec Sterile', href: '#sterile' },
+    { title: 'TopTec HVAC', href: '#hvac' },
+  ];
 
   const navLinks = [
     { name: 'Cleanroom Solutions', href: '#solutions' },
@@ -57,14 +46,18 @@ const Navbar = () => {
     <header className="w-full fixed top-0 z-50 flex flex-col">
       <AnnouncementBar isScrolled={isScrolled} />
 
-      <nav className={`w-full transition-all duration-300 ${
+      <nav className={`w-full transition-all duration-300 relative ${
         isScrolled 
           ? 'py-2.5 bg-white/95 backdrop-blur-md shadow-[0_1px_3px_0_rgba(60,64,67,0.15)]' 
           : 'py-6 bg-white'
       }`}>
-        <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center relative">
-          
-          {/* Google Style Brand Group */}
+        <Search 
+          isOpen={isSearchOpen} 
+          onClose={() => setIsSearchOpen(false)} 
+          query={searchQuery} 
+          setQuery={setSearchQuery} 
+        />
+        <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
           <div className="flex items-center gap-10">
             <motion.div 
               whileTap={{ scale: 0.95 }}
@@ -73,7 +66,7 @@ const Navbar = () => {
               <img src={logo} alt="Top Tec" className="h-7 lg:h-9 w-auto" />
             </motion.div>
 
-            {/* Google's Minimal Nav Links - SEO Keyword Rich */}
+            {/* Google's Minimal Nav Links */}
             <div className="hidden lg:flex items-center">
               {navLinks.map((item) => (
                 <a 
@@ -89,13 +82,6 @@ const Navbar = () => {
 
           {/* Google Style Actions Group */}
           <div className="flex items-center gap-2">
-            <Search 
-              isOpen={isSearchOpen} 
-              onClose={() => setIsSearchOpen(false)} 
-              query={searchQuery} 
-              setQuery={setSearchQuery} 
-            />
-
             <button 
               className="p-3 text-[#5f6368] hover:bg-gray-100 rounded-full transition-all lg:hidden cursor-pointer"
               onClick={() => setIsMobileMenuOpen(true)}
@@ -105,37 +91,69 @@ const Navbar = () => {
             
             <div className="hidden lg:flex items-center gap-2">
               <button 
-                onClick={() => { setIsSearchOpen(!isSearchOpen); setIsGridOpen(false); }}
+                onClick={() => { setIsSearchOpen(!isSearchOpen); setIsProductsOpen(false); }}
                 className={`p-3 rounded-full transition-all cursor-pointer ${isSearchOpen ? 'bg-gray-100 text-[#4A93C4]' : 'text-[#5f6368] hover:bg-gray-100'}`}
                 aria-label="Search"
               >
                 <SearchIcon size={20} />
               </button>
               
-              <button 
-                onClick={() => { setIsGridOpen(!isGridOpen); setIsSearchOpen(false); }}
-                className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all cursor-pointer border ${
-                  isGridOpen 
-                    ? 'bg-[#4A93C4] text-white border-[#4A93C4]' 
-                    : 'bg-gray-50 text-[#3c4043] border-gray-100 hover:bg-gray-100'
-                }`}
-                aria-label="All Divisions"
+              {/* Minimalist Products Dropdown */}
+              <div 
+                className="relative"
+                onMouseEnter={() => setIsProductsOpen(true)}
+                onMouseLeave={() => setIsProductsOpen(false)}
               >
-                <Grid3X3 size={18} />
-                <span className="text-[13px] font-medium">All Divisions</span>
-              </button>
+                <button 
+                  className={`flex items-center gap-1.5 px-4 py-2 rounded-full transition-all cursor-pointer border ${
+                    isProductsOpen 
+                      ? 'bg-gray-50 text-[#4A93C4] border-gray-200' 
+                      : 'bg-gray-50 text-[#3c4043] border-gray-100 hover:bg-gray-100'
+                  }`}
+                  aria-label="Products"
+                >
+                  <Package size={18} />
+                  <span className="text-[13px] font-medium">Products</span>
+                  <ChevronDown size={14} className={`transition-transform duration-300 ${isProductsOpen ? 'rotate-180' : ''}`} />
+                </button>
+
+                <AnimatePresence>
+                  {isProductsOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 5, scale: 0.98 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 5, scale: 0.98 }}
+                      transition={{ duration: 0.15, ease: "easeOut" }}
+                      className="absolute top-full right-0 pt-2 w-64 z-60"
+                    >
+                      <div className="bg-white rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.12)] border border-gray-100 py-3 overflow-hidden">
+                        <div className="px-5 py-2 mb-1 border-b border-gray-50">
+                          <span className="text-[11px] font-bold text-[#4A93C4] uppercase tracking-wider">Product Categories</span>
+                        </div>
+                        {productCategories.map((item) => (
+                          <a
+                            key={item.title}
+                            href={item.href}
+                            className="flex items-center px-5 py-3 text-[14px] text-[#3c4043] hover:bg-gray-50 hover:text-[#202124] transition-colors group"
+                          >
+                            <span className="flex-1">{item.title}</span>
+                            <span className="opacity-0 group-hover:opacity-100 transition-opacity translate-x-1 group-hover:translate-x-0 transform">
+                              <ArrowRight size={14} className="text-[#4A93C4]" />
+                            </span>
+                          </a>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             </div>
 
             <button className="ml-2 px-6 py-2.5 bg-[#4A93C4] text-white rounded-full font-medium text-sm hover:bg-[#3b7ba8] hover:shadow-md transition-all active:scale-95 cursor-pointer">
-              Sign In
+              Contact Us
             </button>
           </div>
         </div>
-
-        <SolutionsGrid 
-          isOpen={isGridOpen} 
-          onClose={() => setIsGridOpen(false)} 
-        />
       </nav>
 
       {/* Mobile Menu - Google Mobile App Style */}
@@ -154,7 +172,10 @@ const Navbar = () => {
                 <X size={24} />
               </button>
             </div>
-            <div className="p-6 flex flex-col gap-2">
+            <div className="p-6 flex flex-col gap-2 overflow-y-auto">
+              <div className="px-4 py-2">
+                <span className="text-[11px] font-bold text-[#4A93C4] uppercase tracking-wider">Main Links</span>
+              </div>
               {navLinks.map((item) => (
                 <a 
                   key={item.name} 
@@ -164,10 +185,24 @@ const Navbar = () => {
                   {item.name}
                 </a>
               ))}
+              
+              <div className="px-4 py-2 mt-4">
+                <span className="text-[11px] font-bold text-[#4A93C4] uppercase tracking-wider">Products</span>
+              </div>
+              {productCategories.map((item) => (
+                <a 
+                  key={item.title} 
+                  href={item.href}
+                  className="p-4 text-md font-medium text-[#5f6368] hover:bg-gray-50 rounded-xl transition-colors no-underline flex items-center justify-between"
+                >
+                  {item.title}
+                  <ArrowRight size={16} className="text-[#4A93C4]" />
+                </a>
+              ))}
             </div>
             <div className="mt-auto p-8 border-t border-gray-100 bg-gray-50/50">
               <button className="w-full py-4 bg-[#4A93C4] text-white rounded-full font-medium active:scale-95 transition-all cursor-pointer">
-                Get Started
+                Contact Us
               </button>
             </div>
           </motion.div>

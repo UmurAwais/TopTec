@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import { X, Search as SearchIcon } from 'lucide-react';
 
 const Search = ({ isOpen, onClose, query, setQuery }) => {
   const inputRef = useRef(null);
@@ -12,34 +12,37 @@ const Search = ({ isOpen, onClose, query, setQuery }) => {
   }, [isOpen]);
 
   return (
-    <div className="flex items-center relative">
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ width: 0, opacity: 0 }}
-            animate={{ width: "220px", opacity: 1 }}
-            exit={{ width: 0, opacity: 0 }}
-            transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="flex items-center bg-gray-50 border border-gray-100 rounded-full px-4 py-2 mr-2 overflow-hidden shadow-sm"
-          >
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
+          className="absolute inset-0 bg-white z-100 flex items-center px-6 lg:px-12"
+        >
+          <div className="container mx-auto flex items-center gap-6">
+            <SearchIcon size={24} className="text-[#4A93C4] shrink-0" />
             <input 
               ref={inputRef}
               type="text" 
-              placeholder="Search..." 
-              className="w-full bg-transparent border-none outline-none text-[13px] font-bold text-gray-900 placeholder:text-gray-300"
+              placeholder="What are you looking for today? (e.g. HEPA Filters, HVAC Services...)" 
+              className="flex-1 bg-transparent border-none outline-none text-xl lg:text-2xl text-[#202124] placeholder:text-gray-300 font-medium tracking-tight"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
+              onKeyDown={(e) => e.key === 'Escape' && onClose()}
             />
             <button 
               onClick={onClose} 
-              className="p-1 hover:bg-gray-200 rounded-full transition-colors"
+              className="p-3 hover:bg-gray-100 rounded-full transition-all cursor-pointer group"
+              aria-label="Close search"
             >
-              <X size={14} className="text-gray-500" />
+              <X size={28} className="text-gray-400 group-hover:text-[#202124] transition-colors" />
             </button>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 
