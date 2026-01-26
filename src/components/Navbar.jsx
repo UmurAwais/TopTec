@@ -103,7 +103,7 @@ const Navbar = () => {
               <Menu size={22} />
             </button>
             
-            <div className="hidden lg:flex items-center gap-1">
+            <div className="hidden lg:flex items-center gap-2">
               <button 
                 onClick={() => { setIsSearchOpen(!isSearchOpen); setIsGridOpen(false); }}
                 className={`p-3 rounded-full transition-all cursor-pointer ${isSearchOpen ? 'bg-gray-100 text-[#4A93C4]' : 'text-[#5f6368] hover:bg-gray-100'}`}
@@ -111,12 +111,18 @@ const Navbar = () => {
               >
                 <SearchIcon size={20} />
               </button>
+              
               <button 
                 onClick={() => { setIsGridOpen(!isGridOpen); setIsSearchOpen(false); }}
-                className={`p-3 rounded-full transition-all cursor-pointer ${isGridOpen ? 'bg-gray-100 text-[#4A93C4]' : 'text-[#5f6368] hover:bg-gray-100'}`}
-                aria-label="Divisions"
+                className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all cursor-pointer border ${
+                  isGridOpen 
+                    ? 'bg-[#4A93C4] text-white border-[#4A93C4]' 
+                    : 'bg-gray-50 text-[#3c4043] border-gray-100 hover:bg-gray-100'
+                }`}
+                aria-label="All Divisions"
               >
-                <Grid3X3 size={20} />
+                <Grid3X3 size={18} />
+                <span className="text-[13px] font-medium">All Divisions</span>
               </button>
             </div>
 
@@ -140,7 +146,7 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 bg-white z-[100] flex flex-col"
+            className="fixed inset-0 bg-white z-100 flex flex-col"
           >
             <div className="p-4 flex justify-between items-center border-b border-gray-100">
               <img src={logo} alt="Top Tec" className="h-6 w-auto" />

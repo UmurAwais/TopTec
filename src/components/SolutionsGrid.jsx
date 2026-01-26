@@ -21,7 +21,7 @@ const SolutionsGrid = ({ isOpen, onClose }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.15, ease: "linear" }}
-          className="fixed inset-0 bg-white z-[100] flex flex-col items-center justify-center p-6 lg:p-24"
+          className="fixed inset-0 bg-white z-100 flex flex-col items-center justify-center p-6 lg:p-24"
         >
           {/* Minimalist Close Button */}
           <button 
@@ -56,7 +56,7 @@ const SolutionsGrid = ({ isOpen, onClose }) => {
                     <h4 className="text-2xl font-semibold text-[#202124] tracking-tight group-hover:text-[#4A93C4] transition-colors">
                       {item.title}
                     </h4>
-                    <div className="h-[2px] w-0 group-hover:w-12 bg-[#4A93C4] transition-all duration-500 mt-3"></div>
+                    <div className="h-0.5 w-0 group-hover:w-12 bg-[#4A93C4] transition-all duration-500 mt-3"></div>
                   </div>
 
                   <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#4A93C4] opacity-0 group-hover:opacity-100 transition-all flex items-center gap-2">
