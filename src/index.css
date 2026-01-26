@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --brand-color: #4A93C4;
+  --google-blue: #4A93C4;
+  --google-red: #EA4335;
+  --google-yellow: #FBBC04;
+  --google-green: #34A853;
+  --gsk-signal: url("data:image/svg+xml,%3Csvg width='800' height='800' viewBox='0 0 800 800' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M400 0C179.086 0 0 179.086 0 400s179.086 400 400 400 400-179.086 400-400S620.914 0 400 0zm0 750C207.107 750 50 592.893 50 400S207.107 50 400 50s350 157.107 350 350-157.107 350-350 350z' fill='%234A93C4' fill-opacity='0.1'/%3E%3Cpath d='M400 100C234.315 100 100 234.315 100 400s134.315 300 300 300 300-134.315 300-300S565.685 100 400 100z' fill='%234A93C4' fill-opacity='0.05'/%3E%3C/svg%3E");
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight font-medium;
+  }
+}
+
+/* GSK Signal Style Organic Curves */
+.signal-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.signal-bg::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 100%;
+  height: 120%;
+  background-image: var(--gsk-signal);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: 0;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  filter: blur(80px);
+}
+
+.google-shadow {
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+}
+
+.google-pill {
+  @apply rounded-full px-6 py-2.5 font-medium transition-all duration-200 border border-gray-200 hover:bg-gray-50 hover:border-gray-300;
+}
+
+.google-button-primary {
+  @apply rounded-full px-8 py-3 bg-[#4285F4] text-white font-medium hover:bg-[#1a73e8] hover:shadow-lg transition-all active:scale-95;
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-xl border border-white/20;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.02); }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 4s ease-in-out infinite;
+}
