@@ -4,7 +4,7 @@ import { CheckCircle2, FlaskConical, Beaker, Activity } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center bg-white px-6 lg:px-24 pt-32 lg:pt-44 pb-32 lg:pb-44 overflow-hidden signal-bg">
+    <section className="relative min-h-screen flex items-center bg-white px-8 lg:px-16 pt-32 lg:pt-44 pb-32 lg:pb-24 overflow-hidden signal-bg">
       {/* Google-Product-Style Soft Background Gradient */}
       <div className="absolute inset-0 z-10 pointer-events-none">
         <div className="absolute top-[10%] left-[-5%] w-[40%] h-[40%] bg-[#4A93C4]/5 rounded-full blur-[120px]"></div>
@@ -16,11 +16,7 @@ const Hero = () => {
           
           {/* Left Content - SEO Optimized Editorial Layout */}
           <div className="lg:col-span-6">
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div>
               <h1 className="text-6xl lg:text-[92px] font-semibold text-[#202124] leading-[0.95] mb-8 tracking-[-0.04em]">
                 Engineered <br />
                 <span className="text-[#4A93C4]">Purity.</span>
@@ -56,17 +52,12 @@ const Hero = () => {
                   <span className="text-sm font-medium group-hover:text-[#202124] transition-colors">HEPA/ULPA Filtration</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Right Asset - Product Card Style */}
           <div className="lg:col-span-6 relative">
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              className="relative z-10 p-4 bg-white rounded-[48px] shadow-2xl border border-gray-100 overflow-hidden group cursor-pointer"
-            >
+            <div className="relative z-10 p-4 bg-white rounded-[48px] shadow-2xl border border-gray-100 overflow-hidden group cursor-pointer">
               <div className="aspect-4/3 rounded-[36px] overflow-hidden bg-gray-50 relative">
                 <div 
                   className="w-full h-full bg-cover bg-center mix-blend-multiply transition-transform duration-700 group-hover:scale-105"
@@ -86,7 +77,7 @@ const Hero = () => {
                   <div className="text-[#4A93C4] font-medium text-sm group-hover:underline">View Live Data</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Floating "Material" Elements */}
             <div className="absolute -top-6 -right-6 p-6 bg-white rounded-4xl shadow-lg border border-gray-100 z-20 flex flex-col gap-2 cursor-default">

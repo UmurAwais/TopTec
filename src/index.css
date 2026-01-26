@@ -24,6 +24,14 @@ body {
   }
 }
 
+/* Expansive GSK-Style Container */
+.container {
+  max-width: 1600px !important;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* GSK Signal Style Organic Curves */
 .signal-bg {
   position: relative;

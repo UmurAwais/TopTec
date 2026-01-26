@@ -3,13 +3,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, Wind, Filter, FlaskConical, Settings, Building2, Layers, Zap } from 'lucide-react';
 
 const products = [
-  { title: 'TopTec Filters', icon: <Filter size={32} />, color: 'text-gray-900' },
-  { title: 'TopTec Air', icon: <Wind size={32} />, color: 'text-gray-900' },
-  { title: 'TopTec Furniture', icon: <Building2 size={32} />, color: 'text-gray-900' },
-  { title: 'TopTec Machine', icon: <Settings size={32} />, color: 'text-gray-900' },
-  { title: 'TopTec Science', icon: <FlaskConical size={32} />, color: 'text-gray-900' },
-  { title: 'TopTec Sterile', icon: <Layers size={32} />, color: 'text-gray-900' },
-  { title: 'TopTec HVAC', icon: <Zap size={32} />, color: 'text-gray-900' },
+  { title: 'Filters', icon: <Filter size={32} />, color: 'text-gray-900' },
+  { title: 'Air', icon: <Wind size={32} />, color: 'text-gray-900' },
+  { title: 'Furniture', icon: <Building2 size={32} />, color: 'text-gray-900' },
+  { title: 'Machine', icon: <Settings size={32} />, color: 'text-gray-900' },
+  { title: 'Science', icon: <FlaskConical size={32} />, color: 'text-gray-900' },
+  { title: 'Sterile', icon: <Layers size={32} />, color: 'text-gray-900' },
+  { title: 'HVAC', icon: <Zap size={32} />, color: 'text-gray-900' },
 ];
 
 const SolutionsGrid = ({ isOpen, onClose }) => {

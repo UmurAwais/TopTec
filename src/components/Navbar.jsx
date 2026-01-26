@@ -25,13 +25,13 @@ const Navbar = () => {
   }, []);
 
   const productCategories = [
-    { title: 'TopTec Filters', href: '#filters' },
-    { title: 'TopTec Air', href: '#air' },
-    { title: 'TopTec Furniture', href: '#furniture' },
-    { title: 'TopTec Machine', href: '#machinery' },
-    { title: 'TopTec Science', href: '#science' },
-    { title: 'TopTec Sterile', href: '#sterile' },
-    { title: 'TopTec HVAC', href: '#hvac' },
+    { title: 'Filters', href: '#filters' },
+    { title: 'Air', href: '#air' },
+    { title: 'Furniture', href: '#furniture' },
+    { title: 'Machine', href: '#machinery' },
+    { title: 'Science', href: '#science' },
+    { title: 'Sterile', href: '#sterile' },
+    { title: 'HVAC', href: '#hvac' },
   ];
 
   const navLinks = [
@@ -57,7 +57,7 @@ const Navbar = () => {
           query={searchQuery} 
           setQuery={setSearchQuery} 
         />
-        <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
+        <div className="w-full px-8 lg:px-16 flex justify-between items-center">
           <div className="flex items-center gap-10">
             <motion.div 
               whileTap={{ scale: 0.95 }}
@@ -128,7 +128,7 @@ const Navbar = () => {
                     >
                       <div className="bg-white rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.12)] border border-gray-100 py-3 overflow-hidden">
                         <div className="px-5 py-2 mb-1 border-b border-gray-50">
-                          <span className="text-[11px] font-bold text-[#4A93C4] uppercase tracking-wider">Product Categories</span>
+                          <span className="text-[11px] font-bold text-[#4A93C4] uppercase tracking-wider">TopTec Products</span>
                         </div>
                         {productCategories.map((item) => (
                           <a
