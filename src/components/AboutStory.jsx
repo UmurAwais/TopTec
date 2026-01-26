@@ -30,12 +30,11 @@ const AboutStory = () => {
              </div>
           </div>
           <div className="order-1 lg:order-2 relative">
-             <div className="aspect-4/5 rounded-[64px] overflow-hidden shadow-2xl relative z-10 bg-gray-100">
+             <div className="aspect-4/5 rounded-[64px] overflow-hidden shadow-2xl relative z-10 bg-gray-50">
                 <img 
-                  src="https://images.unsplash.com/photo-1582719471384-894fbb16e024?q=80&w=1000&auto=format&fit=crop" 
-                  className="w-full h-full object-cover transition-opacity duration-500"
-                  alt="TopTec Pharmaceutical Engineering Laboratory"
-                  loading="lazy"
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop" 
+                  className="w-full h-full object-cover"
+                  alt="TopTec Advanced Engineering Facility"
                 />
              </div>
              {/* Decorative Element */}
