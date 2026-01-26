@@ -5,8 +5,8 @@ const MissionVision = () => {
   return (
     <section className="py-32 bg-[#202124] relative overflow-hidden">
        {/* Science Circles */}
-       <div className="absolute top-[-20%] right-[-10%] w-[60%] h-[100%] border border-white/5 rounded-full pointer-events-none"></div>
-       <div className="absolute bottom-[-20%] left-[-10%] w-[60%] h-[100%] border border-white/5 rounded-full pointer-events-none"></div>
+       <div className="absolute top-[-20%] right-[-10%] w-[60%] h-full border border-white/5 rounded-full pointer-events-none"></div>
+       <div className="absolute bottom-[-20%] left-[-10%] w-[60%] h-full border border-white/5 rounded-full pointer-events-none"></div>
 
        <div className="container mx-auto px-8 lg:px-16">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-32 items-center">
