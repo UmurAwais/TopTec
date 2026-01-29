@@ -2,12 +2,12 @@ import React from 'react';
 import { Wind, Filter, FlaskConical, Settings, Building2, Layers, Zap, ArrowRight } from 'lucide-react';
 
 const categories = [
-  { title: 'Filters', icon: <Filter size={24} />, desc: 'Industrial air filtration including HEPA, Pre-filters, Carbon, and Bag filters for sterile air quality.' },
-  { title: 'Air', icon: <Wind size={24} />, desc: 'Specialized air cleaning equipment including Laminar Flow Hoods, Biosafety Cabinets, and Air Showers.' },
-  { title: 'Furniture', icon: <Building2 size={24} />, desc: 'Durable laboratory furniture, Stainless Steel lockers, workstations, and safety stations.' },
-  { title: 'Machine', icon: <Settings size={24} />, desc: 'Pharmaceutical production machinery for Tablet, Capsule, Liquid Syrup, and Ointment sections.' },
-  { title: 'Science', icon: <FlaskConical size={24} />, desc: 'Precision laboratory equipment for Chromatography, Microbiology, and Tablet Testing.' },
-  { title: 'Sterile', icon: <Layers size={24} />, desc: 'Complete cleanroom solutions including Panels, Doors, Flooring, and Turnkey setups.' },
+  { title: 'Air Filters', icon: <Filter size={24} />, desc: 'Industrial air filtration including HEPA, Pre-filters, Carbon, and Bag filters for sterile air quality.' },
+  { title: 'Air Cleaning', icon: <Wind size={24} />, desc: 'Specialized air cleaning equipment including Laminar Flow Hoods, Biosafety Cabinets, and Air Showers.' },
+  { title: 'Laboratory Furniture', icon: <Building2 size={24} />, desc: 'Durable laboratory furniture, Stainless Steel lockers, workstations, and safety stations.' },
+  { title: 'Production Machinery', icon: <Settings size={24} />, desc: 'Pharmaceutical production machinery for Tablet, Capsule, Liquid Syrup, and Ointment sections.' },
+  { title: 'Laboratory Equipment', icon: <FlaskConical size={24} />, desc: 'Precision laboratory equipment for Chromatography, Microbiology, and Tablet Testing.' },
+  { title: 'Sterile Processing', icon: <Layers size={24} />, desc: 'Complete cleanroom solutions including Panels, Doors, Flooring, and Turnkey setups.' },
   { title: 'HVAC', icon: <Zap size={24} />, desc: 'Integrated HVAC systems, Air Handling Units (AHU), Chillers, and Precision Air Conditioning.' },
 ];
 
