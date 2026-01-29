@@ -356,9 +356,9 @@ const Navbar = () => {
               </Link>
             </div>
 
-            <button className="ml-2 px-6 py-2.5 bg-[#4A93C4] text-white rounded-full font-medium text-sm hover:bg-[#3b7ba8] hover:shadow-md transition-all active:scale-95 cursor-pointer">
+            <Link to="/contact" className="ml-2 px-6 py-2.5 bg-[#4A93C4] text-white rounded-full font-medium text-sm hover:bg-[#3b7ba8] hover:shadow-md transition-all active:scale-95 cursor-pointer">
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -410,9 +410,9 @@ const Navbar = () => {
               </div>
             </div>
             <div className="mt-auto p-8 border-t border-gray-100 bg-gray-50/50">
-              <button className="w-full py-4 bg-[#4A93C4] text-white rounded-full font-medium active:scale-95 transition-all cursor-pointer">
+              <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className="w-full py-4 bg-[#4A93C4] text-white rounded-full font-medium active:scale-95 transition-all cursor-pointer block text-center">
                 Contact Us
-              </button>
+              </Link>
             </div>
           </motion.div>
         )}
