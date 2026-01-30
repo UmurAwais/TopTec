@@ -3,26 +3,26 @@ import { ClipboardCheck, Construction, Settings2, ShieldCheck, ArrowRight } from
 
 const steps = [
   {
-    title: 'Consultancy & Design',
-    desc: 'BIM-integrated engineering designs tailored to specific ISO and Grade classifications.',
+    title: 'Design & Engineering',
+    desc: 'BIM-integrated cleanroom design with CFD analysis, tailored to ISO 14644-1 and EU GMP Grade requirements for your facility.',
     icon: <ClipboardCheck size={28} className="text-[#4A93C4]" />,
     color: 'bg-blue-50'
   },
   {
-    title: 'Precision Manufacturing',
-    desc: 'State-of-the-art production of cleanroom panels, AHUs, and sterile equipment.',
+    title: 'Manufacturing & Testing',
+    desc: 'In-house production of cleanroom panels, HEPA filter housings, and custom AHUs with factory acceptance testing (FAT).',
     icon: <Settings2 size={28} className="text-[#FBBC04]" />,
     color: 'bg-yellow-50'
   },
   {
-    title: 'Construction & Setup',
-    desc: 'Expert on-site installation with seamless integration of HVAC and electrical systems.',
+    title: 'Installation & Integration',
+    desc: 'Expert on-site cleanroom construction, HVAC integration, and electrical commissioning by certified installation teams.',
     icon: <Construction size={28} className="text-[#EA4335]" />,
     color: 'bg-red-50'
   },
   {
-    title: 'Validation & Handover',
-    desc: 'Comprehensive DQ/IQ/OQ/PQ documentation and final certification compliance.',
+    title: 'Validation & Certification',
+    desc: 'Complete DQ/IQ/OQ/PQ protocols, particle count testing, and regulatory compliance documentation for FDA and WHO audits.',
     icon: <ShieldCheck size={28} className="text-[#34A853]" />,
     color: 'bg-green-50'
   }
@@ -38,15 +38,15 @@ const ProcessSection = () => {
         <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
             <span className="text-[#4A93C4] font-bold text-sm uppercase tracking-[0.2em] mb-4 block">
-              The TopTec Method
+              Project Delivery
             </span>
             <h2 className="text-5xl lg:text-6xl font-semibold text-[#202124] tracking-tight leading-[1.1]">
-              Turnkey engineering <br />
-              <span className="text-[#4A93C4]">from concept to sterile.</span>
+              Turnkey cleanroom solutions <br />
+              <span className="text-[#4A93C4]">from Dubai to Dhaka.</span>
             </h2>
           </div>
           <p className="text-lg text-[#5f6368] leading-relaxed max-w-sm">
-            We manage the entire project lifecycle, ensuring zero contamination risk and single-point accountability for your pharmaceutical facility.
+            We manage complete cleanroom projects across UAE, Saudi Arabia, Qatar, Kenya, Nigeria, Bangladesh, Sri Lanka, Vietnam, Jordan, USA, Germany, and UK with single-point accountability and zero contamination risk.
           </p>
         </div>
 
@@ -88,8 +88,8 @@ const ProcessSection = () => {
         {/* Call to Action Bar */}
         <div className="mt-20 p-8 lg:p-12 bg-[#202124] rounded-4xl flex flex-col lg:flex-row items-center justify-between gap-8 group cursor-pointer hover:bg-black transition-colors">
           <div>
-            <h4 className="text-2xl lg:text-3xl font-medium text-white mb-2">Ready to start your next cleanroom project?</h4>
-            <p className="text-gray-400">Consult with our lead engineers today for a custom infrastructure masterplan.</p>
+            <h4 className="text-2xl lg:text-3xl font-medium text-white mb-2">Planning a pharmaceutical cleanroom project?</h4>
+            <p className="text-gray-400">Get a detailed feasibility study and cost estimate from our cleanroom engineering specialists.</p>
           </div>
           <button className="px-10 py-5 bg-[#4A93C4] text-white rounded-full font-bold text-lg hover:bg-[#3b7ba8] transition-all active:scale-95 flex items-center gap-3">
             Book Engineering Consult <ArrowRight size={20} />

@@ -3,27 +3,27 @@ import { ShieldCheck, Zap, Thermometer, Droplets } from 'lucide-react';
 
 const stats = [
   { 
-    label: 'Filtration Efficiency', 
-    value: '99.99%', 
-    desc: 'H14 Grade HEPA integration for absolute sterile environments.',
+    label: 'HEPA Efficiency', 
+    value: '99.995%', 
+    desc: 'H14-grade HEPA filtration removes 99.995% of particles ≥0.3μm for pharmaceutical sterile areas.',
     icon: <ShieldCheck size={24} className="text-[#4A93C4]" />
   },
   { 
-    label: 'Air Exchanges', 
+    label: 'Air Changes/Hour', 
     value: '600+', 
-    desc: 'High-frequency air changes per hour for Grade A classifications.',
+    desc: 'High-velocity air exchange rates maintain Grade A cleanroom classification in aseptic filling zones.',
     icon: <Zap size={24} className="text-[#FBBC04]" />
   },
   { 
-    label: 'Temp. Precision', 
+    label: 'Temperature Control', 
     value: '±0.5°C', 
-    desc: 'Ultra-tight environmental control for sensitive biotech processes.',
+    desc: 'Precision temperature stability essential for biologics manufacturing and vaccine cold chain storage.',
     icon: <Thermometer size={24} className="text-[#EA4335]" />
   },
   { 
-    label: 'Humidity Control', 
-    value: '±2%', 
-    desc: 'Advanced dehumidification systems for dry-powder production.',
+    label: 'Humidity Accuracy', 
+    value: '±2% RH', 
+    desc: 'Advanced humidity control prevents moisture-sensitive product degradation in tablet compression areas.',
     icon: <Droplets size={24} className="text-[#34A853]" />
   }
 ];
@@ -35,15 +35,15 @@ const StatsSection = () => {
         <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
             <span className="text-[#4A93C4] font-bold text-sm uppercase tracking-[0.2em] mb-4 block">
-              Performance by Design
+              Technical Excellence
             </span>
             <h2 className="text-5xl lg:text-6xl font-semibold text-[#202124] tracking-tight leading-[1.1]">
-              Engineering standards <br />
-              <span className="text-[#4A93C4]">define industry limits.</span>
+              Precision engineering <br />
+              <span className="text-[#4A93C4]">backed by data.</span>
             </h2>
           </div>
           <p className="text-lg text-[#5f6368] leading-relaxed max-w-sm">
-            TopTec is not just a supplier. We are an engineering partner. Our systems are built to exceed ISO 14644-1 and GMP standards, ensuring your production never stops.
+            Our cleanroom systems deliver measurable performance that exceeds FDA, WHO, and EU GMP requirements. Every installation is validated with comprehensive DQ/IQ/OQ/PQ documentation for pharmaceutical manufacturing facilities worldwide.
           </p>
         </div>
 

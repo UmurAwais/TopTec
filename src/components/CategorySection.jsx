@@ -2,13 +2,13 @@ import React from 'react';
 import { Wind, Filter, FlaskConical, Settings, Building2, Layers, Zap, ArrowRight } from 'lucide-react';
 
 const categories = [
-  { title: 'Air Filters', icon: <Filter size={24} />, desc: 'Industrial air filtration including HEPA, Pre-filters, Carbon, and Bag filters for sterile air quality.' },
-  { title: 'Air Cleaning', icon: <Wind size={24} />, desc: 'Specialized air cleaning equipment including Laminar Flow Hoods, Biosafety Cabinets, and Air Showers.' },
-  { title: 'Laboratory Furniture', icon: <Building2 size={24} />, desc: 'Durable laboratory furniture, Stainless Steel lockers, workstations, and safety stations.' },
-  { title: 'Production Machinery', icon: <Settings size={24} />, desc: 'Pharmaceutical production machinery for Tablet, Capsule, Liquid Syrup, and Ointment sections.' },
-  { title: 'Laboratory Equipment', icon: <FlaskConical size={24} />, desc: 'Precision laboratory equipment for Chromatography, Microbiology, and Tablet Testing.' },
-  { title: 'Sterile Processing', icon: <Layers size={24} />, desc: 'Complete cleanroom solutions including Panels, Doors, Flooring, and Turnkey setups.' },
-  { title: 'HVAC', icon: <Zap size={24} />, desc: 'Integrated HVAC systems, Air Handling Units (AHU), Chillers, and Precision Air Conditioning.' },
+  { title: 'Air Filters', icon: <Filter size={24} />, desc: 'H14 HEPA filters, pre-filters, activated carbon filters, and bag filters engineered for pharmaceutical cleanrooms and sterile manufacturing environments.' },
+  { title: 'Air Cleaning', icon: <Wind size={24} />, desc: 'Laminar flow hoods, Class II biosafety cabinets, and dynamic air showers that maintain ISO Class 5 cleanroom standards for biotech labs.' },
+  { title: 'Laboratory Furniture', icon: <Building2 size={24} />, desc: 'SS 316L stainless steel workbenches, chemical-resistant lab tables, and modular storage systems for pharmaceutical QC laboratories.' },
+  { title: 'Production Machinery', icon: <Settings size={24} />, desc: 'GMP-compliant tablet presses, capsule filling machines, liquid filling lines, and ointment manufacturing equipment for pharma production.' },
+  { title: 'Laboratory Equipment', icon: <FlaskConical size={24} />, desc: 'HPLC systems, dissolution testers, microbiology incubators, and analytical instruments for pharmaceutical quality control testing.' },
+  { title: 'Sterile Processing', icon: <Layers size={24} />, desc: 'Modular cleanroom panels, hermetic doors, ESD flooring, and complete turnkey cleanroom construction from Grade A to Grade D.' },
+  { title: 'HVAC Systems', icon: <Zap size={24} />, desc: 'Custom air handling units, pharmaceutical-grade chillers, precision HVAC controls, and validated environmental monitoring systems.' },
 ];
 
 const CategorySection = () => {
@@ -22,15 +22,15 @@ const CategorySection = () => {
           <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
             <div className="max-w-2xl">
               <span className="text-[#4A93C4] font-bold text-sm uppercase tracking-widest mb-4 block">
-                TopTec Engineering
+                Complete Solutions
               </span>
               <h2 className="text-5xl lg:text-6xl font-semibold text-[#202124] tracking-tight">
-                Our Specialized <br /> 
-                <span className="text-[#4A93C4]">Categories.</span>
+                Pharmaceutical Equipment <br /> 
+                <span className="text-[#4A93C4]">for Every Need.</span>
               </h2>
             </div>
             <p className="text-[#5f6368] text-lg max-w-sm">
-              Explore our core business segments, each engineered to maintain absolute purity and precision in your controlled environments.
+              From HEPA filtration to complete cleanroom installations, we supply pharmaceutical-grade equipment that meets WHO, FDA, and EU GMP requirements for facilities worldwide.
             </p>
           </div>
 

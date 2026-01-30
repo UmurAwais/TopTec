@@ -3,28 +3,28 @@ import { ShieldCheck, Globe, Award, FileCheck, ArrowUpRight } from 'lucide-react
 
 const standards = [
   {
-    title: 'ISO 14644-1 Standards',
-    desc: 'Expert design and certification for Cleanrooms ranging from ISO Class 1 to Class 9.',
+    title: 'ISO 14644-1 Cleanrooms',
+    desc: 'Complete cleanroom design, construction, and certification for ISO Class 1 through Class 9 controlled environments.',
     icon: <Globe size={28} className="text-[#4A93C4]" />,
-    id: 'ISO-CERT'
+    id: 'ISO-14644'
   },
   {
     title: 'EU GMP Compliance',
-    desc: 'Rigorous adherence to Grade A, B, C, and D sterile manufacturing requirements.',
+    desc: 'Pharmaceutical cleanrooms meeting EU GMP Annex 1 requirements for Grade A, B, C, and D sterile manufacturing.',
     icon: <ShieldCheck size={28} className="text-[#34A853]" />,
-    id: 'GMP-GRADE'
+    id: 'EU-GMP'
   },
   {
-    title: 'WHO-PQS Solutions',
-    desc: 'Supplying WHO pre-qualified equipment and infrastructure for global health initiatives.',
+    title: 'WHO Prequalification',
+    desc: 'WHO-PQS certified equipment and cleanroom infrastructure for global vaccine and essential medicine production.',
     icon: <Award size={28} className="text-[#FBBC04]" />,
     id: 'WHO-PQS'
   },
   {
-    title: 'ASME BPE Certified',
-    desc: 'Bio-processing equipment engineered to the highest hygienic and mechanical standards.',
+    title: 'FDA 21 CFR Part 11',
+    desc: 'Electronic monitoring systems and cleanroom controls compliant with FDA regulations for pharmaceutical manufacturing.',
     icon: <FileCheck size={28} className="text-[#EA4335]" />,
-    id: 'ASME-BPE'
+    id: 'FDA-CFR'
   }
 ];
 
@@ -35,15 +35,15 @@ const ComplianceSection = () => {
         <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
             <span className="text-[#4A93C4] font-bold text-sm uppercase tracking-[0.2em] mb-4 block">
-              Quality Assurance
+              Regulatory Compliance
             </span>
             <h2 className="text-5xl lg:text-6xl font-semibold text-[#202124] tracking-tight leading-[1.1]">
-              Global compliance <br />
-              <span className="text-[#4A93C4]">is our baseline.</span>
+              Meeting global standards <br />
+              <span className="text-[#4A93C4]">in every market.</span>
             </h2>
           </div>
           <p className="text-lg text-[#5f6368] leading-relaxed max-w-sm">
-            We don't just build infrastructure; we build trust through absolute adherence to international pharmaceutical and biomedical regulations.
+            Our cleanroom solutions comply with FDA, WHO, EMA, and local regulatory requirements across UAE, Saudi Arabia, Qatar, Kenya, Nigeria, Bangladesh, Sri Lanka, Vietnam, Jordan, USA, Germany, and UK pharmaceutical markets.
           </p>
         </div>
 

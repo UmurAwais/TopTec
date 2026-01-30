@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="lg:col-span-4">
             <img src={logo} alt="TopTec" className="h-10 w-auto mb-8" />
             <p className="text-[#5f6368] text-lg leading-relaxed mb-8 max-w-sm">
-              Global leaders in Pharmaceutical Engineering, Cleanroom Setup, and specialized HVACR services. Maintaining purity in production since 1998.
+              Leading pharmaceutical cleanroom manufacturer serving healthcare facilities across Middle East, Africa, Asia, Europe, and North America. ISO 14644-1 certified cleanroom solutions since 1998.
             </p>
             <div className="flex items-center gap-4">
               <a href="#" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-[#5f6368] hover:bg-[#4A93C4] hover:text-white hover:border-[#4A93C4] transition-all">

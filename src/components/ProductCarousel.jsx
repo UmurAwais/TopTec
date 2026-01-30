@@ -5,67 +5,67 @@ import { ArrowLeft, ArrowRight, ShoppingCart, Info } from 'lucide-react';
 const products = [
   {
     id: 1,
-    name: 'H14 HEPA Filter',
-    category: 'Filtration',
-    price: 'Contact for Quote',
+    name: 'H14 HEPA Filter System',
+    category: 'Air Filtration',
+    price: 'Request Quote',
     image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=400',
-    specs: '99.995% Efficiency'
+    specs: '99.995% Particle Removal Efficiency'
   },
   {
     id: 2,
-    name: 'Laminar Flow Hood',
-    category: 'Air Cleaning',
-    price: 'Contact for Quote',
+    name: 'Laminar Flow Hood - Class II',
+    category: 'Sterile Equipment',
+    price: 'Request Quote',
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400',
-    specs: 'ISO Class 5 compliant'
+    specs: 'ISO Class 5 Cleanroom Standard'
   },
   {
     id: 3,
-    name: 'Pass Box - SS 316L',
-    category: 'Sterile Transfer',
-    price: 'Contact for Quote',
+    name: 'SS 316L Pass Box',
+    category: 'Material Transfer',
+    price: 'Request Quote',
     image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=400',
-    specs: 'Electromagnetic Interlocking'
+    specs: 'Electromagnetic Interlock System'
   },
   {
     id: 4,
     name: 'Dynamic Air Shower',
-    category: 'Sterile Entrance',
-    price: 'Contact for Quote',
+    category: 'Personnel Decontamination',
+    price: 'Request Quote',
     image: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=400',
-    specs: '25 m/s Air Velocity'
+    specs: '25 m/s High-Velocity Air Jets'
   },
   {
     id: 5,
-    name: 'Bio-Safety Cabinet',
-    category: 'Air Cleaning',
-    price: 'Contact for Quote',
+    name: 'Biosafety Cabinet Class II A2',
+    category: 'Laboratory Safety',
+    price: 'Request Quote',
     image: 'https://images.unsplash.com/photo-1579152276532-a399723a7bca?auto=format&fit=crop&q=80&w=400',
-    specs: 'Class II Type A2'
+    specs: 'NSF/ANSI 49 Certified'
   },
   {
     id: 6,
-    name: 'Fume Hood Controller',
-    category: 'Automation',
-    price: 'Contact for Quote',
+    name: 'Pharmaceutical AHU System',
+    category: 'HVAC Equipment',
+    price: 'Request Quote',
     image: 'https://images.unsplash.com/photo-1581092921461-eab62e92c859?auto=format&fit=crop&q=80&w=400',
-    specs: 'VAV Integration'
+    specs: 'VAV Control with BMS Integration'
   },
   {
     id: 7,
-    name: 'Cleanroom Bench',
-    category: 'Furniture',
-    price: 'Contact for Quote',
+    name: 'Cleanroom Workbench - SS304',
+    category: 'Lab Furniture',
+    price: 'Request Quote',
     image: 'https://images.unsplash.com/photo-1581092162384-8987c1794713?auto=format&fit=crop&q=80&w=400',
-    specs: 'Stainless Steel Polished'
+    specs: 'Electropolished Stainless Steel'
   },
   {
     id: 8,
-    name: 'Pressure Monitor',
-    category: 'Monitoring',
-    price: 'Contact for Quote',
+    name: 'Differential Pressure Monitor',
+    category: 'Monitoring Systems',
+    price: 'Request Quote',
     image: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=400',
-    specs: 'Accuracy ±0.25%'
+    specs: '±0.25% Measurement Accuracy'
   }
 ];
 
@@ -86,11 +86,11 @@ const ProductCarousel = () => {
         <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
             <span className="text-[#4A93C4] font-bold text-sm uppercase tracking-[0.2em] mb-4 block">
-              Specialized Equipment
+              Featured Equipment
             </span>
             <h2 className="text-5xl lg:text-6xl font-semibold text-[#202124] tracking-tight leading-[1.1]">
-              Engineered products for <br />
-              <span className="text-[#4A93C4]">sterile excellence.</span>
+              Pharmaceutical-grade equipment <br />
+              <span className="text-[#4A93C4]">trusted worldwide.</span>
             </h2>
           </div>
           <div className="flex items-center gap-4 mb-4 lg:mb-0">

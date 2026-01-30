@@ -18,38 +18,36 @@ const Hero = () => {
           <div className="lg:col-span-6">
             <div>
               <h1 className="text-6xl lg:text-[92px] font-semibold text-[#202124] leading-[0.95] mb-8 tracking-[-0.04em]">
-                Engineered <br />
-                <span className="text-[#4A93C4]">Purity.</span>
+                Cleanroom <br />
+                <span className="text-[#4A93C4]">Excellence.</span>
               </h1>
               
               <p className="text-[#5f6368] text-lg lg:text-[18px] leading-relaxed mb-12 max-w-lg">
-                TopTec provides advanced Pharmaceutical Engineering and HVACR services. 
-                We design and manufacture ISO-compliant Cleanrooms that guarantee 
-                unmatched contamination control and environmental precision.
+                TopTec delivers turnkey pharmaceutical cleanroom solutions and precision HVAC systems to healthcare facilities worldwide. From Dubai to Nairobi, our ISO 14644-1 certified cleanrooms and GMP-compliant equipment ensure sterile production environments that meet the strictest international standards.
               </p>
               
               <div className="flex flex-wrap items-center gap-4">
                 <button className="google-button-primary bg-[#4A93C4]! hover:bg-[#3b7ba8]! cursor-pointer transition-all active:scale-95 shadow-lg shadow-[#4A93C4]/20">
-                  Explore Cleanroom Services
+                  Request Cleanroom Quote
                 </button>
                 <button className="px-8 py-3 rounded-full border border-gray-200 text-[#3c4043] font-medium hover:bg-gray-50 transition-all cursor-pointer hover:border-gray-300 active:scale-95">
-                  View Specialized Equipment
+                  Browse Equipment Catalog
                 </button>
               </div>
 
               {/* Google-style Trust Indicators - Keyword Rich */}
               <div className="mt-16 flex flex-wrap items-center gap-x-8 gap-y-4 grayscale opacity-60">
-                <div className="flex items-center gap-2 cursor-help group" title="Good Manufacturing Practice">
+                <div className="flex items-center gap-2 cursor-help group" title="Good Manufacturing Practice Certified">
                   <FlaskConical size={20} className="group-hover:text-[#4A93C4] transition-colors" />
-                  <span className="text-sm font-medium group-hover:text-[#202124] transition-colors">GMP Certified Design</span>
+                  <span className="text-sm font-medium group-hover:text-[#202124] transition-colors">GMP Certified</span>
                 </div>
-                <div className="flex items-center gap-2 cursor-help group" title="ISO 14644-1 Standards">
+                <div className="flex items-center gap-2 cursor-help group" title="ISO 14644-1 Cleanroom Standards">
                   <Beaker size={20} className="group-hover:text-[#4A93C4] transition-colors" />
-                  <span className="text-sm font-medium group-hover:text-[#202124] transition-colors">ISO 7 & 8 Standards</span>
+                  <span className="text-sm font-medium group-hover:text-[#202124] transition-colors">ISO 14644-1</span>
                 </div>
-                <div className="flex items-center gap-2 cursor-help group" title="Contamination Control">
+                <div className="flex items-center gap-2 cursor-help group" title="H14 HEPA Filtration Systems">
                   <Activity size={20} className="group-hover:text-[#4A93C4] transition-colors" />
-                  <span className="text-sm font-medium group-hover:text-[#202124] transition-colors">HEPA/ULPA Filtration</span>
+                  <span className="text-sm font-medium group-hover:text-[#202124] transition-colors">H14 HEPA Systems</span>
                 </div>
               </div>
             </div>

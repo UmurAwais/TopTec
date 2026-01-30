@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 
 const Contact = () => {
   useEffect(() => {
-    document.title = "Contact Us | TopTec - Get in Touch";
+    document.title = "Contact TopTec | Cleanroom Solutions UAE, Saudi Arabia, Qatar | Get Quote";
     window.scrollTo(0, 0);
   }, []);
 
@@ -22,10 +22,10 @@ const Contact = () => {
             Contact Us
           </span>
           <h1 className="text-4xl lg:text-6xl font-semibold text-[#202124] mb-6 tracking-tight">
-            Let's start a conversation
+            Let's discuss your cleanroom project
           </h1>
           <p className="text-lg text-[#5f6368] max-w-2xl mx-auto leading-relaxed">
-            Whether you have a question about our products, need a custom solution, or just want to say hello, we're here to help.
+            Need a cleanroom quote, technical consultation, or project inquiry? Our pharmaceutical engineering team serves clients across UAE, Saudi Arabia, Qatar, Kenya, Nigeria, Bangladesh, and 40+ countries worldwide.
           </p>
         </motion.div>
       </div>

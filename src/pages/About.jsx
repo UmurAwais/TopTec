@@ -7,7 +7,7 @@ import ContactSection from '../components/ContactSection';
 
 const About = () => {
   useEffect(() => {
-    document.title = "About Us | TopTec - Pharmaceutical Engineering Excellence";
+    document.title = "About TopTec | ISO Certified Cleanroom Manufacturer | Pharmaceutical Engineering";
     window.scrollTo(0, 0);
   }, []);
 
