@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import ImageSlider from '../components/ImageSlider';
 import CategorySection from '../components/CategorySection';
 import ProductCarousel from '../components/ProductCarousel';
 import StatsSection from '../components/StatsSection';
@@ -13,7 +14,13 @@ const Home = () => {
   return (
     <>
       <div className="relative">
-        <Hero />
+        {/* <Hero /> */}
+        
+        {/* Image Slider Section - Full Width */}
+        <section className="pt-24 lg:pt-28">
+          <ImageSlider />
+        </section>
+
         <CategorySection />
         <ProductCarousel />
         <StatsSection />
