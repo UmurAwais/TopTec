@@ -313,7 +313,7 @@ const Navbar = () => {
           query={searchQuery} 
           setQuery={setSearchQuery} 
         />
-        <div className="w-full px-6 lg:px-10 flex justify-between items-center">
+        <div className="w-full px-4 lg:px-6 flex justify-between items-center">
           <div className="flex items-center gap-6">
             <Link 
               to="/"
