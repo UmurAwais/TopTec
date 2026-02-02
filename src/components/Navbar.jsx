@@ -282,18 +282,18 @@ const Navbar = () => {
       ]
     },
     { 
-      name: 'Hvac', 
+      name: 'HVAC', 
       href: '/#hvac',
       subcategories: [
-        { name: 'Ahu (Air Handling Units)', href: '/hvac/ahu' },
-        { name: 'Fcu (Fan Coil Units)', href: '/hvac/fcu' },
+        { name: 'AHU (Air Handling Units)', href: '/hvac/ahu' },
+        { name: 'FCU (Fan Coil Units)', href: '/hvac/fcu' },
         { name: 'Chillers', href: '/hvac/chillers' },
         { name: 'Dehumidifiers / Humidifiers', href: '/hvac/dehumidifiers' },
         { name: 'Ducting Systems', href: '/hvac/ducting' },
         { name: 'Air Diffusers / Grilles', href: '/hvac/diffusers' },
         { name: 'Exhaust & Fresh Air Systems', href: '/hvac/exhaust' },
         { name: 'Pressurization Systems', href: '/hvac/pressurization' },
-        { name: 'Precision Air Conditioning (Hvac)', href: '/hvac/precision-ac' },
+        { name: 'Precision Air Conditioning (HVAC)', href: '/hvac/precision-ac' },
       ]
     },
   ];
