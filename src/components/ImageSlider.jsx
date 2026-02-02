@@ -201,32 +201,30 @@ const ImageSlider = ({
       </div>
 
       {/* Navigation Controls - Show on Hover (Hidden on Mobile) */}
-      <div className="absolute inset-0 pointer-events-none hidden md:block">
-        <div className="relative w-full h-full container mx-auto px-4 lg:px-8">
-          {/* Previous Button */}
-          <motion.button
-            onClick={goToPrevious}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: isHovered ? 1 : 0, x: isHovered ? 0 : 20 }}
-            transition={{ duration: 0.3 }}
-            className="pointer-events-auto absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 p-3 lg:p-4 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white rounded-full transition-all duration-300 hover:scale-110 active:scale-95 border border-white/20 group"
-            aria-label="Previous slide"
-          >
-            <ChevronLeft size={20} className="lg:w-6 lg:h-6 group-hover:-translate-x-0.5 transition-transform" />
-          </motion.button>
+      <div className="absolute inset-0 pointer-events-none hidden md:block z-30">
+        {/* Previous Button */}
+        <motion.button
+          onClick={goToPrevious}
+          initial={false}
+          animate={{ opacity: isHovered ? 1 : 0 }}
+          transition={{ duration: 0.3 }}
+          className="opacity-0 pointer-events-auto absolute left-4 top-1/2 -translate-y-1/2 p-3 lg:p-4 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white rounded-full transition-transform duration-300 hover:scale-110 active:scale-95 border border-white/20 group"
+          aria-label="Previous slide"
+        >
+          <ChevronLeft size={20} className="lg:w-6 lg:h-6 group-hover:-translate-x-0.5 transition-transform" />
+        </motion.button>
 
-          {/* Next Button */}
-          <motion.button
-            onClick={goToNext}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: isHovered ? 1 : 0, x: isHovered ? 0 : -20 }}
-            transition={{ duration: 0.3 }}
-            className="pointer-events-auto absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 p-3 lg:p-4 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white rounded-full transition-all duration-300 hover:scale-110 active:scale-95 border border-white/20 group"
-            aria-label="Next slide"
-          >
-            <ChevronRight size={20} className="lg:w-6 lg:h-6 group-hover:translate-x-0.5 transition-transform" />
-          </motion.button>
-        </div>
+        {/* Next Button */}
+        <motion.button
+          onClick={goToNext}
+          initial={false}
+          animate={{ opacity: isHovered ? 1 : 0 }}
+          transition={{ duration: 0.3 }}
+          className="opacity-0 pointer-events-auto absolute right-4 top-1/2 -translate-y-1/2 p-3 lg:p-4 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white rounded-full transition-transform duration-300 hover:scale-110 active:scale-95 border border-white/20 group"
+          aria-label="Next slide"
+        >
+          <ChevronRight size={20} className="lg:w-6 lg:h-6 group-hover:translate-x-0.5 transition-transform" />
+        </motion.button>
       </div>
 
       {/* Slide Indicators */}
