@@ -83,13 +83,13 @@ const ImageSlider = ({
 
   return (
     <div 
-      className={`relative w-full pt-10 lg:pt-0 h-100 sm:h-125 md:h-150 lg:h-160 overflow-hidden shadow-2xl group ${className}`}
+      className={`relative w-full pt-10 lg:pt-0 h-100 sm:h-125 md:h-150 lg:h-160 overflow-hidden shadow-2xl group bg-gray-900 ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Slides Container */}
-      <div className="relative w-full h-full">
-        <AnimatePresence initial={false} custom={direction} mode="wait">
+      <div className="relative w-full h-full bg-gray-900">
+        <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={currentIndex}
             custom={direction}
@@ -99,7 +99,7 @@ const ImageSlider = ({
             exit="exit"
             transition={{
               x: { type: "spring", stiffness: 200, damping: 30 },
-              opacity: { duration: 0.4 }
+              opacity: { duration: 0.2 }
             }}
             className="absolute inset-0"
           >
