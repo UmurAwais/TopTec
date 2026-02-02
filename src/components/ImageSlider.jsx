@@ -28,27 +28,15 @@ const ImageSlider = ({
     },
     {
       url: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=800&fit=crop&q=80',
-      title: 'Advanced Laboratory Solutions',
-      subtitle: 'Precision Equipment for Pharmaceutical Excellence',
-      badge: 'ISO Certified'
+      title: 'Complete Cleanroom Solutions',
+      subtitle: 'From modular cleanroom panels and HEPA filtration to pharmaceutical-grade HVAC systems - we deliver ISO-certified sterile environments for biotech, pharma, and healthcare facilities across UAE, Saudi Arabia, and beyond',
+      badge: 'ISO 14644-1 Certified'
     },
     {
       url: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1920&h=800&fit=crop&q=80',
-      title: 'Cleanroom Technology',
-      subtitle: 'State-of-the-Art Sterile Processing Facilities',
+      title: 'Precision Laboratory Equipment',
+      subtitle: 'HPLC systems, dissolution testers, analytical instruments, and GMP-compliant production machinery for pharmaceutical quality control and manufacturing excellence',
       badge: 'GMP Compliant'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&h=800&fit=crop&q=80',
-      title: 'HVAC Systems',
-      subtitle: 'Climate Control for Critical Environments',
-      badge: 'Energy Efficient'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1920&h=800&fit=crop&q=80',
-      title: 'Quality Assurance',
-      subtitle: 'Certified Compliance & Validation Services',
-      badge: 'FDA Approved'
     }
   ];
 
@@ -71,9 +59,12 @@ const ImageSlider = ({
 
   // Auto-play
   useEffect(() => {
+    // Don't auto-play if user is hovering
+    if (isHovered) return;
+    
     const interval = setInterval(goToNext, autoPlayInterval);
     return () => clearInterval(interval);
-  }, [goToNext, autoPlayInterval]);
+  }, [goToNext, autoPlayInterval, isHovered]);
 
   const slideVariants = {
     enter: (direction) => ({
