@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { X, Search as SearchIcon, Menu, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -30,7 +30,7 @@ const Navbar = () => {
       name: 'Air Filters', 
       href: '/#filters',
       subcategories: [
-        { name: 'Hepa Filters', href: '/filters/hepa' },
+        { name: 'HEPA Filters', href: '/filters/hepa' },
         { name: 'Pre Filters', href: '/filters/pre' },
         { name: 'Carbon/Activated Carbon Filters', href: '/filters/carbon' },
         { name: 'Bag Filters', href: '/filters/bag' },
@@ -38,7 +38,7 @@ const Navbar = () => {
         { name: 'Box/Panel Filters', href: '/filters/box-panel' },
         { name: 'Compact Filters', href: '/filters/compact' },
         { name: 'Washable / Reusable Filters', href: '/filters/washable' },
-        { name: 'Terminal Hepa Box', href: '/filters/terminal-hepa' },
+        { name: 'Terminal HEPA Box', href: '/filters/terminal-hepa' },
       ]
     },
     { 
@@ -53,7 +53,7 @@ const Navbar = () => {
         { name: 'Sampling Booths', href: '/air/sampling-booths' },
         { name: 'Dispensing Booths', href: '/air/dispensing-booths' },
         { name: 'Air Showers', href: '/air/air-showers' },
-        { name: 'Fan Filter Units (Ffu)', href: '/air/ffu' },
+        { name: 'Fan Filter Units (FFU)', href: '/air/ffu' },
         { name: 'Pharma Doors', href: '/air/doors' },
         { name: 'Pharma Windows', href: '/air/windows' },
         { name: 'Cross-Over Bench', href: '/air/cross-over-bench' },
@@ -75,7 +75,7 @@ const Navbar = () => {
         { name: 'Continues / Modular Lab Benches', href: '/furniture/modular-benches' },
         { name: 'Central / Island Work Tables', href: '/furniture/island-tables' },
         { name: 'Designing / Drafting Tables', href: '/furniture/drafting-tables' },
-        { name: 'Ss Working Tables (Hygienic Grade)', href: '/furniture/ss-working-tables' },
+        { name: 'SS Working Tables (Hygienic Grade)', href: '/furniture/ss-working-tables' },
         { name: 'Stainless Steel Sinks', href: '/furniture/ss-sinks' },
         { name: 'Hand Wash Stations', href: '/furniture/hand-wash' },
         { name: 'Eye Wash / Safety Shower', href: '/furniture/safety-shower' },
@@ -107,7 +107,7 @@ const Navbar = () => {
             { name: 'Double Cone Mixer', href: '/machinery/capsule/double-cone-mixer' },
             { name: 'Capsule Polisher', href: '/machinery/capsule/polisher' },
             { name: 'Capsule Filling Machine', href: '/machinery/capsule/filling-machine' },
-            { name: 'Ss Tub For Powder', href: '/machinery/capsule/ss-tub' },
+            { name: 'SS Tub For Powder', href: '/machinery/capsule/ss-tub' },
           ]
         },
         {
@@ -115,10 +115,10 @@ const Navbar = () => {
           href: '/machinery/liquid-syrup',
           subcategories: [
             { name: 'Liquid Filling Line', href: '/machinery/liquid/filling-line' },
-            { name: 'Manufacturing Tank With Silversan', href: '/machinery/liquid/tank' },
+            { name: 'Manufacturing Tank With SilverSan', href: '/machinery/liquid/tank' },
             { name: 'Storage Tank', href: '/machinery/liquid/storage-tank' },
             { name: 'Silver San', href: '/machinery/liquid/silver-san' },
-            { name: 'Filtration Unit With Pump', href: '/machinery/liquid/filtration' },
+            { name: 'Filtration Unit with Pump', href: '/machinery/liquid/filtration' },
             { name: 'Bottle Blowing Machine', href: '/machinery/liquid/bottle-blowing' },
             { name: 'Labeling Machine', href: '/machinery/liquid/labeling' },
             { name: 'Colloid Mill', href: '/machinery/liquid/colloid-mill' },
@@ -183,11 +183,11 @@ const Navbar = () => {
           name: 'Chromatography Equipment',
           href: '/science/chromatography',
           subcategories: [
-            { name: 'Hplc', href: '/science/chromatography/hplc' },
-            { name: 'Uv Spectrophotometer', href: '/science/chromatography/uv' },
-            { name: 'Atomic Absorption (Aas)', href: '/science/chromatography/aas' },
+            { name: 'HPLC', href: '/science/chromatography/hplc' },
+            { name: 'UV Spectrophotometer', href: '/science/chromatography/uv' },
+            { name: 'Atomic Absorption (AAS)', href: '/science/chromatography/aas' },
             { name: 'Liquid Particle Counter', href: '/science/chromatography/particle-counter' },
-            { name: 'Toc Analyzer', href: '/science/chromatography/toc' },
+            { name: 'TOC Analyzer', href: '/science/chromatography/toc' },
           ]
         },
         {
@@ -216,7 +216,7 @@ const Navbar = () => {
             { name: 'Air Particle Counter', href: '/science/microbiological/particle-counter' },
             { name: 'Autoclave', href: '/science/microbiological/autoclave' },
             { name: 'Colony Counter', href: '/science/microbiological/colony-counter' },
-            { name: 'Co2 / Cool Incubator', href: '/science/microbiological/incubator' },
+            { name: 'CO2 / Cool Incubator', href: '/science/microbiological/incubator' },
             { name: 'Microbial Air Sampler', href: '/science/microbiological/air-sampler' },
             { name: 'Anemometer / Nano Meters', href: '/science/microbiological/anemometer' },
             { name: 'Biological Microscope', href: '/science/microbiological/microscope' },
@@ -230,7 +230,7 @@ const Navbar = () => {
             { name: 'Stereo Microscope', href: '/science/optical/stereo-microscope' },
             { name: 'Polarimeter', href: '/science/optical/polarimeter' },
             { name: 'Refractometer', href: '/science/optical/refractometer' },
-            { name: 'Uv Inspection Lamp (Tlc)', href: '/science/optical/uv-lamp' },
+            { name: 'UV Inspection Lamp (TLC)', href: '/science/optical/uv-lamp' },
             { name: 'Colorimeter', href: '/science/optical/colorimeter' },
             { name: 'Turbidity Meter', href: '/science/optical/turbidity' },
             { name: 'Lux Meter', href: '/science/optical/lux' },
@@ -252,14 +252,14 @@ const Navbar = () => {
           name: 'Titration / Measuring',
           href: '/science/titration',
           subcategories: [
-            { name: 'Ph Meter', href: '/science/titration/ph' },
+            { name: 'pH Meter', href: '/science/titration/ph' },
             { name: 'Conductivity Meter', href: '/science/titration/conductivity' },
             { name: 'Karl Fischer Titrator', href: '/science/titration/karl-fischer' },
             { name: 'Potentiometric Titrator', href: '/science/titration/potentiometric' },
             { name: 'Melting Point Apparatus', href: '/science/titration/melting-point' },
-            { name: 'Cod / Bod Analyzer', href: '/science/titration/cod-bod' },
-            { name: 'Dissolved Oxygen (Do) Meter', href: '/science/titration/do-meter' },
-            { name: 'Tds Meter', href: '/science/titration/tds' },
+            { name: 'COD / BOD Analyzer', href: '/science/titration/cod-bod' },
+            { name: 'Dissolved Oxygen (DO) Meter', href: '/science/titration/do-meter' },
+            { name: 'TDS Meter', href: '/science/titration/tds' },
             { name: 'Viscosity Measuring Apparatus', href: '/science/titration/viscosity' },
             { name: 'Auto Titrator / Digital Burette', href: '/science/titration/auto-titrator' },
           ]
@@ -270,11 +270,11 @@ const Navbar = () => {
       name: 'Sterile Processing', 
       href: '/#sterile',
       subcategories: [
-        { name: 'Cleanroom Panels (Puf / Pir / Modular)', href: '/sterile/panels' },
-        { name: 'Cleanroom Doors (Hermetically Sealed / Ss)', href: '/sterile/doors' },
+        { name: 'Cleanroom Panels (PUF / PIR / Modular)', href: '/sterile/panels' },
+        { name: 'Cleanroom Doors (Hermetically Sealed / SS)', href: '/sterile/doors' },
         { name: 'Flooring (Epoxy / Vinyl)', href: '/sterile/flooring' },
         { name: 'Cleanroom Lighting', href: '/sterile/lighting' },
-        { name: 'Cleanroom Furniture (Ss & Ms Powder Coated)', href: '/sterile/furniture' },
+        { name: 'Cleanroom Furniture (SS & MS Powder Coated)', href: '/sterile/furniture' },
         { name: 'Garment Storage Cabinets', href: '/sterile/storage' },
         { name: 'Clean Tunnels', href: '/sterile/tunnels' },
         { name: 'Validation & Certification Services', href: '/sterile/validation' },
@@ -282,18 +282,18 @@ const Navbar = () => {
       ]
     },
     { 
-      name: 'Hvac', 
+      name: 'HVAC', 
       href: '/#hvac',
       subcategories: [
-        { name: 'Ahu (Air Handling Units)', href: '/hvac/ahu' },
-        { name: 'Fcu (Fan Coil Units)', href: '/hvac/fcu' },
+        { name: 'AHU (Air Handling Units)', href: '/hvac/ahu' },
+        { name: 'FCU (Fan Coil Units)', href: '/hvac/fcu' },
         { name: 'Chillers', href: '/hvac/chillers' },
         { name: 'Dehumidifiers / Humidifiers', href: '/hvac/dehumidifiers' },
         { name: 'Ducting Systems', href: '/hvac/ducting' },
         { name: 'Air Diffusers / Grilles', href: '/hvac/diffusers' },
         { name: 'Exhaust & Fresh Air Systems', href: '/hvac/exhaust' },
         { name: 'Pressurization Systems', href: '/hvac/pressurization' },
-        { name: 'Precision Air Conditioning (Hvac)', href: '/hvac/precision-ac' },
+        { name: 'Precision Air Conditioning (HVAC)', href: '/hvac/precision-ac' },
       ]
     },
   ];

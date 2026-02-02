@@ -66,8 +66,8 @@ const NavItem = ({ item }) => {
       {item.href.startsWith('/') && !item.href.includes('#') ? (
         <Link 
           to={item.href}
-          className={`flex items-center gap-1 px-3 py-2 rounded-full cursor-pointer text-[13px] font-medium transition-all tracking-normal outline-none whitespace-nowrap ${
-            isOpen ? 'bg-gray-50 text-[#4A93C4]' : 'text-[#5f6368] hover:text-[#202124] hover:bg-gray-50'
+          className={`flex items-center gap-1 px-4 py-2 cursor-pointer text-[13px] font-medium transition-all tracking-wide outline-none whitespace-nowrap ${
+            isOpen ? 'text-[#4A93C4]' : 'text-[#3c4043] hover:text-[#4A93C4]'
           }`}
         >
           {item.name}
@@ -81,8 +81,8 @@ const NavItem = ({ item }) => {
       ) : (
         <a 
           href={item.href}
-          className={`flex items-center gap-1 px-3 py-2 rounded-full cursor-pointer text-[13px] font-medium transition-all tracking-normal outline-none whitespace-nowrap ${
-            isOpen ? 'bg-gray-50 text-[#4A93C4]' : 'text-[#5f6368] hover:text-[#202124] hover:bg-gray-50'
+          className={`flex items-center gap-1 px-4 py-2 cursor-pointer text-[13px] font-medium transition-all tracking-wide outline-none whitespace-nowrap ${
+            isOpen ? 'text-[#4A93C4]' : 'text-[#3c4043] hover:text-[#4A93C4]'
           }`}
         >
           {item.name}
