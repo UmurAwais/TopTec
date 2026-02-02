@@ -83,7 +83,7 @@ const ImageSlider = ({
 
   return (
     <div 
-      className={`relative w-full h-100 sm:h-125 md:h-150 lg:h-175 overflow-hidden shadow-2xl group ${className}`}
+      className={`relative w-full pt-10 lg:pt-0 h-100 sm:h-125 md:h-150 lg:h-160 overflow-hidden shadow-2xl group ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -257,8 +257,8 @@ const ImageSlider = ({
       )}
 
       {/* Slide Counter */}
-      <div className="absolute top-4 sm:top-6 md:top-8 right-4 sm:right-6 md:right-8 z-20 px-3 sm:px-4 py-1.5 sm:py-2 bg-black/30 backdrop-blur-md rounded-full border border-white/20">
-        <span className="text-white text-[10px] sm:text-xs md:text-sm font-medium">
+      <div className="absolute top-16 sm:top-6 md:top-8 right-4 sm:right-6 md:right-8 z-20 px-3 sm:px-4 py-1.5 sm:py-2 bg-black/40 backdrop-blur-md rounded-full border border-white/20">
+        <span className="text-white text-xs sm:text-xs md:text-sm font-semibold">
           {String(currentIndex + 1).padStart(2, '0')} / {String(slides.length).padStart(2, '0')}
         </span>
       </div>
