@@ -27,7 +27,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Email Our Engineers</div>
-                  <div className="text-xl text-white font-medium">projects@toptec.com</div>
+                  <div className="text-xl text-white font-medium">caretoptec@gmail.com</div>
                 </div>
               </div>
 
@@ -37,7 +37,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Global Hotline</div>
-                  <div className="text-xl text-white font-medium">+1 (800) TOP-TEC-0</div>
+                  <div className="text-xl text-white font-medium">+92 323 8491966</div>
                 </div>
               </div>
 
@@ -47,7 +47,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Global HQ</div>
-                  <div className="text-xl text-white font-medium">Tech District, Science Park <br/> Floor 12, Innovation Tower</div>
+                  <div className="text-xl text-white font-medium">12-A, 1st Floor, 1st Commercial Lane,<br>Phase 2, DHA, Karachi, Pakistan</br></div>
                 </div>
               </div>
             </div>
