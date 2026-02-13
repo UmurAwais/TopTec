@@ -22,7 +22,7 @@ const Contact = () => {
             Contact Us
           </span>
           <h1 className="text-4xl lg:text-6xl font-semibold text-[#202124] mb-6 tracking-tight">
-            Let's discuss your cleanroom project
+            Let's discuss your cleanroom laboratory solution project
           </h1>
           <p className="text-lg text-[#5f6368] max-w-2xl mx-auto leading-relaxed">
             Need a cleanroom quote, technical consultation, or project inquiry? Our pharmaceutical engineering team serves clients across UAE, Saudi Arabia, Qatar, Kenya, Nigeria, Bangladesh, and 14+ countries worldwide.
