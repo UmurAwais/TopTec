@@ -47,7 +47,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Global HQ</div>
-                  <div className="text-xl text-white font-medium">12-A, 1st Floor, 1st Commercial Lane,<br>Phase 2, DHA, Karachi, Pakistan</br></div>
+                  <div className="text-xl text-white font-medium">12-A, 1st Floor, 1st Commercial Lane,<br />Phase 2, DHA, Karachi, Pakistan</div>
                 </div>
               </div>
             </div>
