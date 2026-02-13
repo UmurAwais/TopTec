@@ -25,7 +25,7 @@ const Contact = () => {
             Let's discuss your cleanroom project
           </h1>
           <p className="text-lg text-[#5f6368] max-w-2xl mx-auto leading-relaxed">
-            Need a cleanroom quote, technical consultation, or project inquiry? Our pharmaceutical engineering team serves clients across UAE, Saudi Arabia, Qatar, Kenya, Nigeria, Bangladesh, and 40+ countries worldwide.
+            Need a cleanroom quote, technical consultation, or project inquiry? Our pharmaceutical engineering team serves clients across UAE, Saudi Arabia, Qatar, Kenya, Nigeria, Bangladesh, and 14+ countries worldwide.
           </p>
         </motion.div>
       </div>
@@ -48,7 +48,7 @@ const Contact = () => {
                 <div>
                   <h3 className="text-lg font-semibold text-[#202124] mb-1">Email Us</h3>
                   <p className="text-[#5f6368] text-sm mb-2">Our friendly team is here to help.</p>
-                  <a href="mailto:info@toptec.com" className="text-[#4A93C4] font-medium hover:underline">info@toptec.com</a>
+                  <a href="mailto: caretoptec@gmail.com" className="text-[#4A93C4] font-medium hover:underline"> caretoptec@gmail.com</a>
                 </div>
               </div>
 
