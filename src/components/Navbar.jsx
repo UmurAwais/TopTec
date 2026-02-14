@@ -28,7 +28,7 @@ const Navbar = () => {
   const navLinks = [
     { 
       name: 'Air Filters', 
-      href: '/#filters',
+      href: '/categories/air-filters',
       subcategories: [
         { name: 'Hepa Filters', href: '/filters/hepa' },
         { name: 'Pre Filters', href: '/filters/pre' },
@@ -43,7 +43,7 @@ const Navbar = () => {
     },
     { 
       name: 'Air Cleaning', 
-      href: '/#air',
+      href: '/categories/air-cleaning',
       subcategories: [
         { name: 'Laminar Air Flow Hoods', href: '/air/laminar-flow' },
         { name: 'Biosafety Cabinets', href: '/air/biosafety-cabinets' },
@@ -61,7 +61,7 @@ const Navbar = () => {
     },
     { 
       name: 'Laboratory Furniture', 
-      href: '/#furniture',
+      href: '/categories/laboratory-furniture',
       subcategories: [
         { name: 'Employees Lockers', href: '/furniture/employees-lockers' },
         { name: 'Stainless Steel Lockers', href: '/furniture/ss-lockers' },
@@ -86,7 +86,7 @@ const Navbar = () => {
     },
     { 
       name: 'Production Machinery', 
-      href: '/#machinery',
+      href: '/categories/production-machinery',
       subcategories: [
         {
           name: 'Tablet Section Machines',
@@ -177,7 +177,7 @@ const Navbar = () => {
     },
     { 
       name: 'Laboratory Equipment', 
-      href: '/#science',
+      href: '/categories/laboratory-equipment',
       subcategories: [
         {
           name: 'Chromatography Equipment',
@@ -268,7 +268,7 @@ const Navbar = () => {
     },
     { 
       name: 'Sterile Processing', 
-      href: '/#sterile',
+      href: '/categories/sterile-processing',
       subcategories: [
         { name: 'Cleanroom Panels (Puf / Pir / Modular)', href: '/sterile/panels' },
         { name: 'Cleanroom Doors (Hermetically Sealed / Ss)', href: '/sterile/doors' },
@@ -283,7 +283,7 @@ const Navbar = () => {
     },
     { 
       name: 'HVAC', 
-      href: '/#hvac',
+      href: '/categories/hvac-systems',
       subcategories: [
         { name: 'AHU (Air Handling Units)', href: '/hvac/ahu' },
         { name: 'FCU (Fan Coil Units)', href: '/hvac/fcu' },
