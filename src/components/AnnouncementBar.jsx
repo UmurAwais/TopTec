@@ -18,7 +18,7 @@ const AnnouncementBar = ({ isScrolled }) => {
             Update
           </span>
           <span className="text-[13px] font-normal text-white">
-            Now serving pharmaceutical facilities across UAE, Saudi Arabia, Qatar, Kenya, Nigeria, and 40+ countries. <button className="text-[#4A93C4] hover:underline font-medium ml-1">View global projects</button>
+            Now serving pharmaceutical facilities across UAE, Saudi Arabia, Qatar, Kenya, Nigeria, and 14+ countries. <button className="text-[#4A93C4] hover:underline font-medium ml-1">View global projects</button>
           </span>
         </div>
       </div>

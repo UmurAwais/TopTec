@@ -15,12 +15,23 @@ const AirFilters = () => {
     { name: 'Terminal Hepa Box', href: '/filters/terminal-hepa' },
   ];
 
+  const products = [
+    { name: 'Ultra-Flow HEPA H14', description: '99.995% efficiency filters for absolute air purity in critical manufacturing zones.', image: '/slider/corridor.jpg' },
+    { name: 'Activated Carbon Nexus', description: 'Multi-stage molecular filtration for superior odor and VOC removal.', image: '/slider/cleanroom-suit.jpg' },
+    { name: 'V-Bank High Capacity', description: 'Large surface area filters designed for high airflow HVAC systems.', image: '/slider/cleanroom-hall.jpg' },
+    { name: 'Washable Pre-Filter Pro', description: 'Durable and reusable pre-filtration stages to extend primary filter life.', image: '/slider/production.jpg' },
+    { name: 'Compact Bag Filter', description: 'Multi-pocket synthetic media filters for high dust holding capacity.', image: '/slider/lab-work.jpg' },
+    { name: 'Terminal HEPA Module', description: 'Ceiling mount filtration units for laminar air distribution in cleanrooms.', image: '/slider/lab-microscope.jpg' },
+  ];
+
   return (
     <CategoryPage 
       title="Air Filters"
       description="H14 HEPA filters, pre-filters, activated carbon filters, and bag filters engineered for pharmaceutical cleanrooms and sterile manufacturing environments."
       icon={<Filter size={32} />}
+      image="/slider/corridor.jpg"
       subcategories={subcategories}
+      products={products}
     />
   );
 };

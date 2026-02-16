@@ -14,6 +14,8 @@ import LaboratoryEquipment from './pages/categories/laboratory-equipment/index.j
 import SterileProcessing from './pages/categories/sterile-processing/index.jsx'
 import HVACSystems from './pages/categories/hvac-systems/index.jsx'
 
+import ProductPage from './pages/ProductPage.jsx'
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />,
+      },
+      {
+        path: "product/:slug",
+        element: <ProductPage />,
       },
       {
         path: "categories",
