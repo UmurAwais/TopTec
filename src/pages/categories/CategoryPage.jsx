@@ -148,8 +148,8 @@ const CategoryPage = ({ title, description, icon, image, subcategories = [], pro
                                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                               />
                               <div className="absolute top-4 left-4">
-                                <span className="px-3 py-1 bg-[#202124] text-white text-[9px] font-bold uppercase tracking-widest rounded-full">
-                                  Model {2026 + idx}
+                                <span className="px-3 py-1 bg-[#4A93C4] text-white text-[9px] font-bold uppercase tracking-widest rounded-full shadow-lg shadow-[#4A93C4]/20 border border-white/20">
+                                  Premium Grade
                                 </span>
                               </div>
                             </div>

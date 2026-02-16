@@ -25,7 +25,7 @@ const AirCleaning = () => {
       title="Air Cleaning"
       description="Laminar flow hoods, Class II biosafety cabinets, and dynamic air showers that maintain ISO Class 5 cleanroom standards for biotech labs."
       icon={<Wind size={32} />}
-      image="/slider/cleanroom-hall.jpg"
+      image="https://toptec.pk/wp-content/uploads/2024/04/Air-Shower-Image-768x768.png"
       subcategories={subcategories}
       products={airCleaningProducts}
     />
