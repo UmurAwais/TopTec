@@ -181,7 +181,7 @@ const CategoryPage = ({ title, description, icon, image, subcategories = [], pro
                 {products.length > 0 ? (
                   <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-8">
                     {products.map((product, idx) => {
-                      const slug = product.name.toLowerCase().replace(/ /g, '-').replace(/[^\w-]/g, '');
+                      const slug = product.slug || product.name.toLowerCase().replace(/ /g, '-').replace(/[^\w-]/g, '');
                       return (
                         <motion.div 
                           key={idx}

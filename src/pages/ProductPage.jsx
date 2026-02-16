@@ -17,58 +17,13 @@ import {
   FileText
 } from 'lucide-react';
 
-// This would ideally come from a central data file
-const productsData = {
-  // Air Cleaning
-  'laminar-air-flow-pro': {
-    name: 'Laminar Air Flow Pro',
-    category: 'Air Cleaning',
-    description: 'Advanced ISO Class 5 laminar flow hood for sterile pharmaceutical compounding.',
-    image: '/slider/cleanroom-suit.jpg',
-    features: [
-      'ISO Class 5 (Class 100) environment',
-      'H14 HEPA filtration (99.995% efficiency)',
-      'Digital airflow velocity monitoring',
-      'Stainless steel 304/316L construction',
-      'Low noise centrifugal fans'
-    ],
-    specs: {
-      'Working Area': '1200 x 600 x 600 mm',
-      'Filter Type': 'H14 HEPA Filter',
-      'Air Velocity': '0.45 m/s ± 20%',
-      'Power Supply': '220V / 50Hz',
-      'Noise Level': '< 60 dB(A)'
-    }
-  },
-  'biosafety-cabinet-gen-2': {
-    name: 'Biosafety Cabinet Gen-2',
-    category: 'Air Cleaning',
-    description: 'Class II Type A2 cabinet providing personnel, product, and environmental protection.',
-    image: '/slider/lab-work.jpg',
-    features: [
-      'Motorized front window',
-      'ULPA filter (99.999% efficiency)',
-      'Real-time LCD status display',
-      'UV sterilization cycle',
-      'Ergonomic 10° tilted front'
-    ],
-    specs: {
-      'Protection Type': 'Class II Type A2',
-      'Inflow Velocity': '0.53 m/s',
-      'Downflow Velocity': '0.33 m/s',
-      'Filters': 'Dual ULPA Filters',
-      'Lighting': '> 1000 Lux'
-    }
-  },
-  // Add other products here...
-};
+import { getProductBySlug } from '../data';
 
 const ProductPage = () => {
   const { slug } = useParams();
   const [activeTab, setActiveTab] = useState('overview');
   
-  // Fallback for demo purposes if slug doesn't exist in our limited map
-  const product = productsData[slug] || {
+  const product = getProductBySlug(slug) || {
     name: slug?.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') || 'Premium Equipment',
     category: 'Technical Solutions',
     description: 'High-performance pharmaceutical grade equipment designed for precision, durability, and compliance with global standards.',
@@ -308,25 +263,50 @@ const ProductPage = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="max-w-4xl"
+                  className="w-full"
                 >
-                  <div className="bg-gray-50 rounded-[2.5rem] overflow-hidden border border-gray-100 shadow-sm">
-                    <table className="w-full text-left border-collapse">
-                      <thead>
-                        <tr className="bg-white">
-                          <th className="px-10 py-6 text-sm font-bold uppercase tracking-[0.2em] text-[#202124] border-b border-gray-100">Parameter</th>
-                          <th className="px-10 py-6 text-sm font-bold uppercase tracking-[0.2em] text-[#4A93C4] border-b border-gray-100">Specification</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {Object.entries(product.specs).map(([key, value], i) => (
-                          <tr key={i} className="hover:bg-white transition-colors group">
-                            <td className="px-10 py-6 text-sm font-medium text-[#5f6368] group-hover:text-[#202124]">{key}</td>
-                            <td className="px-10 py-6 text-sm font-bold text-[#202124]">{value}</td>
+                  <div className="bg-gray-50 rounded-[2.5rem] overflow-x-auto border border-gray-100 shadow-sm no-scrollbar">
+                    {product.technicalTable ? (
+                      <table className="w-full text-left border-collapse min-w-200">
+                        <thead>
+                          <tr className="bg-white">
+                            {product.technicalTable.headers.map((header, i) => (
+                              <th key={i} className="px-8 py-6 text-[10px] font-bold uppercase tracking-[0.2em] text-[#202124] border-b border-gray-100 whitespace-nowrap">
+                                {header}
+                              </th>
+                            ))}
                           </tr>
-                        ))}
-                      </tbody>
-                    </table>
+                        </thead>
+                        <tbody>
+                          {product.technicalTable.rows.map((row, i) => (
+                            <tr key={i} className="hover:bg-white transition-colors group">
+                              {row.map((cell, j) => (
+                                <td key={j} className={`px-8 py-5 text-sm ${j === 0 ? 'font-bold text-[#4A93C4]' : 'text-[#5f6368]'} border-b border-gray-50/50`}>
+                                  {cell}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    ) : (
+                      <table className="w-full text-left border-collapse">
+                        <thead>
+                          <tr className="bg-white">
+                            <th className="px-10 py-6 text-sm font-bold uppercase tracking-[0.2em] text-[#202124] border-b border-gray-100">Parameter</th>
+                            <th className="px-10 py-6 text-sm font-bold uppercase tracking-[0.2em] text-[#4A93C4] border-b border-gray-100">Specification</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {Object.entries(product.specs).map(([key, value], i) => (
+                            <tr key={i} className="hover:bg-white transition-colors group">
+                              <td className="px-10 py-6 text-sm font-medium text-[#5f6368] group-hover:text-[#202124]">{key}</td>
+                              <td className="px-10 py-6 text-sm font-bold text-[#202124]">{value}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    )}
                   </div>
                 </motion.div>
               )}

@@ -2,6 +2,8 @@ import React from 'react';
 import CategoryPage from '../CategoryPage';
 import { Wind } from 'lucide-react';
 
+import { airCleaningProducts } from '../../../data/air-cleaning';
+
 const AirCleaning = () => {
   const subcategories = [
     { name: 'Laminar Air Flow Hoods', href: '/air/laminar-flow' },
@@ -18,15 +20,6 @@ const AirCleaning = () => {
     { name: 'Cross-Over Bench', href: '/air/cross-over-bench' },
   ];
 
-  const products = [
-    { name: 'Laminar Air Flow Pro', description: 'Advanced ISO Class 5 laminar flow hood for sterile pharmaceutical compounding.', image: '/slider/cleanroom-suit.jpg' },
-    { name: 'Biosafety Cabinet Gen-2', description: 'Class II Type A2 cabinet providing personnel, product, and environmental protection.', image: '/slider/lab-work.jpg' },
-    { name: 'Mobile Air Shower', description: 'Automated high-velocity air shower for cleanroom entry and exit contamination control.', image: '/slider/cleanroom-hall.jpg' },
-    { name: 'Fume Extraction System', description: 'High-efficiency extraction system for chemical vapors and laboratory fumes.', image: '/slider/lab-microscope.jpg' },
-    { name: 'Dynamic Pass Box', description: 'Interlocked transfer hatch with HEPA filtration for material movement.', image: '/slider/corridor.jpg' },
-    { name: 'Sampling Booth', description: 'Negative pressure booth for safe sampling and weighing of powders.', image: '/slider/production.jpg' },
-  ];
-
   return (
     <CategoryPage 
       title="Air Cleaning"
@@ -34,7 +27,7 @@ const AirCleaning = () => {
       icon={<Wind size={32} />}
       image="/slider/cleanroom-hall.jpg"
       subcategories={subcategories}
-      products={products}
+      products={airCleaningProducts}
     />
   );
 };

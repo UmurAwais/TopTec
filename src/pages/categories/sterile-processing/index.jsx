@@ -2,6 +2,8 @@ import React from 'react';
 import CategoryPage from '../CategoryPage';
 import { Layers } from 'lucide-react';
 
+import { sterileProcessingProducts } from '../../../data/sterile-processing';
+
 const SterileProcessing = () => {
   const subcategories = [
     { name: 'Cleanroom Panels', href: '/sterile/panels' },
@@ -15,15 +17,6 @@ const SterileProcessing = () => {
     { name: 'Turnkey Cleanroom Setup', href: '/sterile/turnkey' },
   ];
 
-  const products = [
-    { name: 'Pure-Entry Air Shower', description: 'Dual-side entry air shower with HEPA-filtered vertical airflow and interlocking doors.', image: '/slider/cleanroom-hall.jpg' },
-    { name: 'Dynamic Pass Box Plus', description: 'Self-cleaning pass-through hatch with UV sterilization and electromagnetic interlocking.', image: '/slider/cleanroom-suit.jpg' },
-    { name: 'Crystal-Floor Epoxy Kit', description: 'Self-leveling pharmaceutical grade epoxy flooring system with anti-bacterial properties.', image: '/slider/corridor.jpg' },
-    { name: 'Pharma-Light Panel', description: 'IP65 rated recessed cleanroom LED light panels with bottom-opening access.', image: '/slider/slide2.webp' },
-    { name: 'Hermetic Sliding Door', description: 'High-seal automatic sliding doors for positive/negative pressure maintenance.', image: '/slider/cleanroom-hall.jpg' },
-    { name: 'Modular Wall Panel System', description: 'Quick-install PIR insulated panels with powder-coated antimicrobial finish.', image: '/slider/lab-work.jpg' },
-  ];
-
   return (
     <CategoryPage 
       title="Sterile Processing"
@@ -31,7 +24,7 @@ const SterileProcessing = () => {
       icon={<Layers size={32} />}
       image="/slider/slide2.webp"
       subcategories={subcategories}
-      products={products}
+      products={sterileProcessingProducts}
     />
   );
 };
