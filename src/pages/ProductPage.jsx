@@ -66,11 +66,7 @@ const ProductPage = () => {
             Back to Catalog
           </Link>
           
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#5f6368] bg-white/50 backdrop-blur-sm px-6 py-2 rounded-full border border-gray-100/50 shadow-sm w-fit"
-          >
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#5f6368] bg-white/50 backdrop-blur-sm px-6 py-2 rounded-full border border-gray-100/50 shadow-sm w-fit">
             <Link to="/" className="hover:text-[#4A93C4] transition-colors">Home</Link>
             <ChevronRight size={10} className="text-gray-300" />
             <span className="text-[#4A93C4]">Categories</span>
@@ -83,17 +79,13 @@ const ProductPage = () => {
             </Link>
             <ChevronRight size={10} className="text-gray-300" />
             <span className="text-gray-400 truncate max-w-25">{product.name}</span>
-          </motion.div>
+          </div>
         </div>
 
         {/* Hero Product Section */}
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start border-b border-gray-100 pb-20">
           {/* Left: Product Image Display */}
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="relative"
-          >
+          <div className="relative">
             <div className="relative z-10 rounded-[2.5rem] overflow-hidden bg-[#F8F9FA] shadow-2xl shadow-gray-200/50 group">
               <img 
                 src={product.image} 
@@ -121,14 +113,10 @@ const ProductPage = () => {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Right: Product Basic Info & CTA */}
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="flex flex-col"
-          >
+          <div className="flex flex-col">
             <span className="inline-block px-4 py-1.5 bg-[#4A93C4]/10 text-[#4A93C4] text-[10px] font-bold uppercase tracking-widest rounded-full mb-6 w-fit">
               TopTec Signature Series
             </span>
@@ -160,7 +148,7 @@ const ProductPage = () => {
                 </button>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Detailed Info Tabs Section */}
@@ -191,11 +179,8 @@ const ProductPage = () => {
           <div className="min-h-110">
             <AnimatePresence mode="wait">
               {activeTab === 'overview' && (
-                <motion.div 
+                <div 
                   key="overview"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
                   className="grid md:grid-cols-2 gap-16"
                 >
                   <div className="space-y-8">
@@ -232,15 +217,12 @@ const ProductPage = () => {
                       Request Validation Samples <ArrowLeft size={14} className="rotate-180" />
                     </button>
                   </div>
-                </motion.div>
+                </div>
               )}
 
               {activeTab === 'features' && (
-                <motion.div 
+                <div 
                   key="features"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
                   className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
                 >
                   {product.features.map((feature, i) => (
@@ -254,15 +236,12 @@ const ProductPage = () => {
                       </p>
                     </div>
                   ))}
-                </motion.div>
+                </div>
               )}
 
               {activeTab === 'technical' && (
-                <motion.div 
+                <div 
                   key="technical"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
                   className="w-full"
                 >
                   <div className="bg-gray-50 rounded-[2.5rem] overflow-x-auto border border-gray-100 shadow-sm no-scrollbar">
@@ -308,7 +287,7 @@ const ProductPage = () => {
                       </table>
                     )}
                   </div>
-                </motion.div>
+                </div>
               )}
             </AnimatePresence>
           </div>

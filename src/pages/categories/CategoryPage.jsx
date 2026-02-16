@@ -14,28 +14,6 @@ const relatedCategories = [
 ];
 
 const CategoryPage = ({ title, description, icon, image, subcategories = [], products = [] }) => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: [0.16, 1, 0.3, 1]
-      }
-    }
-  };
 
   return (
     <div className="min-h-screen bg-white selection:bg-[#4A93C4]/20">
@@ -72,28 +50,16 @@ const CategoryPage = ({ title, description, icon, image, subcategories = [], pro
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="flex flex-col items-start">
               {/* Premium Breadcrumbs */}
-              <motion.div 
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#5f6368] mb-12 bg-white/50 backdrop-blur-sm px-6 py-2 rounded-full border border-gray-100/50 shadow-sm w-fit"
-              >
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#5f6368] mb-12 bg-white/50 backdrop-blur-sm px-6 py-2 rounded-full border border-gray-100/50 shadow-sm w-fit">
                 <Link to="/" className="hover:text-[#4A93C4] transition-colors">Home</Link>
                 <ChevronRight size={10} className="text-gray-300" />
                 <span className="text-[#4A93C4]">Categories</span>
                 <ChevronRight size={10} className="text-gray-300" />
                 <span className="text-gray-400">{title}</span>
-              </motion.div>
+              </div>
 
-              <motion.div 
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
-                className="max-w-xl"
-              >
-                <motion.div 
-                  variants={itemVariants}
-                  className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-8"
-                >
+              <div className="max-w-xl">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-8">
                   {/* Left-Aligned Icon with Glassmorphism */}
                   <div 
                     className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-[#4A93C4] shadow-[0_15px_40px_rgba(74,147,196,0.12)] border border-white relative group overflow-hidden shrink-0"
@@ -111,16 +77,13 @@ const CategoryPage = ({ title, description, icon, image, subcategories = [], pro
                       </span>
                     ))}
                   </h1>
-                </motion.div>
+                </div>
                 
-                <motion.p 
-                  variants={itemVariants}
-                  className="text-[#5f6368] text-xl lg:text-xl leading-relaxed mb-14 font-light"
-                >
+                <p className="text-[#5f6368] text-xl lg:text-xl leading-relaxed mb-14 font-light">
                   {description}
-                </motion.p>
+                </p>
 
-                <motion.div variants={itemVariants} className="flex flex-row items-center gap-4 sm:gap-6 overflow-x-auto no-scrollbar pb-2">
+                <div className="flex flex-row items-center gap-4 sm:gap-6 overflow-x-auto no-scrollbar pb-2">
                   <button className="h-14 sm:h-16 px-6 sm:px-10 bg-[#202124] text-white rounded-2xl font-semibold hover:bg-[#4A93C4] transition-all duration-500 shadow-xl shadow-gray-200 hover:shadow-[#4A93C4]/30 active:scale-95 flex items-center gap-3 group shrink-0 text-sm sm:text-base">
                     <Download size={18} className="group-hover:-translate-y-1 transition-transform" />
                     Technical Catalog
@@ -129,17 +92,12 @@ const CategoryPage = ({ title, description, icon, image, subcategories = [], pro
                     <MessageSquare size={18} />
                     Consult Our Experts
                   </Link>
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
             </div>
 
             {/* Right Side: Category Image */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9, x: 50 }}
-              animate={{ opacity: 1, scale: 1, x: 0 }}
-              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="relative hidden lg:block"
-            >
+            <div className="relative hidden lg:block">
               <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl shadow-[#4A93C4]/20 border-8 border-white">
                 {image ? (
                   <img src={image} alt={title} className="w-full h-auto object-cover aspect-4/3" />
@@ -154,7 +112,7 @@ const CategoryPage = ({ title, description, icon, image, subcategories = [], pro
               {/* Decorative Elements */}
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#4A93C4]/10 rounded-full blur-3xl"></div>
               <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-[#4A93C4]/20 rounded-full blur-3xl"></div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -164,13 +122,7 @@ const CategoryPage = ({ title, description, icon, image, subcategories = [], pro
         <div className="container mx-auto px-8 lg:px-16">
           <div className="grid lg:grid-cols-12 gap-20">
             {/* Left Column: Products & Subcats */}
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="lg:col-span-8 flex flex-col gap-24"
-            >
+            <div className="lg:col-span-8 flex flex-col gap-24">
               <div>
                 <div className="flex items-center justify-between mb-12">
                   <h2 className="text-3xl font-bold text-[#202124]">Signature Products</h2>
@@ -183,12 +135,8 @@ const CategoryPage = ({ title, description, icon, image, subcategories = [], pro
                     {products.map((product, idx) => {
                       const slug = product.slug || product.name.toLowerCase().replace(/ /g, '-').replace(/[^\w-]/g, '');
                       return (
-                        <motion.div 
+                        <div 
                           key={idx}
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: idx * 0.1 }}
                           className="group bg-white border border-gray-100 rounded-2xl flex flex-col h-full hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] transition-all duration-500 overflow-hidden"
                         >
                           <Link to={`/product/${slug}`} className="cursor-pointer flex flex-col h-full">
@@ -233,7 +181,7 @@ const CategoryPage = ({ title, description, icon, image, subcategories = [], pro
                               </div>
                             </div>
                           </Link>
-                        </motion.div>
+                        </div>
                       );
                     })}
                   </div>
@@ -287,17 +235,11 @@ const CategoryPage = ({ title, description, icon, image, subcategories = [], pro
                   )}
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Right Column: Sticky Sidebar Info */}
-            <motion.div 
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="lg:col-span-4"
-            >
-              <div className="sticky top-18 space-y-10">
+            <div className="lg:col-span-4">
+              <div className="sticky top-24 space-y-10">
                 <div className="bg-[#202124] rounded-[2.5rem] p-10 text-white relative overflow-hidden shadow-2xl shadow-gray-400">
                   <div className="absolute top-10 right-10 w-20 h-20 bg-[#4A93C4] rounded-full blur-[60px] opacity-30 animate-pulse"></div>
                   <h3 className="text-[28px] font-bold mb-6 leading-tight">Certified Quality Assurance</h3>
@@ -347,7 +289,7 @@ const CategoryPage = ({ title, description, icon, image, subcategories = [], pro
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
