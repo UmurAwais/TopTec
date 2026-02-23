@@ -299,5 +299,131 @@ TOPTEC pharmaceutical doors play an essential role in preventing cross-contamina
       'Finish': 'Brushed / Mirror Polish',
       'Grade': 'Pharmaceutical / Laboratory'
     }
+  },
+  {
+    slug: 'fan-filter-unit',
+    name: 'Fan Filter Unit',
+    category: 'Air Cleaning Equipments',
+    description: 'Fan filter units are stand-alone units with integrated HEPA-filter, fans, and control systems. They supply purified air to cleanrooms and laboratories within the life-science, food-and-beverage and microelectronic industries by removing harmful airborne particles from recirculating air.\n\nFan filter unit is a containment equipment module utilizing a zoned unidirectional (laminar) down flow supply of air to positively pressurize and purge the working environment from potential contaminants; thereby providing enhanced aseptic work zones for maintaining process integrity and/or product protection. Medical Industry (i.e., operating theatre) Pharmaceutical Industry Research and Development Laboratories',
+    image: 'https://toptec.pk/wp-content/uploads/2024/04/fan-filter-unit.png',
+    features: [
+      'Stand-alone units with integrated HEPA-filter, fans, and control systems',
+      'Supplies purified air to cleanrooms and laboratories',
+      'Zoned unidirectional (laminar) down flow supply of air',
+      'Positively pressurizes and purges working environment from contaminants',
+      'Provides enhanced aseptic work zones for process integrity and product protection'
+    ],
+    specs: {
+      'Modal': 'TTFFU',
+      'Material': 'Stainless Steel 304SUS or 201SUS',
+      'Power Supply': '220VAC 50/60Hz',
+      'Controller': 'Manual Button',
+      'UV Light': 'Installed Optional',
+      'Florescent Light': 'Installed',
+      'Blower Type': 'High Flow',
+      'PVC Curtain': 'All Side'
+    }
+  },
+  {
+    slug: 'laminar-flow-hood',
+    name: 'Laminar Flow Hood',
+    category: 'Air Cleaning Equipments',
+    description: 'A Laminar flow hood/cabinet is an enclosed workstation that creates a contamination-free work environment through filters to capture all the particles entering the cabinet.\n\nThese cabinets protect the work from the environment and are most useful for the aseptic distribution of specific media and plate pouring. Laminar flow cabinets are similar to biosafety cabinets with the only difference being that in laminar flow cabinets the effluent air is drawn into the face of the user. In a biosafety cabinet, both the sample and user are protected while in the laminar flow cabinet, only the sample is protected and not the user.',
+    image: 'https://toptec.pk/wp-content/uploads/2024/12/horizonal-laminar-air-flow-bench-500x500-1.webp',
+    features: [
+      'Creates a contamination-free work environment through filters to capture all particles',
+      'Protects the work from the environment',
+      'Most useful for aseptic distribution of specific media and plate pouring',
+      'Effluent air is drawn into the face of the user',
+      'Protects the sample only (does not protect the user)'
+    ],
+    specs: {
+      'Protection': 'Sample Only',
+      'Application': 'Aseptic distribution, plate pouring',
+      'Airflow': 'Drawn into user face'
+    }
+  },
+  {
+    slug: 'shoes-changing-bench-shoes-cabinet',
+    name: 'Shoes-Changing Bench / Shoes Cabinet',
+    category: 'Air Cleaning Equipments',
+    description: 'Size Can be Customized\nMaterial: Mild Steel\nStainless Steel',
+    image: 'https://toptec.pk/wp-content/uploads/2024/04/shoes.png',
+    features: [
+      'Size Can be Customized',
+      'Available in Mild Steel',
+      'Available in Stainless Steel'
+    ],
+    specs: {
+      'Size': 'Can be Customized',
+      'Material': 'Mild Steel / Stainless Steel'
+    }
+  },
+  {
+    slug: 'ss-pallets',
+    name: 'SS Pallets',
+    category: 'Air Cleaning Equipments',
+    description: 'Introducing our Heavy-Duty Steel Pallets, designed to meet the rigorous demands of industrial and warehouse settings. Crafted with precision from high-quality steel, these pallets provide a robust and reliable solution for efficient material handling and storage.',
+    image: 'https://toptec.pk/wp-content/uploads/2024/12/ss-pallets-768x768.jpg',
+    features: [
+      'Industrial Strength: Built to withstand the toughest industrial environments, offering unparalleled strength and durability.',
+      'High Load Capacity: Engineered for heavy-duty applications, boasting a high load capacity for securely handling substantial quantities of goods.',
+      'Corrosion Resistance: Crafted from corrosion-resistant steel, enduring diverse environmental conditions.',
+      'Versatile Applications: Versatile for warehouses, manufacturing facilities, or logistics operations.',
+      'Space Optimization: Design focused on space optimization, stacking securely for efficient use of storage areas.'
+    ],
+    specs: {
+      'Strength': 'Industrial Strength / Heavy Duty',
+      'Load Capacity': 'High Load Capacity',
+      'Material': 'Corrosion-Resistant Steel / Stainless Steel',
+      'Design': 'Stackable / Space Optimization'
+    }
+  },
+  {
+    slug: 'stainless-steel-trolley',
+    name: 'Stainless Steel Trolley',
+    category: 'Air Cleaning Equipments',
+    description: 'Dimensions and types can be customized.\n\nMaterial:\n- Mild Steel\n- Stainless Steel',
+    image: 'https://toptec.pk/wp-content/uploads/2024/04/STAINLESS-STEEL-CART.png',
+    features: [
+      'Dimensions and types can be customized.',
+      'Available in Mild Steel',
+      'Available in Stainless Steel'
+    ],
+    specs: {
+      'Dimensions': 'Customizable',
+      'Types': 'Customizable',
+      'Material': 'Mild Steel / Stainless Steel'
+    }
+  },
+  {
+    slug: 'stainless-steel-washing-sink',
+    name: 'Stainless Steel Washing Sink',
+    category: 'Air Cleaning Equipments',
+    description: 'Pharmaceutical workshop, clean room, hospital, office, etc.\n\nMaterial:\n- Mild Steel\n- Stainless Steel',
+    image: 'https://toptec.pk/wp-content/uploads/2024/04/washing.png',
+    features: [
+      'Suitable for Pharmaceutical workshop, clean room, hospital, office, etc.',
+      'Available in Mild Steel',
+      'Available in Stainless Steel'
+    ],
+    specs: {
+      'Applications': 'Pharmaceutical workshop, clean room, hospital, office, etc.',
+      'Material': 'Mild Steel / Stainless Steel'
+    }
+  },
+  {
+    slug: 'pharma-door',
+    name: 'Pharma Door',
+    category: 'Air Cleaning Equipments',
+    description: 'Specialized Pharma Door designed for clean room and pharmaceutical applications.',
+    image: 'https://toptec.pk/wp-content/uploads/2024/12/pharma-door.avif',
+    features: [
+      'Designed for clean rooms and pharmaceutical facilities',
+      'High quality cleanroom standard finish'
+    ],
+    specs: {
+      'Application': 'Cleanroom / Pharmaceutical'
+    }
   }
 ];

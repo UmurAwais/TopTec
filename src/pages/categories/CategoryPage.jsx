@@ -14,6 +14,17 @@ const relatedCategories = [
 ];
 
 const CategoryPage = ({ title, description, icon, image, subcategories = [], products = [] }) => {
+  const PRODUCTS_PER_PAGE = 9;
+  const [currentPage, setCurrentPage] = React.useState(1);
+
+  const indexOfLastProduct = currentPage * PRODUCTS_PER_PAGE;
+  const indexOfFirstProduct = indexOfLastProduct - PRODUCTS_PER_PAGE;
+  const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+  const totalPages = Math.ceil(products.length / PRODUCTS_PER_PAGE);
+
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [title]);
 
   return (
     <div className="min-h-screen bg-white selection:bg-[#4A93C4]/20">
@@ -131,8 +142,9 @@ const CategoryPage = ({ title, description, icon, image, subcategories = [], pro
                 </div>
                 
                 {products.length > 0 ? (
-                  <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-8">
-                    {products.map((product, idx) => {
+                  <>
+                    <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-8">
+                      {currentProducts.map((product, idx) => {
                       const slug = product.slug || product.name.toLowerCase().replace(/ /g, '-').replace(/[^\w-]/g, '');
                       return (
                         <div 
@@ -185,6 +197,27 @@ const CategoryPage = ({ title, description, icon, image, subcategories = [], pro
                       );
                     })}
                   </div>
+                  {totalPages > 1 && (
+                    <div className="mt-12 flex justify-center items-center gap-2">
+                      {Array.from({ length: totalPages }).map((_, index) => (
+                        <button
+                          key={index}
+                          onClick={() => {
+                            setCurrentPage(index + 1);
+                            window.scrollTo({ top: 400, behavior: 'smooth' });
+                          }}
+                          className={`w-10 h-10 rounded-xl font-bold flex items-center justify-center transition-all ${
+                            currentPage === index + 1 
+                              ? 'bg-[#4A93C4] text-white shadow-lg shadow-[#4A93C4]/30' 
+                              : 'bg-white text-gray-500 border border-gray-100 hover:border-[#4A93C4] hover:text-[#4A93C4]'
+                          }`}
+                        >
+                          {index + 1}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                  </>
                 ) : (
                   <div className="bg-linear-to-br from-gray-50 to-white border border-gray-100 rounded-[3rem] p-20 flex flex-col items-center justify-center text-center shadow-sm group hover:shadow-xl hover:shadow-[#4A93C4]/5 transition-all duration-700">
                     <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center text-[#4A93C4] mb-8 shadow-inner border border-gray-50 group-hover:scale-110 transition-transform">
