@@ -91,6 +91,26 @@ const CategorySection = () => {
                 </div>
               </Link>
             ))}
+
+            {/* Browse All Products Card */}
+            <Link
+              to="/all-products"
+              className="bg-[#202124] p-8 rounded-3xl border border-transparent shadow-xl hover:shadow-[#202124]/20 transition-all group cursor-pointer flex flex-col h-full relative overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-bl-full translate-x-8 -translate-y-8 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-700"></div>
+              <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white group-hover:bg-[#4A93C4] transition-all duration-500 mb-6 shrink-0 group-hover:scale-110">
+                <ArrowRight size={24} className="-rotate-45" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3 transition-colors">
+                Browse All Products
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-6 grow">
+                Explore our comprehensive catalog of 500+ pharmaceutical-grade machines and components.
+              </p>
+              <div className="flex items-center gap-2 text-[12px] font-bold text-[#4A93C4] mt-auto">
+                View Catalog <ArrowRight size={14} />
+              </div>
+            </Link>
           </div>
         </div>
       </div>

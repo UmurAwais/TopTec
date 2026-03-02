@@ -15,6 +15,7 @@ import SterileProcessing from './pages/categories/sterile-processing/index.jsx'
 import HVACSystems from './pages/categories/hvac-systems/index.jsx'
 
 import ProductPage from './pages/ProductPage.jsx'
+import AllProducts from './pages/AllProducts.jsx'
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "product/:slug",
         element: <ProductPage />,
+      },
+      {
+        path: "all-products",
+        element: <AllProducts />,
       },
       {
         path: "categories",
