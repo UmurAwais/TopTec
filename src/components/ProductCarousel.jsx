@@ -1,71 +1,104 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ArrowRight, ShoppingCart, Info } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
+import ProductCard from './ProductCard';
 
 const products = [
   {
     id: 1,
-    name: 'H14 HEPA Filter System',
-    category: 'Air Filtration',
+    name: 'Bag Filter',
+    category: 'Air Filters',
     price: 'Request Quote',
-    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=400',
-    specs: '99.995% Particle Removal Efficiency'
+    image: 'https://toptec.pk/wp-content/uploads/2024/07/1-2-f5-f9-medium-replacement-air-filter_01m.jpg',
+    specs: 'F6-F9 Efficiency, Synthetic Fiber'
   },
   {
     id: 2,
-    name: 'Laminar Flow Hood - Class II',
-    category: 'Sterile Equipment',
+    name: 'Deep Pleated HEPA Filter',
+    category: 'Air Filters',
     price: 'Request Quote',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400',
-    specs: 'ISO Class 5 Cleanroom Standard'
+    image: 'https://toptec.pk/wp-content/uploads/2024/07/thumbnail-720-tiny.jpg',
+    specs: 'H13 / H14 (up to 99.995%)'
   },
   {
     id: 3,
-    name: 'SS 316L Pass Box',
-    category: 'Material Transfer',
+    name: 'Air Shower',
+    category: 'Air Cleaning',
     price: 'Request Quote',
-    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=400',
-    specs: 'Electromagnetic Interlock System'
+    image: 'https://toptec.pk/wp-content/uploads/2024/04/Air-Shower-Image-768x768.png',
+    specs: 'High-velocity nozzle decontamination'
   },
   {
     id: 4,
-    name: 'Dynamic Air Shower',
-    category: 'Personnel Decontamination',
+    name: 'Biological Safety Cabinet (Class II)',
+    category: 'Air Cleaning',
     price: 'Request Quote',
-    image: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=400',
-    specs: '25 m/s High-Velocity Air Jets'
-  },
-  {
-    id: 5,
-    name: 'Biosafety Cabinet Class II A2',
-    category: 'Laboratory Safety',
-    price: 'Request Quote',
-    image: 'https://images.unsplash.com/photo-1579152276532-a399723a7bca?auto=format&fit=crop&q=80&w=400',
+    image: 'https://toptec.pk/wp-content/uploads/2024/04/BSC-B2-48-2.jpg',
     specs: 'NSF/ANSI 49 Certified'
   },
   {
-    id: 6,
-    name: 'Pharmaceutical AHU System',
-    category: 'HVAC Equipment',
+    id: 5,
+    name: 'Dispensing/Sampling Booth',
+    category: 'Air Cleaning',
     price: 'Request Quote',
-    image: 'https://images.unsplash.com/photo-1581092921461-eab62e92c859?auto=format&fit=crop&q=80&w=400',
-    specs: 'VAV Control with BMS Integration'
+    image: 'https://toptec.pk/wp-content/uploads/2024/12/Dispensingsampling-768x768.jpg',
+    specs: 'Negative pressure environment'
+  },
+  {
+    id: 6,
+    name: 'Fan Filter Unit',
+    category: 'Air Cleaning Equipments',
+    price: 'Request Quote',
+    image: 'https://toptec.pk/wp-content/uploads/2024/04/fan-filter-unit.png',
+    specs: 'Integrated HEPA & fan system'
   },
   {
     id: 7,
-    name: 'Cleanroom Workbench - SS304',
-    category: 'Lab Furniture',
+    name: 'Micro-Scan Digital 4K',
+    category: 'Laboratory Equipment',
     price: 'Request Quote',
-    image: 'https://images.unsplash.com/photo-1581092162384-8987c1794713?auto=format&fit=crop&q=80&w=400',
-    specs: 'Electropolished Stainless Steel'
+    image: '/slider/lab-microscope.jpg',
+    specs: 'Ultra-HD digital imaging'
   },
   {
     id: 8,
-    name: 'Differential Pressure Monitor',
-    category: 'Monitoring Systems',
+    name: 'Precision Dissolution X4',
+    category: 'Laboratory Equipment',
     price: 'Request Quote',
-    image: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=400',
-    specs: '±0.25% Measurement Accuracy'
+    image: '/slider/lab-work.jpg',
+    specs: 'Automated dissolution testing'
+  },
+  {
+    id: 9,
+    name: 'Analytical Balance Pro',
+    category: 'Laboratory Equipment',
+    price: 'Request Quote',
+    image: '/slider/corridor.jpg',
+    specs: 'High-precision stability'
+  },
+  {
+    id: 10,
+    name: 'Rotary Tablet Press 3000',
+    category: 'Production Machinery',
+    price: 'Request Quote',
+    image: '/slider/production.jpg',
+    specs: 'High-speed tablet compaction'
+  },
+  {
+    id: 11,
+    name: 'Precision Capsule Filler',
+    category: 'Production Machinery',
+    price: 'Request Quote',
+    image: '/slider/pharma-pills.jpg',
+    specs: 'Accurate powder/pellet dosing'
+  },
+  {
+    id: 12,
+    name: 'Fluid Bed Dryer',
+    category: 'Production Machinery',
+    price: 'Request Quote',
+    image: '/slider/cleanroom-suit.jpg',
+    specs: 'Efficient granulation & drying'
   }
 ];
 
@@ -111,55 +144,18 @@ const ProductCarousel = () => {
           </div>
         </div>
 
-        {/* Carousel Container */}
+        {/* Carousel Container - 1 Row, 4 Items visible */}
         <div 
           ref={scrollRef}
           className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-8 -mx-4 px-4 lg:mx-0 lg:px-0"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {products.map((product) => (
-            <div 
-              key={product.id}
-              className="min-w-[45%] lg:min-w-[calc(25%-18px)] snap-start group"
-            >
-              <div className="bg-white rounded-4xl border border-gray-100 p-4 transition-all duration-500 hover:shadow-2xl hover:shadow-[#4A93C4]/10 hover:-translate-y-2 h-full flex flex-col">
-                <div className="relative aspect-square rounded-2xl overflow-hidden bg-gray-50 mb-6">
-                  <img 
-                    src={product.image} 
-                    alt={product.name} 
-                    className="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-[10px] font-bold text-[#4A93C4] uppercase tracking-widest border border-white/20">
-                      {product.category}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="px-2 grow">
-                  <h3 className="text-xl font-bold text-[#202124] mb-2 group-hover:text-[#4A93C4] transition-colors">
-                    {product.name}
-                  </h3>
-                  <p className="text-[#5f6368] text-sm mb-4 line-clamp-1">
-                    {product.specs}
-                  </p>
-                </div>
-
-                <div className="px-2 pt-4 border-t border-gray-50 flex items-center justify-between">
-                  <div className="text-sm font-bold text-[#202124]">
-                    {product.price}
-                  </div>
-                  <div className="flex gap-2">
-                    <button className="p-2 rounded-xl bg-gray-50 text-gray-400 hover:bg-[#4A93C4] hover:text-white transition-all cursor-pointer">
-                      <Info size={18} />
-                    </button>
-                    <button className="p-2 rounded-xl bg-gray-50 text-gray-400 hover:bg-[#4A93C4] hover:text-white transition-all cursor-pointer">
-                      <ShoppingCart size={18} />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ProductCard 
+              key={product.id} 
+              product={product} 
+              className="min-w-[85vw] sm:min-w-[45vw] lg:min-w-[calc(25%-18px)] snap-start"
+            />
           ))}
         </div>
       </div>
