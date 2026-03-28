@@ -6,14 +6,14 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white border-t border-gray-100 pt-24 pb-12">
+    <footer className="bg-white border-t border-gray-100 pt-16 lg:pt-24 pb-12">
       <div className="container mx-auto px-8 lg:px-16">
-        <div className="grid lg:grid-cols-12 gap-16 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-20 lg:mb-24">
           
           {/* Brand Column */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-4 md:col-span-2">
             <img src={logo} alt="TopTec" className="h-10 w-auto mb-8" />
-            <p className="text-[#5f6368] text-lg leading-relaxed mb-8 max-w-sm">
+            <p className="text-[#5f6368] text-base lg:text-lg leading-relaxed mb-8 max-w-lg lg:max-w-sm">
               Leading pharmaceutical cleanroom manufacturer serving healthcare facilities across Middle East, Africa, Asia, Europe, and North America. ISO 14644-1 certified cleanroom solutions since 1998.
             </p>
             <div className="flex items-center gap-4">
@@ -31,11 +31,11 @@ const Footer = () => {
 
           {/* Quick Links Column */}
           <div className="lg:col-span-2">
-            <h4 className="font-bold text-[#202124] uppercase tracking-[0.2em] text-sm mb-8">Solutions</h4>
-            <ul className="space-y-4">
+            <h4 className="font-bold text-[#202124] uppercase tracking-[0.2em] text-sm mb-6 lg:mb-8">Solutions</h4>
+            <ul className="space-y-3 lg:space-y-4">
               {['Filters', 'Air Handling', 'Furniture', 'Machinery', 'Science Lab', 'Sterile Rooms'].map((link) => (
                 <li key={link}>
-                  <a href="#" className="text-[#5f6368] hover:text-[#4A93C4] transition-colors">{link}</a>
+                  <a href="#" className="text-[#5f6368] hover:text-[#4A93C4] transition-colors text-sm lg:text-base">{link}</a>
                 </li>
               ))}
             </ul>
@@ -43,21 +43,21 @@ const Footer = () => {
 
           {/* Company Column */}
           <div className="lg:col-span-2">
-            <h4 className="font-bold text-[#202124] uppercase tracking-[0.2em] text-sm mb-8">Company</h4>
-            <ul className="space-y-4">
+            <h4 className="font-bold text-[#202124] uppercase tracking-[0.2em] text-sm mb-6 lg:mb-8">Company</h4>
+            <ul className="space-y-3 lg:space-y-4">
               {['About TopTec', 'Certifications', 'Our Process', 'Technical Papers', 'Case Studies', 'Global Presence'].map((link) => (
                 <li key={link}>
-                  <a href="#" className="text-[#5f6368] hover:text-[#4A93C4] transition-colors">{link}</a>
+                  <a href="#" className="text-[#5f6368] hover:text-[#4A93C4] transition-colors text-sm lg:text-base">{link}</a>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Newsletter Column */}
-          <div className="lg:col-span-4">
-            <h4 className="font-bold text-[#202124] uppercase tracking-[0.2em] text-sm mb-8">Industry Updates</h4>
-            <p className="text-[#5f6368] mb-8">Get the latest technical briefs and compliance news from our engineers.</p>
-            <div className="relative">
+          <div className="lg:col-span-4 md:col-span-2 mt-8 lg:mt-0">
+            <h4 className="font-bold text-[#202124] uppercase tracking-[0.2em] text-sm mb-6 lg:mb-8">Industry Updates</h4>
+            <p className="text-[#5f6368] mb-8 text-sm lg:text-base">Get the latest technical briefs and compliance news from our engineers.</p>
+            <div className="relative max-w-md lg:max-w-none">
               <input 
                 type="email" 
                 placeholder="Business Email" 
@@ -70,14 +70,12 @@ const Footer = () => {
           </div>
         </div>
 
-
-
         {/* Legal Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-[#5f6368] text-[13px]">
-            © {currentYear} TopTec Private Limited. All engineering specifications reserved.
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-10 border-t border-gray-50">
+          <div className="text-[#5f6368] text-[12px] lg:text-[13px] text-center md:text-left">
+            © {currentYear} Quality Clean Equipment. All engineering specifications reserved.
           </div>
-          <div className="flex items-center gap-8 text-[13px] font-medium text-[#5f6368]">
+          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 text-[12px] lg:text-[13px] font-medium text-[#5f6368]">
             <a href="#" className="hover:text-[#4A93C4]">Standard Terms & Conditions</a>
             <a href="#" className="hover:text-[#4A93C4]">Data Privacy Policy</a>
             <a href="#" className="hover:text-[#4A93C4]">Cookies</a>

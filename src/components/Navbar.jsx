@@ -305,7 +305,7 @@ const Navbar = () => {
       <nav className={`w-full transition-all duration-300 relative ${
         isScrolled 
           ? 'py-2.5 bg-white/95 backdrop-blur-md shadow-[0_1px_3px_0_rgba(60,64,67,0.15)]' 
-          : 'py-6 bg-white'
+          : 'py-4 bg-white'
       }`}>
         <Search 
           isOpen={isSearchOpen} 
