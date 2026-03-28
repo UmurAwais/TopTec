@@ -410,8 +410,8 @@ const Navbar = () => {
               </div>
             </div>
             <div className="mt-auto p-8 border-t border-gray-100 bg-gray-50/50">
-              <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className="w-full py-4 bg-[#4A93C4] text-white rounded-full font-medium active:scale-95 transition-all cursor-pointer block text-center">
-                Contact Us
+              <Link to="/about" onClick={() => setIsMobileMenuOpen(false)} className="w-full py-4 bg-[#4A93C4] text-white rounded-full font-medium active:scale-95 transition-all cursor-pointer block text-center">
+                About Us
               </Link>
             </div>
           </motion.div>
