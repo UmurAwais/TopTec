@@ -15,21 +15,21 @@ const AboutStory = () => {
              <div className="relative z-10 aspect-4/5 rounded-3xl sm:rounded-[56px] overflow-hidden shadow-2xl border-2 sm:border-4 border-white">
                 <img 
                   src={whyimg}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700"
                   alt="Precision Engineering Detail"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent"></div>
              </div>
 
              {/* Floating Quality Badge */}
-             <div className="absolute -bottom-6 -right-4 sm:-bottom-8 sm:-right-8 p-4 sm:p-8 bg-white rounded-2xl sm:rounded-4xl shadow-xl border border-gray-100 z-20 max-w-35 sm:max-w-50 hover:-translate-y-2 transition-transform duration-500">
+             {/* <div className="absolute -bottom-6 -right-4 sm:-bottom-8 sm:-right-8 p-4 sm:p-8 bg-white rounded-2xl sm:rounded-4xl shadow-xl border border-gray-100 z-20 max-w-35 sm:max-w-50 hover:-translate-y-2 transition-transform duration-500">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#34A853] flex items-center justify-center text-white mb-3 sm:mb-4">
                    <ShieldCheck size={24} className="sm:hidden" />
                    <ShieldCheck size={28} className="hidden sm:block" />
                 </div>
                 <div className="text-xs sm:text-sm font-bold text-[#202124] mb-1 leading-tight">Zero-Defect Standard</div>
                 <div className="text-[9px] sm:text-[11px] text-gray-400 font-medium uppercase tracking-wider">ISO & GMP Compliant</div>
-             </div>
+             </div> */}
           </div>
 
           {/* Right: The Quality Philosophy Content */}
@@ -55,7 +55,7 @@ const AboutStory = () => {
               </div>
             </div>
 
-            <div className="pt-6 sm:pt-8 flex flex-row items-center gap-8 sm:gap-12">
+            {/* <div className="pt-6 sm:pt-8 flex flex-row items-center gap-8 sm:gap-12">
                <div>
                   <div className="text-2xl sm:text-3xl font-bold text-[#202124]">2016</div>
                   <div className="text-[10px] sm:text-sm text-gray-400 font-medium uppercase tracking-widest mt-1">Established</div>
@@ -65,7 +65,7 @@ const AboutStory = () => {
                   <div className="text-2xl sm:text-3xl font-bold text-[#202124]">Premium</div>
                   <div className="text-[10px] sm:text-sm text-gray-400 font-medium uppercase tracking-widest mt-1">Quality Grade</div>
                </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

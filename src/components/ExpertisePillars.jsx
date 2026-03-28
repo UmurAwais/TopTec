@@ -41,7 +41,7 @@ const ExpertisePillars = () => {
     <section className="py-16 sm:py-24 bg-white">
       <div className="container mx-auto px-6 sm:px-8 lg:px-16 text-center mb-12 sm:mb-16">
          <span className="text-[#4A93C4] font-bold text-xs sm:text-sm uppercase tracking-[0.3em] mb-4 block">Our Expertise</span>
-         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#202124] tracking-tight leading-tight">The pillars of <br className="sm:hidden" /> <span className="text-[#4A93C4]">TopTec engineering.</span></h2>
+         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#202124] tracking-tight leading-tight uppercase">Precision. <br className="sm:hidden" /> <span className="text-[#4A93C4]">Performance. </span>Perfection</h2>
       </div>
       <div className="container mx-auto px-6 sm:px-8 lg:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {pillars.map((pillar, idx) => {
@@ -56,9 +56,9 @@ const ExpertisePillars = () => {
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-[#202124] mb-3 sm:mb-4 leading-tight">{pillar.title}</h3>
                 <p className="text-xs sm:text-sm text-[#5f6368] leading-relaxed mb-6 sm:mb-8 grow">{pillar.desc}</p>
-                <div className={`mt-auto flex items-center gap-2 ${pillar.color} font-bold tracking-wider text-[10px] sm:text-[11px] uppercase`}>
+                {/* <div className={`mt-auto flex items-center gap-2 ${pillar.color} font-bold tracking-wider text-[10px] sm:text-[11px] uppercase`}>
                    Learn More <ArrowRight size={14} />
-                </div>
+                </div> */}
               </div>
             );
           })}
