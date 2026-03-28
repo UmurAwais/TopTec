@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShieldCheck, Award } from 'lucide-react';
-import whyimg from '../assets/toptec.jpeg';
+import whyimg from '../assets/why.jpg';
 
 const AboutStory = () => {
   return (
@@ -22,7 +22,7 @@ const AboutStory = () => {
              </div>
 
              {/* Floating Quality Badge */}
-             <div className="absolute -bottom-6 -right-4 sm:-bottom-8 sm:-right-8 p-4 sm:p-8 bg-white rounded-2xl sm:rounded-[32px] shadow-xl border border-gray-100 z-20 max-w-[140px] sm:max-w-[200px] hover:-translate-y-2 transition-transform duration-500">
+             <div className="absolute -bottom-6 -right-4 sm:-bottom-8 sm:-right-8 p-4 sm:p-8 bg-white rounded-2xl sm:rounded-4xl shadow-xl border border-gray-100 z-20 max-w-35 sm:max-w-50 hover:-translate-y-2 transition-transform duration-500">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#34A853] flex items-center justify-center text-white mb-3 sm:mb-4">
                    <ShieldCheck size={24} className="sm:hidden" />
                    <ShieldCheck size={28} className="hidden sm:block" />
