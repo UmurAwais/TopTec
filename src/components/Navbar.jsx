@@ -321,17 +321,12 @@ const Navbar = () => {
           ? 'py-2.5 bg-white/95 backdrop-blur-md shadow-[0_1px_3px_0_rgba(60,64,67,0.15)]' 
           : 'py-4 bg-white'
       }`}>
-        {/* Inline Search results logic moved to dropdown below */}
         <div className="w-full px-4 lg:px-6 flex justify-between items-center">
           <div className="flex items-center gap-6">
-            <Link 
-              to="/"
-              className="flex items-center cursor-pointer"
-            >
+            <Link to="/" className="flex items-center cursor-pointer">
               <img src={logo} alt="Top Tec" className="h-7 lg:h-9 w-auto" />
             </Link>
 
-            {/* Google's Minimal Nav Links */}
             <AnimatePresence>
               {!isSearchOpen && (
                 <motion.div 
@@ -348,39 +343,27 @@ const Navbar = () => {
             </AnimatePresence>
           </div>
 
-          {/* Google Style Actions Group */}
           <div className="flex items-center gap-2">
-            <button 
-              className="p-3 text-[#5f6368] hover:bg-gray-100 rounded-full transition-all lg:hidden cursor-pointer"
-              onClick={() => setIsMobileMenuOpen(true)}
-            >
-              <Menu size={22} />
-            </button>
-            
+            {/* Desktop Search Bar */}
             <div className="hidden lg:flex items-center gap-3 relative" ref={searchRef}>
               <div className="w-10 h-10 flex items-center justify-center relative">
                 <button 
                   onClick={() => setIsSearchOpen(!isSearchOpen)}
-                  className={`absolute right-0 p-2.5 rounded-full transition-all duration-500 ease-in-out cursor-pointer z-30 ${isSearchOpen ? 'text-[#4A93C4] bg-white shadow-sm' : 'text-[#5f6368] hover:bg-gray-100'}`}
-                  aria-label="Search"
+                  className={`absolute right-0 p-2.5 rounded-full transition-all duration-500 ease-in-out cursor-pointer z-40 ${isSearchOpen ? 'text-[#4A93C4] bg-white shadow-sm' : 'text-[#5f6368] hover:bg-gray-100'}`}
                 >
                   <SearchIcon size={20} />
                 </button>
                 
                 <input 
                    type="text"
-                   placeholder="Search cleanrooms, filters..."
+                   placeholder="Search..."
                    value={searchQuery}
-                   onChange={(e) => {
-                     setSearchQuery(e.target.value);
-                     if (!isSearchOpen) setIsSearchOpen(true);
-                   }}
-                   className={`absolute right-0 h-10 pr-12 pl-6 bg-gray-50 border border-transparent rounded-full text-sm outline-none transition-all duration-500 ease-in-out z-20 ${
-                     isSearchOpen ? 'w-[500px] opacity-100 border-gray-100 focus:border-[#4A93C4] focus:bg-white focus:ring-4 focus:ring-blue-50/10' : 'w-10 opacity-0 pointer-events-none'
+                   onChange={(e) => setSearchQuery(e.target.value)}
+                   className={`absolute right-0 h-10 pr-12 pl-6 bg-gray-50 border border-transparent rounded-full text-sm outline-none transition-all duration-500 ease-in-out z-30 ${
+                     isSearchOpen ? 'w-[500px] opacity-100 border-gray-100' : 'w-10 opacity-0 pointer-events-none'
                    }`}
                 />
 
-                {/* Dropdown Results */}
                 <Search 
                   isOpen={isSearchOpen && searchQuery.length > 0} 
                   onClose={() => setIsSearchOpen(false)} 
@@ -389,17 +372,22 @@ const Navbar = () => {
                 />
               </div>
               
-                <Link 
-                  to="/about"
-                  className="flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-gray-50 text-[#3c4043] border border-gray-100 hover:bg-gray-100 transition-all cursor-pointer text-[13px] font-medium whitespace-nowrap"
-                >
-                  About Us
-                </Link>
+              <Link to="/about" className="flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-gray-50 text-[#3c4043] border border-gray-100 hover:bg-gray-100 transition-all text-sm font-medium whitespace-nowrap">
+                About Us
+              </Link>
             </div>
 
-            <Link to="/contact" className="ml-2 px-6 py-2.5 bg-[#4A93C4] text-white rounded-full font-medium text-sm hover:bg-[#3b7ba8] hover:shadow-md transition-all active:scale-95 cursor-pointer">
+            {/* Always visible on Mobile: Contact & Menu */}
+            <Link to="/contact" className="px-4 lg:px-6 py-2 lg:py-2.5 bg-[#4A93C4] text-white rounded-full font-medium text-xs lg:text-sm hover:bg-[#3b7ba8] hover:shadow-md transition-all active:scale-95 whitespace-nowrap">
               Contact Us
             </Link>
+
+            <button 
+              className="p-3 text-[#5f6368] hover:bg-gray-100 rounded-full transition-all lg:hidden cursor-pointer"
+              onClick={() => setIsMobileMenuOpen(true)}
+            >
+              <Menu size={22} />
+            </button>
           </div>
         </div>
       </nav>
@@ -421,6 +409,44 @@ const Navbar = () => {
               </button>
             </div>
             <div className="p-6 flex flex-col gap-2 overflow-y-auto">
+              <div className="px-4 mb-4">
+                <div className="relative">
+                  <SearchIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+                  <input 
+                    type="text"
+                    placeholder="Search TopTec..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full bg-gray-50 border border-gray-100 rounded-2xl py-4 pl-12 pr-4 text-sm focus:bg-white focus:border-[#4A93C4] outline-none transition-all"
+                  />
+                  {searchQuery.length > 0 && (
+                    <div className="absolute top-full left-0 right-0 bg-white shadow-xl rounded-2xl mt-2 border border-gray-100 z-50 overflow-hidden max-h-[300px] overflow-y-auto">
+                      {searchData.filter(i => 
+                        i.name.toLowerCase().includes(searchQuery.toLowerCase())
+                      ).slice(0, 5).map((item, idx) => (
+                        <Link 
+                          key={idx}
+                          to={item.href}
+                          onClick={() => {
+                            setIsMobileMenuOpen(false);
+                            setSearchQuery('');
+                          }}
+                          className="flex items-center gap-3 p-4 hover:bg-gray-50 border-b border-gray-50 last:border-none"
+                        >
+                          <div className="w-8 h-8 rounded-lg bg-[#4A93C4]/10 flex items-center justify-center text-[#4A93C4]">
+                            <ArrowRight size={14} />
+                          </div>
+                          <div>
+                            <div className="text-sm font-bold text-[#202124]">{item.name}</div>
+                            <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{item.type}</div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+
               <div className="px-4 py-2">
                 <span className="text-[11px] font-bold text-[#4A93C4] uppercase tracking-wider">Main Links</span>
               </div>
