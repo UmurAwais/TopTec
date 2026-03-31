@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ChevronRight, ShieldCheck, Zap, Award, Microscope, ArrowRight, Wind, Filter, FlaskConical, Settings, Building2, Layers, Download, MessageSquare } from 'lucide-react';
+import { ChevronRight, ShieldCheck, Zap, Award, Microscope, ArrowRight, Wind, Filter, FlaskConical, Settings, Building2, Layers, Download, MessageSquare, LayoutGrid } from 'lucide-react';
 import ProductCard from '../../components/ProductCard';
 
 const relatedCategories = [
@@ -14,7 +14,14 @@ const relatedCategories = [
   { title: 'HVAC Systems', icon: <Zap size={20} />, slug: 'hvac-systems' },
 ];
 
-const CategoryPage = ({ title, description, icon, image, subcategories = [], products = [] }) => {
+const CategoryPage = ({ 
+  title, 
+  description, 
+  icon, 
+  image, 
+  subcategories = [], 
+  products = []
+}) => {
   const PRODUCTS_PER_PAGE = 9;
   const [currentPage, setCurrentPage] = React.useState(1);
 
@@ -229,21 +236,22 @@ const CategoryPage = ({ title, description, icon, image, subcategories = [], pro
               <div className="sticky top-24 space-y-8 lg:space-y-10">
                 <div className="bg-[#202124] rounded-[2rem] sm:rounded-[2.5rem] p-8 sm:p-10 text-white relative overflow-hidden shadow-2xl shadow-gray-400">
                   <div className="absolute top-10 right-10 w-20 h-20 bg-[#4A93C4] rounded-full blur-[60px] opacity-30 animate-pulse"></div>
-                  <h3 className="text-2xl sm:text-[28px] font-bold mb-6 sm:mb-8 leading-tight">Certified Quality Assurance</h3>
+                  <h3 className="text-2xl sm:text-[28px] font-bold mb-6 sm:mb-8 leading-tight uppercase">Our Expertise</h3>
                   <div className="space-y-6 sm:space-y-8">
                     {[
-                      { icon: <ShieldCheck size={24} />, title: "GMP Compliant", desc: "Rigorous alignment with WHO & FDA standards." },
-                      { icon: <Microscope size={24} />, title: "Precision Built", desc: "Engineered for zero-tolerance performance." },
-                      { icon: <Award size={24} />, title: "Global Export", desc: "Trusted by facilities in 40+ countries." }
+                      { icon: <Building2 size={24} />, title: "Cleanroom Innovation", desc: "Modular designs providing absolute environmental control." },
+                      { icon: <ShieldCheck size={24} />, title: "Pharma Equipment", desc: "Advanced interlocking technology ensuring zero-contamination." },
+                      { icon: <Microscope size={24} />, title: "QC Lab Equipments", desc: "High-precision apparatus for stringent quality control." },
+                      { icon: <LayoutGrid size={24} />, title: "Lab Furnitures", desc: "Technical and ergonomic solutions for modern laboratories." }
                     ].map((item, idx) => (
-                      <div key={idx} className="flex gap-4 sm:gap-5">
-                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/10 flex items-center justify-center text-[#4A93C4] shrink-0">
+                      <div key={idx} className="flex gap-4 sm:gap-5 group">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/10 flex items-center justify-center text-[#4A93C4] shrink-0 group-hover:bg-[#4A93C4] group-hover:text-white transition-all duration-500">
                           {React.cloneElement(item.icon, { size: 20, className: "sm:hidden" })}
                           {React.cloneElement(item.icon, { size: 24, className: "hidden sm:block" })}
                         </div>
                         <div>
-                          <h4 className="font-bold text-base sm:text-lg mb-1">{item.title}</h4>
-                          <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">{item.desc}</p>
+                          <h4 className="font-bold text-base sm:text-lg mb-1 leading-tight">{item.title}</h4>
+                          <p className="text-gray-400 text-[10px] sm:text-xs leading-relaxed font-light">{item.desc}</p>
                         </div>
                       </div>
                     ))}
@@ -284,6 +292,7 @@ const CategoryPage = ({ title, description, icon, image, subcategories = [], pro
           </div>
         </div>
       </section>
+
     </div>
   );
 };

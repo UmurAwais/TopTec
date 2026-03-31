@@ -20,7 +20,7 @@ const AirFilters = () => {
   return (
     <CategoryPage 
       title="Air Filters"
-      description="H14 HEPA filters, pre-filters, activated carbon filters, and bag filters engineered for pharmaceutical cleanrooms and sterile manufacturing environments."
+      description="TopTec is Pakistan's premier manufacturer of high-performance air filtration systems since 2016. We engineer ISO-certified H14 HEPA filters, activated carbon systems, and multi-stage pre-filters specifically for pharmaceutical cleanrooms and sterile manufacturing environments."
       icon={<Filter size={32} />}
       image="https://toptec.pk/wp-content/uploads/2024/07/201909101442246985.jpg"
       subcategories={subcategories}
