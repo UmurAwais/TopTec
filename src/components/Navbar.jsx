@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { X, Search as SearchIcon, Menu, ArrowRight } from 'lucide-react';
+import { X, Search as SearchIcon, Menu, ArrowRight, CornerDownLeft } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useRef } from 'react';
 import logo from '../assets/Top Tec Logo.png';
 import AnnouncementBar from './AnnouncementBar';
 import Search from './Search';
 import NavItem from './NavItem';
+import { searchData } from '../data/searchData';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,16 +15,28 @@ const Navbar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const [searchQuery, setSearchQuery] = useState('');
+  const [results, setResults] = useState([]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const navigate = useNavigate();
+  const searchRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
-      if (window.scrollY > 100) {
+    };
+
+    const handleClickOutside = (event) => {
+      if (searchRef.current && !searchRef.current.contains(event.target)) {
         setIsSearchOpen(false);
       }
     };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, []);
 
   const navLinks = [
@@ -307,12 +321,7 @@ const Navbar = () => {
           ? 'py-2.5 bg-white/95 backdrop-blur-md shadow-[0_1px_3px_0_rgba(60,64,67,0.15)]' 
           : 'py-4 bg-white'
       }`}>
-        <Search 
-          isOpen={isSearchOpen} 
-          onClose={() => setIsSearchOpen(false)} 
-          query={searchQuery} 
-          setQuery={setSearchQuery} 
-        />
+        {/* Inline Search results logic moved to dropdown below */}
         <div className="w-full px-4 lg:px-6 flex justify-between items-center">
           <div className="flex items-center gap-6">
             <Link 
@@ -323,11 +332,20 @@ const Navbar = () => {
             </Link>
 
             {/* Google's Minimal Nav Links */}
-            <div className="hidden lg:flex items-center">
-              {navLinks.map((item) => (
-                <NavItem key={item.name} item={item} />
-              ))}
-            </div>
+            <AnimatePresence>
+              {!isSearchOpen && (
+                <motion.div 
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -10 }}
+                  className="hidden lg:flex items-center"
+                >
+                  {navLinks.map((item) => (
+                    <NavItem key={item.name} item={item} />
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
           {/* Google Style Actions Group */}
@@ -339,21 +357,44 @@ const Navbar = () => {
               <Menu size={22} />
             </button>
             
-            <div className="hidden lg:flex items-center gap-2">
-              <button 
-                onClick={() => setIsSearchOpen(!isSearchOpen)}
-                className={`p-3 rounded-full transition-all cursor-pointer ${isSearchOpen ? 'bg-gray-100 text-[#4A93C4]' : 'text-[#5f6368] hover:bg-gray-100'}`}
-                aria-label="Search"
-              >
-                <SearchIcon size={20} />
-              </button>
+            <div className="hidden lg:flex items-center gap-3 relative" ref={searchRef}>
+              <div className="w-10 h-10 flex items-center justify-center relative">
+                <button 
+                  onClick={() => setIsSearchOpen(!isSearchOpen)}
+                  className={`absolute right-0 p-2.5 rounded-full transition-all duration-500 ease-in-out cursor-pointer z-30 ${isSearchOpen ? 'text-[#4A93C4] bg-white shadow-sm' : 'text-[#5f6368] hover:bg-gray-100'}`}
+                  aria-label="Search"
+                >
+                  <SearchIcon size={20} />
+                </button>
+                
+                <input 
+                   type="text"
+                   placeholder="Search cleanrooms, filters..."
+                   value={searchQuery}
+                   onChange={(e) => {
+                     setSearchQuery(e.target.value);
+                     if (!isSearchOpen) setIsSearchOpen(true);
+                   }}
+                   className={`absolute right-0 h-10 pr-12 pl-6 bg-gray-50 border border-transparent rounded-full text-sm outline-none transition-all duration-500 ease-in-out z-20 ${
+                     isSearchOpen ? 'w-[500px] opacity-100 border-gray-100 focus:border-[#4A93C4] focus:bg-white focus:ring-4 focus:ring-blue-50/10' : 'w-10 opacity-0 pointer-events-none'
+                   }`}
+                />
+
+                {/* Dropdown Results */}
+                <Search 
+                  isOpen={isSearchOpen && searchQuery.length > 0} 
+                  onClose={() => setIsSearchOpen(false)} 
+                  query={searchQuery} 
+                  setQuery={setSearchQuery} 
+                />
+              </div>
               
-              <Link 
-                to="/about"
-                className="flex items-center gap-1.5 px-5 py-2 rounded-full bg-gray-50 text-[#3c4043] border border-gray-100 hover:bg-gray-100 transition-all cursor-pointer text-[13px] font-medium"
-              >
-                About Us
-              </Link>
+                <Link 
+                  to="/about"
+                  className="flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-gray-50 text-[#3c4043] border border-gray-100 hover:bg-gray-100 transition-all cursor-pointer text-[13px] font-medium whitespace-nowrap"
+                >
+                  About Us
+                </Link>
             </div>
 
             <Link to="/contact" className="ml-2 px-6 py-2.5 bg-[#4A93C4] text-white rounded-full font-medium text-sm hover:bg-[#3b7ba8] hover:shadow-md transition-all active:scale-95 cursor-pointer">
