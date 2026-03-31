@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ChevronRight, ShieldCheck, Zap, Award, Microscope, ArrowRight, Wind, Filter, FlaskConical, Settings, Building2, Layers, Download, MessageSquare, LayoutGrid } from 'lucide-react';
+import { ChevronRight, ShieldCheck, Zap, Award, Microscope, ArrowRight, Wind, Filter, FlaskConical, Settings, Building2, Layers, MessageSquare, LayoutGrid, Mail } from 'lucide-react';
 import ProductCard from '../../components/ProductCard';
 
 const relatedCategories = [
@@ -104,10 +104,13 @@ const CategoryPage = ({
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-6">
-                  <button className="h-14 sm:h-16 px-6 sm:px-10 bg-[#202124] text-white rounded-xl sm:rounded-2xl font-semibold hover:bg-[#4A93C4] transition-all duration-500 shadow-xl shadow-gray-200 hover:shadow-[#4A93C4]/30 active:scale-95 flex items-center justify-center gap-3 group text-sm sm:text-base">
-                    <Download size={18} className="group-hover:-translate-y-1 transition-transform" />
-                    Technical Catalog
-                  </button>
+                  <a 
+                    href="mailto:caretoptec@gmail.com" 
+                    className="h-14 sm:h-16 px-6 sm:px-10 bg-[#202124] text-white rounded-xl sm:rounded-2xl font-semibold hover:bg-[#4A93C4] transition-all duration-500 shadow-xl shadow-gray-200 hover:shadow-[#4A93C4]/30 active:scale-95 flex items-center justify-center gap-3 group text-sm sm:text-base cursor-pointer"
+                  >
+                    <Mail size={18} />
+                    Request Quotation
+                  </a>
                   <Link to="/contact" className="h-14 sm:h-16 px-6 sm:px-10 bg-white text-[#202124] border border-gray-200 rounded-xl sm:rounded-2xl font-semibold hover:border-[#4A93C4] hover:text-[#4A93C4] transition-all duration-500 active:scale-95 flex items-center justify-center gap-3 text-sm sm:text-base">
                     <MessageSquare size={18} />
                     Consult Our Experts
