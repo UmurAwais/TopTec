@@ -5,7 +5,7 @@ import Aboutimg from '../assets/about.jpg'
 
 const AboutHero = () => {
   return (
-    <section className="relative min-h-[70vh] flex items-center pt-42 sm:pt-40 lg:pt-52 pb-16 lg:pb-24 overflow-hidden">
+    <section className="relative min-h-[70vh] flex items-center pt-42 sm:pt-40 lg:pt-42 pb-16 lg:pb-24 overflow-hidden">
       {/* Abstract Engineering Background */}
       <div className="absolute inset-0 z-0 opacity-40">
          <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[70%] bg-[#4A93C4]/5 rounded-full blur-[120px]"></div>
