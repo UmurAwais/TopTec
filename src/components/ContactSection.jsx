@@ -80,7 +80,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="text-[10px] sm:text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Corporate HQ</div>
-                  <div className="text-xs sm:text-lg lg:text-xl text-white font-medium italic leading-relaxed">Office#01, Block A, Gohawa, Ring Road, Lahore</div>
+                  <div className="text-xs sm:text-lg lg:text-xl text-white font-medium leading-relaxed">Office#01, Block A, Gohawa, Ring Road, Lahore</div>
                 </div>
               </div>
 

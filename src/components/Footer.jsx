@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../assets/Top Tec Logo.png';
-import { Linkedin, Twitter, Youtube, ArrowRight, MapPin, Mail, Phone } from 'lucide-react';
+import { Linkedin, Twitter, Youtube, Facebook, ArrowRight, MapPin, Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,9 +14,12 @@ const Footer = () => {
           <div className="lg:col-span-4 md:col-span-2">
             <img src={logo} alt="TopTec" className="h-10 w-auto mb-8" />
             <p className="text-[#5f6368] text-base lg:text-lg leading-relaxed mb-8 max-w-lg lg:max-w-sm">
-              Leading pharmaceutical cleanroom manufacturer serving healthcare facilities across Middle East, Africa, Asia, Europe, and North America. ISO 14644-1 certified cleanroom solutions since 1998.
+              Global manufacturer of precision-engineered cleanroom and pharmaceutical infrastructure since 2016. Delivering ISO-certified solutions to healthcare and biotech facilities worldwide.
             </p>
             <div className="flex items-center gap-4">
+              <a href="https://www.facebook.com/people/Top-Tec-PVT-LTD/100095500606020/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-[#5f6368] hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] transition-all">
+                <Facebook size={18} />
+              </a>
               <a href="#" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-[#5f6368] hover:bg-[#4A93C4] hover:text-white hover:border-[#4A93C4] transition-all">
                 <Linkedin size={18} />
               </a>
@@ -73,7 +76,7 @@ const Footer = () => {
         {/* Legal Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-10 border-t border-gray-50">
           <div className="text-[#5f6368] text-[12px] lg:text-[13px] text-center md:text-left">
-            © {currentYear} Quality Clean Equipment. All engineering specifications reserved.
+            © {currentYear} TopTec PVT LTD. All engineering specifications reserved.
           </div>
           <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 text-[12px] lg:text-[13px] font-medium text-[#5f6368]">
             <a href="#" className="hover:text-[#4A93C4]">Standard Terms & Conditions</a>
