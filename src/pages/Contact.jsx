@@ -154,112 +154,113 @@ const Contact = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-gray-50 p-6 sm:p-10 rounded-3xl sm:rounded-4xl relative"
+            className="relative"
           >
-            <AnimatePresence>
-              {status === "SUCCESS" && (
-                <motion.div 
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  className="absolute inset-0 z-50 bg-[#4A93C4] rounded-3xl sm:rounded-4xl flex flex-col items-center justify-center text-white p-8 text-center"
-                >
-                  <CheckCircle2 size={64} className="mb-6 animate-bounce" />
-                  <h3 className="text-3xl font-bold mb-4">Message Sent!</h3>
-                  <p className="text-lg text-blue-50 opacity-90 max-w-xs mx-auto">
-                    Thank you for reaching out. Our engineering team will review your query and get back to you within 24 hours.
-                  </p>
-                  <button 
-                    onClick={() => setStatus("")}
-                    className="mt-10 px-8 py-3 bg-white text-[#4A93C4] rounded-xl font-bold hover:bg-blue-50 transition-colors"
+            <div className="bg-gray-50 p-6 sm:p-10 rounded-3xl sm:rounded-4xl">
+              <AnimatePresence>
+                {status === "SUCCESS" && (
+                  <motion.div 
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    className="absolute inset-0 z-50 bg-[#4A93C4] rounded-3xl sm:rounded-4xl flex flex-col items-center justify-center text-white p-8 text-center"
                   >
-                    Send Another
-                  </button>
-                </motion.div>
-              )}
-            </AnimatePresence>
+                    <CheckCircle2 size={64} className="mb-6 animate-bounce" />
+                    <h3 className="text-3xl font-bold mb-4">Message Sent!</h3>
+                    <p className="text-lg text-blue-50 opacity-90 max-w-xs mx-auto">
+                      Thank you for reaching out. Our engineering team will review your query and get back to you within 24 hours.
+                    </p>
+                    <button 
+                      onClick={() => setStatus("")}
+                      className="mt-10 px-8 py-3 bg-white text-[#4A93C4] rounded-xl font-bold hover:bg-blue-50 transition-colors"
+                    >
+                      Send Another
+                    </button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-[#202124]" htmlFor="first-name">First name</label>
+                    <input 
+                      type="text" 
+                      name="first_name"
+                      id="first-name" 
+                      required
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#4A93C4] focus:ring-2 focus:ring-blue-100 outline-none transition-all bg-white"
+                      placeholder="First name"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-[#202124]" htmlFor="last-name">Last name</label>
+                    <input 
+                      type="text" 
+                      name="last_name"
+                      id="last-name" 
+                      required
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#4A93C4] focus:ring-2 focus:ring-blue-100 outline-none transition-all bg-white"
+                      placeholder="Last name"
+                    />
+                  </div>
+                </div>
+
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-[#202124]" htmlFor="first-name">First name</label>
+                  <label className="text-sm font-medium text-[#202124]" htmlFor="email">Email</label>
                   <input 
-                    type="text" 
-                    name="first_name"
-                    id="first-name" 
+                    type="email" 
+                    name="email"
+                    id="email" 
                     required
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#4A93C4] focus:ring-2 focus:ring-blue-100 outline-none transition-all bg-white"
-                    placeholder="First name"
+                    placeholder="you@company.com"
                   />
                 </div>
+
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-[#202124]" htmlFor="last-name">Last name</label>
-                  <input 
-                    type="text" 
-                    name="last_name"
-                    id="last-name" 
-                    required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#4A93C4] focus:ring-2 focus:ring-blue-100 outline-none transition-all bg-white"
-                    placeholder="Last name"
-                  />
+                  <label className="text-sm font-medium text-[#202124]" htmlFor="subject">Subject</label>
+                  <select 
+                    id="subject"
+                    name="subject"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#4A93C4] focus:ring-2 focus:ring-blue-100 outline-none transition-all bg-white text-gray-600 appearance-none cursor-pointer"
+                  >
+                    <option>Select a subject</option>
+                    <option>Sales Inquiry</option>
+                    <option>Technical Support</option>
+                    <option>Other</option>
+                  </select>
                 </div>
-              </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-[#202124]" htmlFor="email">Email</label>
-                <input 
-                  type="email" 
-                  name="email"
-                  id="email" 
-                  required
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#4A93C4] focus:ring-2 focus:ring-blue-100 outline-none transition-all bg-white"
-                  placeholder="you@company.com"
-                />
-              </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-[#202124]" htmlFor="message">Message</label>
+                  <textarea 
+                    id="message" 
+                    name="message"
+                    rows="4" 
+                    required
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#4A93C4] focus:ring-2 focus:ring-blue-100 outline-none transition-all bg-white resize-none"
+                    placeholder="Leave us a message..."
+                  ></textarea>
+                </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-[#202124]" htmlFor="subject">Subject</label>
-                <select 
-                  id="subject"
-                  name="subject"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#4A93C4] focus:ring-2 focus:ring-blue-100 outline-none transition-all bg-white text-gray-600 appearance-none cursor-pointer"
+                <button 
+                  type="submit" 
+                  disabled={status === "SENDING"}
+                  className="w-full py-4 bg-[#4A93C4] text-white rounded-xl font-semibold text-lg hover:bg-[#3b7ba8] hover:shadow-lg hover:shadow-blue-100 transition-all active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  <option>Select a subject</option>
-                  <option>Sales Inquiry</option>
-                  <option>Technical Support</option>
-                  {/* <option>Partnership</option> */}
-                  <option>Other</option>
-                </select>
-              </div>
+                  {status === "SENDING" ? "Processing..." : "Send Message"}
+                  <Send size={18} />
+                </button>
 
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-[#202124]" htmlFor="message">Message</label>
-                <textarea 
-                  id="message" 
-                  name="message"
-                  rows="4" 
-                  required
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#4A93C4] focus:ring-2 focus:ring-blue-100 outline-none transition-all bg-white resize-none"
-                  placeholder="Leave us a message..."
-                ></textarea>
-              </div>
-
-              <button 
-                type="submit" 
-                disabled={status === "SENDING"}
-                className="w-full py-4 bg-[#4A93C4] text-white rounded-xl font-semibold text-lg hover:bg-[#3b7ba8] hover:shadow-lg hover:shadow-blue-100 transition-all active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
-              >
-                {status === "SENDING" ? "Processing..." : "Send Message"}
-                <Send size={18} />
-              </button>
-
-              {status === "ERROR" && (
-                <div className="flex items-center gap-2 text-red-500 text-sm mt-2">
-                  <AlertCircle size={16} />
-                  <span>Something went wrong. Please try again or email us directly.</span>
-                </div>
-              )}
-            </form>
+                {status === "ERROR" && (
+                  <div className="flex items-center gap-2 text-red-500 text-sm mt-2">
+                    <AlertCircle size={16} />
+                    <span>Something went wrong. Please try again or email us directly.</span>
+                  </div>
+                )}
+              </form>
+            </div>
           </motion.div>
         </div>
       </div>
