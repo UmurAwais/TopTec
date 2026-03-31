@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../assets/Top Tec Logo.png';
-import { Linkedin, Twitter, Youtube, Facebook, ArrowRight, MapPin, Mail, Phone } from 'lucide-react';
+import { Linkedin, Twitter, Facebook, ArrowRight, MapPin, Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -25,9 +25,6 @@ const Footer = () => {
               </a>
               <a href="#" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-[#5f6368] hover:bg-[#1a73e8] hover:text-white hover:border-[#1a73e8] transition-all">
                 <Twitter size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-[#5f6368] hover:bg-[#EA4335] hover:text-white hover:border-[#EA4335] transition-all">
-                <Youtube size={18} />
               </a>
             </div>
           </div>

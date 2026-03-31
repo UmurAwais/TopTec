@@ -39,7 +39,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="pt-42 pb-16 lg:pt-52 min-h-screen bg-white font-['Outfit']">
+    <div className="pt-42 pb-16 lg:pt-46 min-h-screen bg-white font-['Outfit']">
       {/* Hero Section */}
       <div className="max-w-350 mx-auto px-6 lg:px-12 mb-12 sm:mb-20 text-center">
         <motion.div
