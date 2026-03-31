@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShieldCheck, Award } from 'lucide-react';
-import whyimg from '../assets/why.jpg';
+import whyimg from '../assets/wychooseus.webp';
 
 const AboutStory = () => {
   return (
