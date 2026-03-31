@@ -17,8 +17,8 @@ const Contact = () => {
     const data = new FormData(form);
 
     try {
-      // Note: Replace 'xarozpqr' with your actual Formspree ID or caretoptec@gmail.com if using paid plan
-      const response = await fetch("https://formspree.io/f/mbdpdpya", {
+      // Note: Replace 'xqegbpqd' with your actual Formspree ID or caretoptec@gmail.com if using paid plan
+      const response = await fetch("https://formspree.io/f/xqegbpqd", {
         method: "POST",
         body: data,
         headers: {
