@@ -21,8 +21,8 @@ const AboutHero = () => {
               The TopTec Standard
             </span>
             <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold text-[#202124] leading-tight mb-8 sm:mb-10 tracking-tight">
-              Advancing <br />
-              <span className="text-[#4A93C4]">Precision Machinery</span>
+              Cleanroom 
+              <span className="text-[#4A93C4]"> Experts.</span>
             </h1>
             <p className="text-base sm:text-lg lg:text-xl text-[#5f6368] leading-relaxed max-w-2xl font-light">
               Precision-engineered cleanroom solutions for global innovators. Since 2016, Quality Clean Equipment has been the trusted partner for premium stainless steel fabrication, delivering unparalleled quality across the Biotech, Pharma, and Food sectors.
