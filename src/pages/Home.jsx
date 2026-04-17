@@ -17,7 +17,7 @@ const Home = () => {
         {/* <Hero /> */}
         
         {/* Image Slider Section - Full Width */}
-        <section className="pt-24 lg:pt-28">
+        <section className="pt-24 lg:pt-26">
           <ImageSlider />
         </section>
 

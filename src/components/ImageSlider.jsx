@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import cleanRoomImg from '../assets/clean room.webp';
+import cleanRoomMobileImg from '../assets/clean room mobile.webp';
 
 const ImageSlider = ({ 
   images = [], 
@@ -27,10 +29,11 @@ const ImageSlider = ({
       certifications: ['GMP Certified', 'ISO 14644-1', 'H14 HEPA Systems']
     },
     {
-      url: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=800&fit=crop&q=80',
-      title: 'Complete Cleanroom Solutions',
-      subtitle: 'From modular cleanroom panels and HEPA filtration to pharmaceutical-grade HVAC systems - we deliver ISO-certified sterile environments for biotech, pharma, and healthcare facilities across UAE, Saudi Arabia, and beyond',
-      badge: 'ISO 14644-1 Certified'
+      url: cleanRoomImg,
+      mobileUrl: cleanRoomMobileImg,
+      // title: 'Complete Cleanroom Solutions',
+      // subtitle: 'From modular cleanroom panels and HEPA filtration to pharmaceutical-grade HVAC systems - we deliver ISO-certified sterile environments for biotech, pharma, and healthcare facilities across UAE, Saudi Arabia, and beyond',
+      // badge: 'ISO 14644-1 Certified'
     },
     {
       url: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1920&h=800&fit=crop&q=80',
@@ -83,7 +86,7 @@ const ImageSlider = ({
 
   return (
     <div 
-      className={`relative w-full pt-10 lg:pt-0 h-100 sm:h-125 md:h-150 lg:h-160 overflow-hidden shadow-2xl group bg-gray-900 ${className}`}
+      className={`relative w-full h-125 sm:h-125 md:h-150 lg:h-160 overflow-hidden shadow-2xl group bg-gray-900 ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -103,98 +106,17 @@ const ImageSlider = ({
             }}
             className="absolute inset-0"
           >
-            {/* Background Image */}
             <div className="relative w-full h-full">
-              <img
-                src={slides[currentIndex].url}
-                alt={slides[currentIndex].title}
-                className="w-full h-full object-cover"
-              />
-              
-              {/* Multi-layer Gradient Overlay */}
-              <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/50 to-transparent" />
-              <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
-              
-              {/* Content Container */}
-              <div className="absolute inset-0 flex items-center">
-                <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16">
-                  <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3, duration: 0.6 }}
-                    className="max-w-4xl"
-                  >
-                    {/* Badge */}
-                    {/* <motion.div
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.4, duration: 0.5 }}
-                      className="mb-6"
-                    >
-                      <span className="inline-block px-5 py-2.5 bg-white/10 backdrop-blur-md border border-white/30 text-white text-xs font-bold uppercase tracking-widest">
-                        {slides[currentIndex].badge}
-                      </span>
-                    </motion.div> */}
-
-                    {/* Title */}
-                    <motion.h1
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.5, duration: 0.6 }}
-                      className={`font-bold text-white leading-[1.1] tracking-tight ${
-                        slides[currentIndex].isMainSlide 
-                          ? 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-3 sm:mb-4 md:mb-5' 
-                          : 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-3 sm:mb-4 lg:mb-6'
-                      }`}
-                    >
-                      {slides[currentIndex].title}
-                    </motion.h1>
-
-                    {/* Subtitle */}
-                    <motion.p
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.6, duration: 0.6 }}
-                      className={`text-gray-200 font-light ${
-                        slides[currentIndex].isMainSlide 
-                          ? 'text-xs sm:text-sm md:text-base lg:text-lg mb-5 sm:mb-6 md:mb-8 max-w-xl leading-relaxed' 
-                          : 'text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-5 sm:mb-6 md:mb-8'
-                      }`}
-                    >
-                      {slides[currentIndex].subtitle}
-                    </motion.p>
-
-                    {/* Stats - Only for Main Slide */}
-                    {slides[currentIndex].isMainSlide && slides[currentIndex].stats && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.7, duration: 0.6 }}
-                        className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 mb-5 sm:mb-6 md:mb-8 max-w-xl"
-                      >
-                        {slides[currentIndex].stats.map((stat, idx) => (
-                          <div key={idx} className="bg-black/30 backdrop-blur-md border border-white/20 rounded-xl sm:rounded-2xl p-2.5 sm:p-3 md:p-4 lg:p-5 hover:bg-black/40 transition-all">
-                            <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-0.5 sm:mb-1 md:mb-1.5">{stat.value}</div>
-                            <div className="text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs text-gray-300 font-semibold uppercase tracking-wider leading-tight">{stat.label}</div>
-                          </div>
-                        ))}
-                      </motion.div>
-                    )}
-
-                    {/* CTA Button */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: slides[currentIndex].isMainSlide ? 0.8 : 0.7, duration: 0.6 }}
-                    >
-                      <button className="group px-5 sm:px-6 md:px-7 lg:px-9 xl:px-10 py-2.5 sm:py-3 md:py-3.5 lg:py-4 bg-[#4A93C4] hover:bg-[#3b7ba8] text-white font-semibold text-xs sm:text-sm md:text-base rounded-full transition-all duration-300 hover:shadow-2xl hover:shadow-[#4A93C4]/30 hover:scale-105 active:scale-95 flex items-center gap-2">
-                        {slides[currentIndex].isMainSlide ? 'Request Quote' : 'Explore Solutions'}
-                        <ChevronRight size={16} className="sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-                      </button>
-                    </motion.div>
-                  </motion.div>
-                </div>
-              </div>
+              <picture>
+                {slides[currentIndex].mobileUrl && (
+                  <source media="(max-width: 640px)" srcSet={slides[currentIndex].mobileUrl} />
+                )}
+                <img
+                  src={slides[currentIndex].url}
+                  alt={slides[currentIndex].title || 'Banner'}
+                  className="w-full h-full object-cover"
+                />
+              </picture>
             </div>
           </motion.div>
         </AnimatePresence>
