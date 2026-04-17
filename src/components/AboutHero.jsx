@@ -1,6 +1,6 @@
 import React from 'react';
 import { Zap } from 'lucide-react';
-import Aboutimg from '../assets/airfilter.webp'
+import Aboutimg from '../assets/about us 1.webp'
 
 
 const AboutHero = () => {
