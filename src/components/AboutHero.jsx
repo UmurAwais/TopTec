@@ -36,7 +36,6 @@ const AboutHero = () => {
                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                    alt="TopTec Advanced Engineering Facility"
                  />
-                 <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent"></div>
                </div>
              </div>
              
