@@ -321,10 +321,10 @@ const Navbar = () => {
           ? 'py-2.5 bg-white/95 backdrop-blur-md shadow-[0_1px_3px_0_rgba(60,64,67,0.15)]' 
           : 'py-4 bg-white'
       }`}>
-        <div className="w-full px-4 lg:px-6 flex justify-between items-center">
-          <div className="flex items-center gap-6">
-            <Link to="/" className="flex items-center cursor-pointer">
-              <img src={logo} alt="Top Tec" className="h-7 lg:h-9 w-auto" />
+        <div className="w-full px-3 lg:px-4 flex justify-between items-center gap-4">
+          <div className="flex items-center gap-2 lg:gap-4 shrink-0 overflow-hidden">
+            <Link to="/" className="flex items-center cursor-pointer shrink-0 min-w-fit">
+              <img src={logo} alt="Top Tec" className="h-7 lg:h-9 w-auto object-contain shrink-0" />
             </Link>
 
             <AnimatePresence>
@@ -371,8 +371,8 @@ const Navbar = () => {
                   setQuery={setSearchQuery} 
                 />
               </div>
-              
-              <Link to="/about" className="flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-gray-50 text-[#3c4043] border border-gray-100 hover:bg-gray-100 transition-all text-sm font-medium whitespace-nowrap">
+
+              <Link to="/about" className="text-[13px] font-bold text-[#3c4043] hover:text-[#4A93C4] transition-all uppercase tracking-wide whitespace-nowrap mr-2">
                 About Us
               </Link>
             </div>
@@ -456,7 +456,7 @@ const Navbar = () => {
                     key={item.name} 
                     to={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="p-4 text-lg font-medium text-[#202124] hover:bg-gray-50 rounded-xl cursor-pointer transition-colors no-underline block"
+                    className="p-4 text-sm font-bold uppercase tracking-widest text-[#202124] hover:bg-gray-50 rounded-xl cursor-pointer transition-colors no-underline block"
                   >
                     {item.name}
                   </Link>
@@ -465,7 +465,7 @@ const Navbar = () => {
                     key={item.name} 
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="p-4 text-lg font-medium text-[#202124] hover:bg-gray-50 rounded-xl cursor-pointer transition-colors no-underline block"
+                    className="p-4 text-sm font-bold uppercase tracking-widest text-[#202124] hover:bg-gray-50 rounded-xl cursor-pointer transition-colors no-underline block"
                   >
                     {item.name}
                   </a>
@@ -476,9 +476,12 @@ const Navbar = () => {
                 <span className="text-[11px] font-bold text-[#4A93C4] uppercase tracking-wider">Contact</span>
               </div>
             </div>
-            <div className="mt-auto p-8 border-t border-gray-100 bg-gray-50/50">
-              <Link to="/about" onClick={() => setIsMobileMenuOpen(false)} className="w-full py-4 bg-[#4A93C4] text-white rounded-full font-medium active:scale-95 transition-all cursor-pointer block text-center">
+            <div className="mt-auto p-8 border-t border-gray-100 bg-gray-50/50 flex flex-col items-center gap-6">
+              <Link to="/about" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-bold text-[#3c4043] hover:text-[#4A93C4] transition-colors uppercase tracking-widest">
                 About Us
+              </Link>
+              <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className="w-full py-4 bg-[#4A93C4] text-white rounded-full font-medium active:scale-95 transition-all cursor-pointer block text-center">
+                Get a Quote
               </Link>
             </div>
           </motion.div>
