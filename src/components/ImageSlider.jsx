@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import cleanRoomImg from '../assets/clean room.webp';
 import cleanRoomMobileImg from '../assets/clean room mobile.webp';
+import lab from '../assets/lab.webp';
+import labMobile from '../assets/lab mobile.webp'
 
 const ImageSlider = ({ 
   images = [], 
@@ -36,10 +38,11 @@ const ImageSlider = ({
       // badge: 'ISO 14644-1 Certified'
     },
     {
-      url: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1920&h=800&fit=crop&q=80',
-      title: 'Precision Laboratory Equipment',
-      subtitle: 'HPLC systems, dissolution testers, analytical instruments, and GMP-compliant production machinery for pharmaceutical quality control and manufacturing excellence',
-      badge: 'GMP Compliant'
+      url: lab,
+      mobileUrl: labMobile,
+      // title: 'Precision Laboratory Equipment',
+      // subtitle: 'HPLC systems, dissolution testers, analytical instruments, and GMP-compliant production machinery for pharmaceutical quality control and manufacturing excellence',
+      // badge: 'GMP Compliant'
     }
   ];
 
