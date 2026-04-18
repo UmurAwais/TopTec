@@ -18,19 +18,6 @@ const ImageSlider = ({
   // Premium pharmaceutical/laboratory themed slides
   const defaultSlides = [
     {
-      url: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1920&h=800&fit=crop&q=80',
-      title: 'TopTec - Cleanroom Excellence',
-      subtitle: 'Delivering turnkey pharmaceutical cleanroom solutions and precision HVAC systems to healthcare facilities worldwide',
-      badge: 'Trusted Since 1999',
-      isMainSlide: true,
-      stats: [
-        { value: '25+', label: 'Years Experience' },
-        { value: '150+', label: 'Global Projects' },
-        { value: '300+', label: 'Specialist Engineers' }
-      ],
-      certifications: ['GMP Certified', 'ISO 14644-1', 'H14 HEPA Systems']
-    },
-    {
       url: cleanRoomImg,
       mobileUrl: cleanRoomMobileImg,
       // title: 'Complete Cleanroom Solutions',
