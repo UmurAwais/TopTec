@@ -16,10 +16,10 @@ const AboutHero = () => {
       <div className="container mx-auto px-6 sm:px-8 lg:px-16 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-16 lg:gap-8">
           <div className="lg:col-span-7">
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#4A93C4]/10 rounded-full text-[#4A93C4] text-xs font-black uppercase tracking-[0.2em] mb-6 sm:mb-8">
+            {/* <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#4A93C4]/10 rounded-full text-[#4A93C4] text-xs font-black uppercase tracking-[0.2em] mb-6 sm:mb-8">
               <span className="w-2 h-2 rounded-full bg-[#4A93C4] animate-pulse"></span>
               The TopTec Standard
-            </span>
+            </span> */}
             <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold text-[#202124] leading-tight mb-8 sm:mb-10 tracking-tight">
               Cleanroom & Pharma 
               <span className="text-[#4A93C4]"> Solutions.</span>
