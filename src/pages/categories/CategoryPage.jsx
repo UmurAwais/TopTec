@@ -74,7 +74,7 @@ const CategoryPage = ({
                 <ChevronRight size={10} className="text-gray-300 shrink-0" />
                 <span className="text-[#4A93C4] shrink-0">Categories</span>
                 <ChevronRight size={10} className="text-gray-300 shrink-0" />
-                <span className="text-gray-400 truncate max-w-[120px] sm:max-w-none">{title}</span>
+                <span className="text-gray-400 truncate max-w-30 sm:max-w-none">{title}</span>
               </div>
 
               <div className="max-w-xl w-full">
@@ -121,7 +121,7 @@ const CategoryPage = ({
 
             {/* Right Side: Category Image */}
             <div className="relative mt-12 lg:mt-0">
-              <div className="relative z-10 rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-2xl shadow-[#4A93C4]/20 border-4 sm:border-8 border-white">
+              <div className="relative z-10 rounded-4xl sm:rounded-[3rem] overflow-hidden shadow-2xl shadow-[#4A93C4]/20 border-4 sm:border-8 border-white">
                 {image ? (
                   <img src={image} alt={title} className="w-full h-auto object-cover aspect-4/3" />
                 ) : (
@@ -183,7 +183,7 @@ const CategoryPage = ({
                   )}
                   </>
                 ) : (
-                  <div className="bg-linear-to-br from-gray-50 to-white border border-gray-100 rounded-[2rem] sm:rounded-[3rem] p-8 sm:p-20 flex flex-col items-center justify-center text-center shadow-sm group hover:shadow-xl hover:shadow-[#4A93C4]/5 transition-all duration-700">
+                  <div className="bg-linear-to-br from-gray-50 to-white border border-gray-100 rounded-4xl sm:rounded-[3rem] p-8 sm:p-20 flex flex-col items-center justify-center text-center shadow-sm group hover:shadow-xl hover:shadow-[#4A93C4]/5 transition-all duration-700">
                     <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-full flex items-center justify-center text-[#4A93C4] mb-6 sm:mb-8 shadow-inner border border-gray-50 group-hover:scale-110 transition-transform">
                       <Zap size={32} />
                     </div>
@@ -206,7 +206,7 @@ const CategoryPage = ({
                       <Link 
                         key={i} 
                         to={sub.href}
-                        className="group p-8 sm:p-10 bg-white border border-gray-100 rounded-[2rem] sm:rounded-[2.5rem] hover:border-[#4A93C4]/30 transition-all duration-500 hover:shadow-2xl hover:shadow-gray-100 relative overflow-hidden flex flex-col items-start"
+                        className="group p-8 sm:p-10 bg-white border border-gray-100 rounded-4xl sm:rounded-[2.5rem] hover:border-[#4A93C4]/30 transition-all duration-500 hover:shadow-2xl hover:shadow-gray-100 relative overflow-hidden flex flex-col items-start"
                       >
                         <div className="absolute top-0 right-0 w-24 h-24 bg-[#4A93C4]/5 rounded-bl-full translate-x-8 -translate-y-8 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-700"></div>
                         <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gray-50 rounded-xl sm:rounded-2xl mb-6 sm:mb-8 flex items-center justify-center text-[#4A93C4] group-hover:bg-[#4A93C4] group-hover:text-white transition-all">
@@ -220,7 +220,7 @@ const CategoryPage = ({
                     ))
                   ) : (
                     [1, 2].map((i) => (
-                      <div key={i} className="group p-8 sm:p-10 bg-white border border-gray-100 rounded-[2rem] sm:rounded-[2.5rem] animate-pulse relative overflow-hidden">
+                      <div key={i} className="group p-8 sm:p-10 bg-white border border-gray-100 rounded-4xl sm:rounded-[2.5rem] animate-pulse relative overflow-hidden">
                         <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gray-50 rounded-xl sm:rounded-2xl mb-6 sm:mb-8"></div>
                         <div className="h-6 sm:h-7 bg-gray-50 rounded-lg w-3/4 mb-4"></div>
                         <div className="space-y-3">
@@ -237,7 +237,7 @@ const CategoryPage = ({
             {/* Right Column: Sticky Sidebar Info */}
             <div className="lg:col-span-4 mt-12 lg:mt-0">
               <div className="sticky top-24 space-y-8 lg:space-y-10">
-                <div className="bg-[#202124] rounded-[2rem] sm:rounded-[2.5rem] p-8 sm:p-10 text-white relative overflow-hidden shadow-2xl shadow-gray-400">
+                <div className="bg-[#202124] rounded-4xl sm:rounded-[2.5rem] p-8 sm:p-10 text-white relative overflow-hidden shadow-2xl shadow-gray-400">
                   <div className="absolute top-10 right-10 w-20 h-20 bg-[#4A93C4] rounded-full blur-[60px] opacity-30 animate-pulse"></div>
                   <h3 className="text-2xl sm:text-[28px] font-bold mb-6 sm:mb-8 leading-tight uppercase">Our Expertise</h3>
                   <div className="space-y-6 sm:space-y-8">

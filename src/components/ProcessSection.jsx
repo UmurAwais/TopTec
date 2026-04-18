@@ -86,12 +86,12 @@ const ProcessSection = () => {
         </div>
 
         {/* Call to Action Bar */}
-        <div className="mt-20 p-8 lg:p-12 bg-[#202124] rounded-4xl flex flex-col lg:flex-row items-center justify-between gap-8 group cursor-pointer hover:bg-black transition-colors">
+        <div className="mt-20 p-8 lg:p-12 bg-[#202124] rounded-4xl flex flex-col lg:flex-row items-center justify-between gap-8 group cursor-pointer">
           <div>
             <h4 className="text-2xl lg:text-3xl font-medium text-white mb-2">Planning a pharmaceutical cleanroom project?</h4>
             <p className="text-gray-400">Get a detailed feasibility study and cost estimate from our cleanroom engineering specialists.</p>
           </div>
-          <button className="px-10 py-5 bg-[#4A93C4] text-white rounded-full font-bold text-lg hover:bg-[#3b7ba8] transition-all active:scale-95 flex items-center gap-3">
+          <button className="px-10 py-5 bg-[#4A93C4] text-white rounded-full font-bold text-lg hover:bg-[#3b7ba8] transition-all active:scale-95 flex items-center gap-3 cursor-pointer">
             Book Engineering Consult <ArrowRight size={20} />
           </button>
         </div>
