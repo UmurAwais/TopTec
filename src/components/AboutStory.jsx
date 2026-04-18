@@ -38,7 +38,7 @@ const AboutStory = () => {
               <span className="inline-flex items-center gap-2 text-[#4A93C4] font-black uppercase text-[10px] sm:text-xs tracking-[0.3em] mb-4 sm:mb-6">
                  <Award size={14} /> Our Philosophy
               </span>
-              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-[#202124] leading-tight tracking-tight mb-6 sm:mb-8">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#202124] leading-tight tracking-tight mb-6 sm:mb-8">
                 Precision <br />
                 <span className="text-[#4A93C4]">Cleanroom Solutions</span>
               </h2>

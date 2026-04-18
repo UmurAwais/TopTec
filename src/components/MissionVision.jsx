@@ -11,7 +11,7 @@ const MissionVision = () => {
        <div className="container mx-auto px-6 sm:px-8 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-32 items-center">
              <div>
-                <h3 className="text-3xl sm:text-5xl lg:text-7xl font-semibold text-white mb-6 sm:mb-10 tracking-tight leading-tight">
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-6 sm:mb-10 tracking-tight leading-tight">
                   Our Mission <br />
                   <span className="text-[#4A93C4]">is your safety.</span>
                 </h3>
