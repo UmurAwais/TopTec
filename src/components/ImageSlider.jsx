@@ -5,6 +5,8 @@ import cleanRoomImg from '../assets/clean room.webp';
 import cleanRoomMobileImg from '../assets/clean room mobile.webp';
 import lab from '../assets/lab.webp';
 import labMobile from '../assets/lab mobile.webp'
+import furniture from '../assets/furniture.webp'
+import furnitureMobile from '../assets/furniture mobile.webp'
 
 const ImageSlider = ({ 
   images = [], 
@@ -27,6 +29,13 @@ const ImageSlider = ({
     {
       url: lab,
       mobileUrl: labMobile,
+      // title: 'Precision Laboratory Equipment',
+      // subtitle: 'HPLC systems, dissolution testers, analytical instruments, and GMP-compliant production machinery for pharmaceutical quality control and manufacturing excellence',
+      // badge: 'GMP Compliant'
+    },
+    {
+      url: furniture,
+      mobileUrl: furnitureMobile,
       // title: 'Precision Laboratory Equipment',
       // subtitle: 'HPLC systems, dissolution testers, analytical instruments, and GMP-compliant production machinery for pharmaceutical quality control and manufacturing excellence',
       // badge: 'GMP Compliant'
