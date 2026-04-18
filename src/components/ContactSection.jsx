@@ -35,7 +35,7 @@ const ContactSection = () => {
   return (
     <section className="py-16 sm:py-24 bg-[#F8F9FA]">
       <div className="container mx-auto px-4 sm:px-8 lg:px-16">
-        <div className="bg-[#202124] rounded-4xl sm:rounded-[56px] overflow-hidden shadow-2xl flex flex-col lg:flex-row relative min-h-0 lg:min-h-[700px]">
+        <div className="bg-[#202124] rounded-4xl sm:rounded-[56px] overflow-hidden shadow-2xl flex flex-col lg:flex-row relative min-h-0 lg:min-h-175">
           
           {/* Decorative background circle */}
           <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[80%] bg-[#4A93C4]/10 rounded-full blur-[120px] pointer-events-none hidden sm:block"></div>
@@ -84,7 +84,7 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 sm:gap-6 group">
+              {/* <div className="flex items-start gap-4 sm:gap-6 group">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[#4A93C4] group-hover:bg-[#4A93C4] group-hover:text-white transition-all duration-300 shrink-0">
                   <Building2 size={20} className="sm:hidden" />
                   <Building2 size={24} className="hidden sm:block" />
@@ -93,7 +93,7 @@ const ContactSection = () => {
                   <div className="text-[10px] sm:text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Operating From</div>
                   <div className="text-xs sm:text-lg lg:text-xl text-white font-medium">Lahore, Punjab, Pakistan</div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
