@@ -6,43 +6,43 @@ const categories = [
   { 
     title: 'Air Filters', 
     icon: <Filter size={24} />, 
-    desc: 'H14 HEPA filters, pre-filters, activated carbon filters, and bag filters engineered for pharmaceutical cleanrooms and sterile manufacturing environments.',
+    desc: 'High-efficiency HEPA filters and pre-filters designed for sterile environments and pharma labs.',
     slug: 'air-filters'
   },
   { 
     title: 'Air Cleaning', 
     icon: <Wind size={24} />, 
-    desc: 'Laminar flow hoods, Class II biosafety cabinets, and dynamic air showers that maintain ISO Class 5 cleanroom standards for biotech labs.',
+    desc: 'Advanced biosafety cabinets and laminar flow hoods to maintain ISO Grade A standards.',
     slug: 'air-cleaning'
   },
   { 
-    title: 'Laboratory Furniture', 
+    title: 'Lab Furniture', 
     icon: <Building2 size={24} />, 
-    desc: 'SS 316L stainless steel workbenches, chemical-resistant lab tables, and modular storage systems for pharmaceutical QC laboratories.',
+    desc: 'Durable SS 316L stainless steel workbenches and modular storage for medical laboratories.',
     slug: 'laboratory-furniture'
   },
   { 
     title: 'Production Machinery', 
     icon: <Settings size={24} />, 
-    desc: 'GMP-compliant tablet presses, capsule filling machines, liquid filling lines, and ointment manufacturing equipment for pharma production.',
+    desc: 'Reliable tablet section, capsule filling, and liquid syrup section machinery for manufacturers.',
     slug: 'production-machinery'
   },
   { 
-    title: 'Laboratory Equipment', 
+    title: 'Lab Equipment', 
     icon: <FlaskConical size={24} />, 
-    desc: 'HPLC systems, dissolution testers, microbiology incubators, and analytical instruments for pharmaceutical quality control testing.',
+    desc: 'Precision analytical instruments and general lab equipment for strict quality control.',
     slug: 'laboratory-equipment'
   },
   { 
-    title: 'Sterile Processing', 
+    title: 'Clean Room', 
     icon: <Layers size={24} />, 
-    desc: 'Modular cleanroom panels, hermetic doors, ESD flooring, and complete turnkey cleanroom construction from Grade A to Grade D.',
+    desc: 'Turnkey cleanroom panels and flooring for pharmaceutical and medical device industries.',
     slug: 'sterile-processing'
   },
   { 
-    title: 'HVAC Systems', 
+    title: 'HVAC Services', 
     icon: <Zap size={24} />, 
-    desc: 'Custom air handling units, pharmaceutical-grade chillers, precision HVAC controls, and validated environmental monitoring systems.',
+    desc: 'Specialized environmental control systems maintaining humidity and temperature for pharma.',
     slug: 'hvac-systems'
   },
 ];
@@ -58,15 +58,15 @@ const CategorySection = () => {
           <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
             <div className="max-w-2xl">
               <span className="text-[#4A93C4] font-bold text-sm uppercase tracking-widest mb-4 block">
-                Complete Solutions
+                What We Offer
               </span>
-              <h2 className="text-5xl lg:text-6xl font-semibold text-[#202124] tracking-tight">
-                Pharmaceutical Equipment <br /> 
-                <span className="text-[#4A93C4]">for Every Need.</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#202124] tracking-tight leading-[1.1]">
+                Pharma & Laboratory <br /> 
+                <span className="text-[#4A93C4]">Solutions.</span>
               </h2>
             </div>
             <p className="text-[#5f6368] text-lg max-w-sm">
-              From HEPA filtration to complete cleanroom installations, we supply pharmaceutical-grade equipment that meets WHO, FDA, and EU GMP requirements for facilities worldwide.
+              We provide top-tier laboratory equipment, services, and sterile cleanroom setups tailored for Pakistan's pharmaceutical industry.
             </p>
           </div>
 

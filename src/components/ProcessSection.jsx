@@ -3,26 +3,26 @@ import { ClipboardCheck, Construction, Settings2, ShieldCheck, ArrowRight } from
 
 const steps = [
   {
-    title: 'Design & Engineering',
-    desc: 'BIM-integrated cleanroom design with CFD analysis, tailored to ISO 14644-1 and EU GMP Grade requirements for your facility.',
+    title: 'Consultation & Design',
+    desc: 'Expert planning and custom cleanroom designs tailored to ISO 14644-1 and industry-specific requirements.',
     icon: <ClipboardCheck size={28} className="text-[#4A93C4]" />,
     color: 'bg-blue-50'
   },
   {
-    title: 'Manufacturing & Testing',
-    desc: 'In-house production of cleanroom panels, HEPA filter housings, and custom AHUs with factory acceptance testing (FAT).',
+    title: 'Precision Supply',
+    desc: 'Sourcing high-quality imported, refurbished, or locally manufactured equipment for your facility.',
     icon: <Settings2 size={28} className="text-[#FBBC04]" />,
     color: 'bg-yellow-50'
   },
   {
-    title: 'Installation & Integration',
-    desc: 'Expert on-site cleanroom construction, HVAC integration, and electrical commissioning by certified installation teams.',
+    title: 'Expert Installation',
+    desc: 'Professional on-site setup of lab furniture, HVAC systems, and production machinery by certified technicians.',
     icon: <Construction size={28} className="text-[#EA4335]" />,
     color: 'bg-red-50'
   },
   {
-    title: 'Validation & Certification',
-    desc: 'Complete DQ/IQ/OQ/PQ protocols, particle count testing, and regulatory compliance documentation for FDA and WHO audits.',
+    title: 'Validation & Support',
+    desc: 'Full testing and ongoing support to ensure your operations remain compliant with global safety standards.',
     icon: <ShieldCheck size={28} className="text-[#34A853]" />,
     color: 'bg-green-50'
   }
@@ -38,15 +38,15 @@ const ProcessSection = () => {
         <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
             <span className="text-[#4A93C4] font-bold text-sm uppercase tracking-[0.2em] mb-4 block">
-              Project Delivery
+              Our Process
             </span>
-            <h2 className="text-5xl lg:text-6xl font-semibold text-[#202124] tracking-tight leading-[1.1]">
-              Turnkey cleanroom solutions <br />
-              <span className="text-[#4A93C4]">from Dubai to Dhaka.</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#202124] tracking-tight leading-[1.1]">
+              Reliable Solutions <br />
+              <span className="text-[#4A93C4]">Across Pakistan.</span>
             </h2>
           </div>
           <p className="text-lg text-[#5f6368] leading-relaxed max-w-sm">
-            We manage complete cleanroom projects across UAE, Saudi Arabia, Qatar, Kenya, Nigeria, Bangladesh, Sri Lanka, Vietnam, Jordan, USA, Germany, and UK with single-point accountability and zero contamination risk.
+            We deliver complete pharmaceutical cleanroom and laboratory solutions with a focus on quality, precision, and reliable engineering.
           </p>
         </div>
 

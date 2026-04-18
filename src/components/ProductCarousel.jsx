@@ -119,11 +119,11 @@ const ProductCarousel = () => {
         <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
             <span className="text-[#4A93C4] font-bold text-sm uppercase tracking-[0.2em] mb-4 block">
-              Featured Equipment
+              Featured Machinery
             </span>
-            <h2 className="text-5xl lg:text-6xl font-semibold text-[#202124] tracking-tight leading-[1.1]">
-              Pharmaceutical-grade equipment <br />
-              <span className="text-[#4A93C4]">trusted worldwide.</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#202124] tracking-tight leading-[1.1]">
+              Quality Engineering <br />
+              <span className="text-[#4A93C4]">You Can Trust.</span>
             </h2>
           </div>
           <div className="flex items-center gap-4 mb-4 lg:mb-0">

@@ -45,7 +45,7 @@ const ContactSection = () => {
             <span className="text-[#4A93C4] font-bold text-xs sm:text-sm uppercase tracking-[0.2em] mb-4 block">
               Contact Us
             </span>
-            <h2 className="text-3xl sm:text-5xl lg:text-7xl font-semibold text-white tracking-tight leading-tight lg:leading-[0.9] mb-8 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white tracking-tight leading-tight mb-8 sm:mb-12">
               Let's build <br className="hidden sm:block" />
               <span className="text-[#4A93C4]">together.</span>
             </h2>
@@ -68,8 +68,8 @@ const ContactSection = () => {
                   <Phone size={24} className="hidden sm:block" />
                 </div>
                 <div>
-                  <div className="text-[10px] sm:text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Global Hotline</div>
-                  <div className="text-sm sm:text-xl text-white font-medium">+92 323 8491966</div>
+                  <div className="text-[10px] sm:text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Phone Numbers</div>
+                  <div className="text-sm sm:text-xl text-white font-medium">+92 323 8491966 / +92 310 9999414</div>
                 </div>
               </div>
 
@@ -79,8 +79,8 @@ const ContactSection = () => {
                   <MapPin size={24} className="hidden sm:block" />
                 </div>
                 <div>
-                  <div className="text-[10px] sm:text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Corporate HQ</div>
-                  <div className="text-xs sm:text-lg lg:text-xl text-white font-medium leading-relaxed">Office#01, Block A, Gohawa, Ring Road, Lahore</div>
+                  <div className="text-[10px] sm:text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Office Address</div>
+                  <div className="text-xs sm:text-lg lg:text-xl text-white font-medium leading-relaxed">House # 51, Block E, Fathe Abad Academy Road, Lahore Cantt.</div>
                 </div>
               </div>
 
@@ -90,8 +90,8 @@ const ContactSection = () => {
                   <Building2 size={24} className="hidden sm:block" />
                 </div>
                 <div>
-                  <div className="text-[10px] sm:text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Warehouse</div>
-                  <div className="text-xs sm:text-lg lg:text-xl text-white font-medium">Block E, Fathe Abad Academy Road, Lahore</div>
+                  <div className="text-[10px] sm:text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Operating From</div>
+                  <div className="text-xs sm:text-lg lg:text-xl text-white font-medium">Lahore, Punjab, Pakistan</div>
                 </div>
               </div>
             </div>

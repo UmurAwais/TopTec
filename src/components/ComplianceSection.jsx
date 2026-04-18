@@ -35,15 +35,15 @@ const ComplianceSection = () => {
         <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
             <span className="text-[#4A93C4] font-bold text-sm uppercase tracking-[0.2em] mb-4 block">
-              Regulatory Compliance
+              Global Compliance
             </span>
-            <h2 className="text-5xl lg:text-6xl font-semibold text-[#202124] tracking-tight leading-[1.1]">
-              Meeting global standards <br />
-              <span className="text-[#4A93C4]">in every market.</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#202124] tracking-tight leading-[1.1]">
+              Strict Standards <br />
+              <span className="text-[#4A93C4]">Guaranteed.</span>
             </h2>
           </div>
           <p className="text-lg text-[#5f6368] leading-relaxed max-w-sm">
-            Our cleanroom solutions comply with FDA, WHO, EMA, and local regulatory requirements across UAE, Saudi Arabia, Qatar, Kenya, Nigeria, Bangladesh, Sri Lanka, Vietnam, Jordan, USA, Germany, and UK pharmaceutical markets.
+            We provide cleanroom and laboratory solutions that meet the highest international standards, including WHO, FDA, and local health regulations.
           </p>
         </div>
 

@@ -3,28 +3,28 @@ import { ArrowRight, BookOpen, Clock, Tag } from 'lucide-react';
 
 const articles = [
   {
-    category: 'Engineering',
-    title: 'The Future of ISO 7 Cleanroom Standards in 2026',
-    excerpt: 'Examining the upcoming shifts in air exchange requirements and environmental monitoring protocols for biotech.',
-    date: 'Jan 24, 2026',
-    readTime: '8 min read',
+    category: 'Laboratory',
+    title: 'Biological Safety Cabinets: Classes I, II & III Explained',
+    excerpt: 'Detailed guide on understanding the differences between BSC classes for your laboratory protection.',
+    date: 'April 17, 2026',
+    readTime: '6 min read',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    category: 'Equipment',
+    title: 'Biological Safety Cabinet vs. Fume Hood: Key Differences',
+    excerpt: 'Choosing the right ventilation system. A comparison between BSCs and standard laboratory fume hoods.',
+    date: 'April 17, 2026',
+    readTime: '5 min read',
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800'
   },
   {
-    category: 'HVACR',
-    title: 'Optimizing AHU Efficiency for Extreme Climates',
-    excerpt: 'How our modified air handling units maintain absolute precision in high-humidity tropical environments.',
-    date: 'Jan 18, 2026',
-    readTime: '12 min read',
+    category: 'Safety',
+    title: 'Complete Guide to Biological Safety Cabinet Safe Use',
+    excerpt: 'Best practices for operating BSCs to ensure the safety of personnel and the integrity of research samples.',
+    date: 'April 17, 2026',
+    readTime: '7 min read',
     image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800'
-  },
-  {
-    category: 'Solutions',
-    title: 'Sterile Grade A Transfer: New Pass Box Tech',
-    excerpt: 'Introducing electromagnetic interloking systems that eliminate cross-contamination during material transfer.',
-    date: 'Jan 12, 2026',
-    readTime: '10 min read',
-    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=800'
   }
 ];
 
@@ -37,7 +37,7 @@ const InsightsSection = () => {
             <span className="text-[#4A93C4] font-bold text-sm uppercase tracking-[0.2em] mb-4 block">
               Knowledge Hub
             </span>
-            <h2 className="text-5xl lg:text-6xl font-semibold text-[#202124] tracking-tight leading-[1.1]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#202124] tracking-tight leading-[1.1]">
               Technical insights <br />
               <span className="text-[#4A93C4]">from our lead engineers.</span>
             </h2>
