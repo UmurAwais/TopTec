@@ -322,7 +322,7 @@ const Navbar = () => {
           : 'py-4 bg-white'
       }`}>
         <div className="w-full px-3 lg:px-4 flex justify-between items-center gap-4">
-          <div className="flex items-center gap-2 lg:gap-4 shrink-0 overflow-hidden">
+          <div className="flex items-center gap-2 lg:gap-4 shrink-0">
             <Link to="/" className="flex items-center cursor-pointer shrink-0 min-w-fit">
               <img src={logo} alt="Top Tec" className="h-7 lg:h-9 w-auto object-contain shrink-0" />
             </Link>
