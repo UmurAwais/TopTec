@@ -120,7 +120,7 @@ const ImageSlider = ({
           initial={false}
           animate={{ opacity: isHovered ? 1 : 0 }}
           transition={{ duration: 0.3 }}
-          className="opacity-0 pointer-events-auto absolute left-4 top-1/2 -translate-y-1/2 p-3 lg:p-4 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white rounded-full transition-transform duration-300 hover:scale-110 active:scale-95 border border-white/20 group"
+          className="opacity-0 pointer-events-auto absolute left-4 top-1/2 -translate-y-1/2 p-2 lg:p-2 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white rounded-full transition-transform duration-300 hover:scale-110 active:scale-95 border border-white/20 group"
           aria-label="Previous slide"
         >
           <ChevronLeft size={20} className="lg:w-6 lg:h-6 group-hover:-translate-x-0.5 transition-transform" />
@@ -132,7 +132,7 @@ const ImageSlider = ({
           initial={false}
           animate={{ opacity: isHovered ? 1 : 0 }}
           transition={{ duration: 0.3 }}
-          className="opacity-0 pointer-events-auto absolute right-4 top-1/2 -translate-y-1/2 p-3 lg:p-4 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white rounded-full transition-transform duration-300 hover:scale-110 active:scale-95 border border-white/20 group"
+          className="opacity-0 pointer-events-auto absolute right-4 top-1/2 -translate-y-1/2 p-2 lg:p-2 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white rounded-full transition-transform duration-300 hover:scale-110 active:scale-95 border border-white/20 group"
           aria-label="Next slide"
         >
           <ChevronRight size={20} className="lg:w-6 lg:h-6 group-hover:translate-x-0.5 transition-transform" />
