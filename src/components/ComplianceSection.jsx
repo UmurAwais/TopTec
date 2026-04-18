@@ -79,13 +79,13 @@ const ComplianceSection = () => {
         </div>
 
         {/* Dynamic Certification Logo Bar */}
-        <div className="mt-20 py-12 border-y border-gray-100 flex flex-wrap justify-between items-center gap-12 opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+        {/* <div className="mt-20 py-12 border-y border-gray-100 flex flex-wrap justify-between items-center gap-12 opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
              <div className="text-2xl font-black tracking-tighter text-gray-900 italic">ISO 9001:2015</div>
              <div className="text-2xl font-black tracking-tighter text-gray-900">GMP <span className="text-[#4A93C4]">GRADE A</span></div>
              <div className="text-2xl font-black tracking-tighter text-gray-900 border-2 border-gray-900 px-3 py-1">WHO CERTIFIED</div>
              <div className="text-2xl font-black tracking-tighter text-gray-900 underline decoration-[#4A93C4] decoration-4">ISO 14644-1</div>
              <div className="text-2xl font-black tracking-tighter text-gray-900">ASME <span className="text-[#EA4335]">BPE</span></div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
