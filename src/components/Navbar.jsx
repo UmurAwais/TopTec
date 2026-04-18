@@ -360,7 +360,7 @@ const Navbar = () => {
                    value={searchQuery}
                    onChange={(e) => setSearchQuery(e.target.value)}
                    className={`absolute right-0 h-10 pr-12 pl-6 bg-gray-50 border border-transparent rounded-full text-sm outline-none transition-all duration-500 ease-in-out z-30 ${
-                     isSearchOpen ? 'w-[500px] opacity-100 border-gray-100' : 'w-10 opacity-0 pointer-events-none'
+                     isSearchOpen ? 'w-125 opacity-100 border-gray-100' : 'w-10 opacity-0 pointer-events-none'
                    }`}
                 />
 
@@ -378,8 +378,8 @@ const Navbar = () => {
             </div>
 
             {/* Always visible on Mobile: Contact & Menu */}
-            <Link to="/contact" className="px-4 lg:px-6 py-2 lg:py-2.5 bg-[#4A93C4] text-white rounded-full font-medium text-xs lg:text-sm hover:bg-[#3b7ba8] hover:shadow-md transition-all active:scale-95 whitespace-nowrap">
-              Contact Us
+            <Link to="/contact" className="px-4 lg:px-6 py-2 lg:py-2.5 bg-[#4A93C4] text-white rounded-full font-medium text-xs lg:text-sm hover:bg-[#3b7ba8] hover:shadow-md transition-all active:scale-95 whitespace-nowrap uppercase">
+              Contact
             </Link>
 
             <button 
@@ -420,7 +420,7 @@ const Navbar = () => {
                     className="w-full bg-gray-50 border border-gray-100 rounded-2xl py-4 pl-12 pr-4 text-sm focus:bg-white focus:border-[#4A93C4] outline-none transition-all"
                   />
                   {searchQuery.length > 0 && (
-                    <div className="absolute top-full left-0 right-0 bg-white shadow-xl rounded-2xl mt-2 border border-gray-100 z-50 overflow-hidden max-h-[300px] overflow-y-auto">
+                    <div className="absolute top-full left-0 right-0 bg-white shadow-xl rounded-2xl mt-2 border border-gray-100 z-50 overflow-hidden max-h-75 overflow-y-auto">
                       {searchData.filter(i => 
                         i.name.toLowerCase().includes(searchQuery.toLowerCase())
                       ).slice(0, 5).map((item, idx) => (
