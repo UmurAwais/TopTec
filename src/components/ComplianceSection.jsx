@@ -5,25 +5,29 @@ const standards = [
   {
     title: 'ISO 14644-1 Cleanrooms',
     desc: 'Complete cleanroom design, construction, and certification for ISO Class 1 through Class 9 controlled environments.',
-    icon: <Globe size={28} className="text-[#4A93C4]" />,
+    icon: <Globe size={28} />,
+    color: 'text-[#4A93C4]',
     id: 'ISO-14644'
   },
   {
     title: 'EU GMP Compliance',
     desc: 'Pharmaceutical cleanrooms meeting EU GMP Annex 1 requirements for Grade A, B, C, and D sterile manufacturing.',
-    icon: <ShieldCheck size={28} className="text-[#34A853]" />,
+    icon: <ShieldCheck size={28} />,
+    color: 'text-[#34A853]',
     id: 'EU-GMP'
   },
   {
     title: 'WHO Prequalification',
     desc: 'WHO-PQS certified equipment and cleanroom infrastructure for global vaccine and essential medicine production.',
-    icon: <Award size={28} className="text-[#FBBC04]" />,
+    icon: <Award size={28} />,
+    color: 'text-[#FBBC04]',
     id: 'WHO-PQS'
   },
   {
     title: 'FDA 21 CFR Part 11',
     desc: 'Electronic monitoring systems and cleanroom controls compliant with FDA regulations for pharmaceutical manufacturing.',
-    icon: <FileCheck size={28} className="text-[#EA4335]" />,
+    icon: <FileCheck size={28} />,
+    color: 'text-[#EA4335]',
     id: 'FDA-CFR'
   }
 ];
@@ -54,7 +58,7 @@ const ComplianceSection = () => {
               className="p-10 rounded-4xl bg-[#f8f9fa] border border-gray-100 hover:bg-white hover:shadow-2xl hover:shadow-[#4A93C4]/10 transition-all duration-500 group flex flex-col h-full"
             >
               <div className="flex justify-between items-start mb-8">
-                <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center group-hover:bg-[#4A93C4] group-hover:text-white transition-all duration-500">
+                <div className={`w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center ${item.color} group-hover:bg-[#4A93C4] group-hover:text-white transition-all duration-500`}>
                   {item.icon}
                 </div>
                 <span className="text-[10px] font-black text-gray-300 tracking-widest group-hover:text-[#4A93C4]/30 transition-colors">
