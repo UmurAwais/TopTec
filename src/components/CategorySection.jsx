@@ -16,7 +16,7 @@ const categories = [
     slug: 'air-cleaning'
   },
   { 
-    title: 'Lab Furniture', 
+    title: 'Laboratory Furniture', 
     icon: <Building2 size={24} />, 
     desc: 'Durable SS 316L stainless steel workbenches and modular storage for medical laboratories.',
     slug: 'laboratory-furniture'
@@ -28,19 +28,19 @@ const categories = [
     slug: 'production-machinery'
   },
   { 
-    title: 'Lab Equipment', 
+    title: 'Laboratory Equipment', 
     icon: <FlaskConical size={24} />, 
     desc: 'Precision analytical instruments and general lab equipment for strict quality control.',
     slug: 'laboratory-equipment'
   },
   { 
-    title: 'Clean Room', 
+    title: 'Sterile Processing', 
     icon: <Layers size={24} />, 
     desc: 'Turnkey cleanroom panels and flooring for pharmaceutical and medical device industries.',
     slug: 'sterile-processing'
   },
   { 
-    title: 'HVAC Services', 
+    title: 'HVAC', 
     icon: <Zap size={24} />, 
     desc: 'Specialized environmental control systems maintaining humidity and temperature for pharma.',
     slug: 'hvac-systems'
@@ -58,15 +58,15 @@ const CategorySection = () => {
           <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
             <div className="max-w-2xl">
               <span className="text-[#4A93C4] font-bold text-sm uppercase tracking-widest mb-4 block">
-                What We Offer
+                Quality Control Expert
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#202124] tracking-tight leading-[1.1]">
-                Pharma & Laboratory <br /> 
-                <span className="text-[#4A93C4]">Solutions.</span>
+                Clean Room & <br /> 
+                <span className="text-[#4A93C4]">Industrial Engineering.</span>
               </h2>
             </div>
             <p className="text-[#5f6368] text-lg max-w-sm">
-              We provide top-tier laboratory equipment, services, and sterile cleanroom setups tailored for Pakistan's pharmaceutical industry.
+              Serving pharmaceuticals, nutraceuticals, and medical device industries with high-quality engineering and manufacturing services since 2016.
             </p>
           </div>
 

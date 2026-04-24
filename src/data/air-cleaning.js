@@ -2,7 +2,7 @@ export const airCleaningProducts = [
   {
     slug: 'air-shower-standard',
     name: 'Air Shower',
-    category: 'Air Cleaning',
+    category: 'Air Cleaning Equipments',
     description: 'An air shower is a sealed room, which is located in a cleanroom or controlled environment to prevent contaminants from entering on people or objects. They will remove particles from a surface using filtered, high-velocity air before allowing the air into a clean area. TOPTEC is the largest manufacturer of air showers for demanding applications.',
     image: 'https://toptec.pk/wp-content/uploads/2024/04/Air-Shower-Image-768x768.png',
     features: [
@@ -39,7 +39,7 @@ export const airCleaningProducts = [
   {
     slug: 'clean-room-stainless-steel-door',
     name: 'Clean Room Stainless Steel Door',
-    category: 'Air Cleaning',
+    category: 'Air Cleaning Equipments',
     description: `Mild-Steel doors are widely used in clean rooms of pharmaceuticals, food, cosmetics and electronics manufacturing industries.
 Fireproof, durable, beautiful appearance, neat, flush with wall panels, easy to clean, good tightness.
 
@@ -68,7 +68,7 @@ TOPTEC pharmaceutical doors play an essential role in preventing cross-contamina
   {
     slug: 'clean-room-mild-steel-door',
     name: 'Clean Room Mild-Steel Door',
-    category: 'Air Cleaning',
+    category: 'Air Cleaning Equipments',
     description: `Mild-Steel doors are widely used in clean rooms of pharmaceuticals, food, cosmetics and electronics manufacturing industries.
 Fireproof, durable, beautiful appearance, neat, flush with wall panels, easy to clean, good tightness.
 
@@ -97,7 +97,7 @@ TOPTEC pharmaceutical doors play an essential role in preventing cross-contamina
   {
     slug: 'biological-safety-cabinet',
     name: 'Biological Safety Cabinet (Class II)',
-    category: 'Air Cleaning',
+    category: 'Air Cleaning Equipments',
     description: `II Type biosafety cabinet (Class II) is a critical safety equipment used widely in scientific research, clinical testing, and microbiology. It features a unique design to provide the best security protection for the environment, operators, and experimental items. The cabinet is made of high-quality cold-rolled plate with electrostatic sprayed surfaces and SUS304 stainless steel table-board.`,
     image: 'https://toptec.pk/wp-content/uploads/2024/04/BSC-B2-48-2.jpg',
     features: [
@@ -138,7 +138,7 @@ TOPTEC pharmaceutical doors play an essential role in preventing cross-contamina
   {
     slug: 'dispensing-sampling-booth',
     name: 'Dispensing/Sampling Booth',
-    category: 'Air Cleaning',
+    category: 'Air Cleaning Equipments',
     description: 'The Dispensing/Sampling Booth (also known as a Weighing Booth) is a specialized purified equipment used in pharmaceutical, microbiological research, and scientific experiments. It provides a vertical unidirectional airflow (laminar flow) that creates a negative pressure environment in the work area to prevent cross-contamination and protect operators from inhaling powders.',
     image: 'https://toptec.pk/wp-content/uploads/2024/12/Dispensingsampling-768x768.jpg',
     features: [
@@ -162,7 +162,7 @@ TOPTEC pharmaceutical doors play an essential role in preventing cross-contamina
   {
     slug: 'cross-over-bench',
     name: 'Cross Over Bench',
-    category: 'Air Cleaning',
+    category: 'Air Cleaning Equipments',
     description: 'Cross Over Benches are essential for cleanroom transition areas, separating the "clean" area from the "dirty" area. They are designed for personnel to change footwear while ensuring hygiene and preventing cross-contamination in pharmaceutical and laboratory environments.',
     image: 'https://toptec.pk/wp-content/uploads/2024/12/cross-over-bench-768x768.webp',
     features: [
@@ -184,7 +184,7 @@ TOPTEC pharmaceutical doors play an essential role in preventing cross-contamina
   {
     slug: 'clean-wardrobe',
     name: 'Clean Wardrobe',
-    category: 'Air Cleaning',
+    category: 'Air Cleaning Equipments',
     description: 'Clean wardrobe, also known as dust-free wardrobe, is a specialized storage solution for cleanroom garments used in medicine, electronics, and precision instrumentation. It ensures that sterilized clothes are stored and transmitted without pollution by ambient air, maintaining garment integrity for sterile environments.',
     image: 'https://toptec.pk/wp-content/uploads/2024/04/CLEAN-WARDROBE.png',
     features: [
@@ -208,7 +208,7 @@ TOPTEC pharmaceutical doors play an essential role in preventing cross-contamina
   {
     slug: 'cleanroom-window',
     name: 'Cleanroom Window',
-    category: 'Air Cleaning',
+    category: 'Air Cleaning Equipments',
     description: 'Specialized double-glazed windows designed for pharmaceutical and electronic cleanrooms. These windows feature a vacuum-sealed design with internal desiccant to eliminate condensation and ensure maximum visibility and hygiene.',
     image: 'https://toptec.pk/wp-content/uploads/2024/04/window-410x410.png',
     features: [
@@ -231,7 +231,7 @@ TOPTEC pharmaceutical doors play an essential role in preventing cross-contamina
   {
     slug: 'cleanroom-lockers',
     name: 'Cleanroom Lockers',
-    category: 'Air Cleaning',
+    category: 'Air Cleaning Equipments',
     description: 'Cleanroom Lockers are specifically designed for storing personal items and clothing in sterile environments. These lockers feature a smooth, easy-to-clean design that minimizes dust accumulation and supports strict hygiene protocols in pharmaceutical, medical, and laboratory facilities.',
     image: 'https://toptec.pk/wp-content/uploads/2024/04/WhatsApp_Image_2024-11-18_at_14.59.28_db647b7e-removebg-preview.png',
     features: [
@@ -255,7 +255,7 @@ TOPTEC pharmaceutical doors play an essential role in preventing cross-contamina
   {
     slug: 'employee-locker',
     name: 'Employee Locker',
-    category: 'Air Cleaning',
+    category: 'Air Cleaning Equipments',
     description: 'Industrial-grade employee lockers designed for secure storage in changing rooms and transition zones. These lockers are engineered for durability and hygiene, featuring ventilated doors and robust construction to meet the demands of pharmaceutical and manufacturing facilities.',
     image: 'https://toptec.pk/wp-content/uploads/2024/12/EmployeeLocker-768x768.webp',
     features: [
@@ -279,7 +279,7 @@ TOPTEC pharmaceutical doors play an essential role in preventing cross-contamina
   {
     slug: 'executive-cabinet',
     name: 'Executive Cabinet',
-    category: 'Air Cleaning',
+    category: 'Air Cleaning Equipments',
     description: 'High-end stainless steel executive cabinet designed for sterile laboratory and pharmaceutical environments. Combining aesthetic appeal with extreme durability, this cabinet provides secure storage for sensitive equipment, documents, or high-value laboratory essentials.',
     image: 'https://toptec.pk/wp-content/uploads/2024/12/Executive-cabinet.png',
     features: [

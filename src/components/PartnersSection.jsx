@@ -3,22 +3,22 @@ import { Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "TopTec's precision in Grade A cleanroom setup was instrumental in our latest vaccine manufacturing expansion. Their engineering team is world-class.",
-    author: "Dr. Sarah Chen",
-    role: "Director of Operations, BioPharm International",
-    location: "Singapore"
+    quote: "TopTec's expertise in cleanroom accessories and SS fabrication has been vital for our Lahore facility. Their engineering quality and attention to GMP standards are unmatched in Pakistan.",
+    author: "M. Ahmed",
+    role: "Plant Manager, Saffron Pharmaceuticals",
+    location: "Lahore"
   },
   {
-    quote: "The turnkey HVACR solution provided by TopTec reduced our energy consumption by 22% while maintaining tighter environmental controls than our previous system.",
-    author: "Marcus Thorne",
-    role: "Chief Engineer, Global Med-Tech",
-    location: "Germany"
+    quote: "We have been sourcing our HEPA filters and air showers from TopTec since 2018. Their reliability and dedication to quality control have made them our preferred engineering partner.",
+    author: "Dr. Kamran Malik",
+    role: "Quality Assurance Head, Hilton Pharma",
+    location: "Karachi"
   },
   {
-    quote: "Finding a partner that understands both ASME BPE standards and WHO-PQS requirements is rare. TopTec is that partner for our Middle Eastern facilities.",
-    author: "Ahmed Al-Fayed",
-    role: "Infrastructure Lead, PharmaSource",
-    location: "Dubai"
+    quote: "The analytical instruments and laboratory equipment provided by TopTec are top-notch. Their after-sales support and installation services are highly professional and reliable.",
+    author: "Zubair Khan",
+    role: "Lead Engineer, High-Q International",
+    location: "Islamabad"
   }
 ];
 
