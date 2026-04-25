@@ -99,7 +99,7 @@ const CategoryPage = ({
                   </h1>
                 </div>
                 
-                <p className="text-[#5f6368] text-base sm:text-lg lg:text-xl leading-relaxed mb-8 sm:mb-14 font-light">
+                <p className="text-[#5f6368] text-base sm:text-lg lg:text-xl leading-relaxed mb-8 sm:mb-14 font-light whitespace-pre-line">
                   {description}
                 </p>
 

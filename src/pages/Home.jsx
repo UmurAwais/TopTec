@@ -3,7 +3,7 @@ import Hero from '../components/Hero';
 import ImageSlider from '../components/ImageSlider';
 import CategorySection from '../components/CategorySection';
 import ProductCarousel from '../components/ProductCarousel';
-import StatsSection from '../components/StatsSection';
+// import StatsSection from '../components/StatsSection';
 import ProcessSection from '../components/ProcessSection';
 import ComplianceSection from '../components/ComplianceSection';
 import PartnersSection from '../components/PartnersSection';
@@ -23,7 +23,7 @@ const Home = () => {
 
         <CategorySection />
         <ProductCarousel />
-        <StatsSection />
+        {/* <StatsSection /> */}
         <ProcessSection />
         <ComplianceSection />
         <PartnersSection />

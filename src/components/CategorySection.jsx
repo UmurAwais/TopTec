@@ -6,7 +6,7 @@ const categories = [
   { 
     title: 'Air Filters', 
     icon: <Filter size={24} />, 
-    desc: 'High-efficiency HEPA filters and pre-filters designed for sterile environments and pharma labs.',
+    desc: 'Our air filters are widely used in HVAC and AHU systems, cleanrooms, offices, commercial spaces, laboratories, clinics, hospitals, and similar environments.',
     slug: 'air-filters'
   },
   { 
