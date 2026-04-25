@@ -73,9 +73,9 @@ const ProcessSection = () => {
                 {step.desc}
               </p>
 
-              <div className="flex items-center gap-2 text-sm font-bold text-[#4A93C4] transition-all opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 cursor-pointer">
+              {/* <div className="flex items-center gap-2 text-sm font-bold text-[#4A93C4] transition-all opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 cursor-pointer">
                 Process Details <ArrowRight size={16} />
-              </div>
+              </div> */}
 
               {/* Connecting line for desktop */}
               {idx < steps.length - 1 && (
