@@ -1,6 +1,6 @@
 import React from 'react';
 import { Zap } from 'lucide-react';
-import Aboutimg from '../assets/about us 1.webp'
+import Aboutimg from '../assets/about.jpeg'
 
 
 const AboutHero = () => {
@@ -33,7 +33,7 @@ const AboutHero = () => {
                <div className="aspect-4/3 lg:aspect-square w-full rounded-2xl sm:rounded-[36px] overflow-hidden bg-gray-50 relative">
                  <img 
                    src={Aboutimg} 
-                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                   className="w-full h-full object-cover transition-transform duration-700"
                    alt="TopTec Advanced Engineering Facility"
                  />
                </div>

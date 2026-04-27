@@ -3,26 +3,26 @@ import { ClipboardCheck, Construction, Settings2, ShieldCheck, ArrowRight } from
 
 const steps = [
   {
-    title: 'Consultation & Design',
-    desc: 'Expert planning and custom cleanroom designs tailored to ISO 14644-1 and industry-specific requirements.',
+    title: 'Strategic Planning',
+    desc: 'Expert technical consultation and custom cleanroom designs compliant with ISO 14644-1 and cGMP standards.',
     icon: <ClipboardCheck size={28} className="text-[#4A93C4]" />,
     color: 'bg-blue-50'
   },
   {
-    title: 'Precision Supply',
-    desc: 'Sourcing high-quality imported, refurbished, or locally manufactured equipment for your facility.',
+    title: 'Precision Sourcing',
+    desc: 'Global procurement of high-performance lab equipment, pharma machinery, and premium HVAC components.',
     icon: <Settings2 size={28} className="text-[#FBBC04]" />,
     color: 'bg-yellow-50'
   },
   {
-    title: 'Expert Installation',
-    desc: 'Professional on-site setup of lab furniture, HVAC systems, and production machinery by certified technicians.',
+    title: 'Technical Installation',
+    desc: 'Professional deployment of HVAC systems, HEPA filtration, and modular cleanroom panels by certified teams.',
     icon: <Construction size={28} className="text-[#EA4335]" />,
     color: 'bg-red-50'
   },
   {
     title: 'Validation & Support',
-    desc: 'Full testing and ongoing support to ensure your operations remain compliant with global safety standards.',
+    desc: 'Rigorous testing for global compliance, backed by dedicated maintenance and long-term operational support.',
     icon: <ShieldCheck size={28} className="text-[#34A853]" />,
     color: 'bg-green-50'
   }
@@ -41,12 +41,12 @@ const ProcessSection = () => {
               Our Process
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#202124] tracking-tight leading-[1.1]">
-              Reliable Solutions <br />
-              <span className="text-[#4A93C4]">Across Pakistan.</span>
+              Engineering Excellence <br />
+              <span className="text-[#4A93C4]">Across World.</span>
             </h2>
           </div>
           <p className="text-lg text-[#5f6368] leading-relaxed max-w-sm">
-            We deliver complete pharmaceutical cleanroom and laboratory solutions with a focus on quality, precision, and reliable engineering.
+            Turnkey pharmaceutical and laboratory solutions optimized for international safety and compliance.
           </p>
         </div>
 
@@ -88,11 +88,11 @@ const ProcessSection = () => {
         {/* Call to Action Bar */}
         <div className="mt-20 p-8 lg:p-12 bg-[#202124] rounded-4xl flex flex-col lg:flex-row items-center justify-between gap-8 group cursor-pointer">
           <div>
-            <h4 className="text-2xl lg:text-3xl font-medium text-white mb-2">Planning a pharmaceutical cleanroom project?</h4>
-            <p className="text-gray-400">Get a detailed feasibility study and cost estimate from our cleanroom engineering specialists.</p>
+            <h4 className="text-2xl lg:text-3xl font-medium text-white mb-2">Starting a new project?</h4>
+            <p className="text-gray-400">Get a detailed feasibility study from Pakistan’s leading cleanroom engineering specialists.</p>
           </div>
           <button className="px-10 py-5 bg-[#4A93C4] text-white rounded-full font-bold text-lg hover:bg-[#3b7ba8] transition-all active:scale-95 flex items-center gap-3 cursor-pointer">
-            Book Engineering Consult <ArrowRight size={20} />
+            Consult Our Engineers <ArrowRight size={20} />
           </button>
         </div>
       </div>
