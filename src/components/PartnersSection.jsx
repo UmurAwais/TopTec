@@ -1,30 +1,73 @@
-import React from 'react';
-import { Quote } from 'lucide-react';
+import React, { useState } from 'react';
+import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const testimonials = [
   {
-    quote: "TopTec's expertise in cleanroom accessories and SS fabrication has been vital for our Lahore facility. Their engineering quality and attention to GMP standards are unmatched in Pakistan.",
-    author: "M. Ahmed",
-    role: "Plant Manager, Saffron Pharmaceuticals",
-    location: "Lahore"
-  },
-  {
-    quote: "We have been sourcing our HEPA filters and air showers from TopTec since 2018. Their reliability and dedication to quality control have made them our preferred engineering partner.",
-    author: "Dr. Kamran Malik",
-    role: "Quality Assurance Head, Hilton Pharma",
+    quote: "TopTec has been instrumental in maintaining our cleanroom standards. Their modular partition systems and HVAC solutions meet the highest global compliance requirements, ensuring our sterile manufacturing remains uninterrupted.",
+    author: "Usman Ghani",
+    role: "Technical Director, GSK Pakistan",
     location: "Karachi"
   },
   {
-    quote: "The analytical instruments and laboratory equipment provided by TopTec are top-notch. Their after-sales support and installation services are highly professional and reliable.",
+    quote: "The specialized SS fabrication and production machinery from TopTec have significantly improved our operational efficiency. Their attention to detail in stainless steel work is truly top-tier.",
+    author: "Dr. Fawad Ahmed",
+    role: "Operations Manager, Hilton Pharma",
+    location: "Lahore"
+  },
+  {
+    quote: "We rely on TopTec for our most critical laboratory instruments. Their range of chromatographic and titrometric equipment is highly reliable, backed by expert technical support.",
+    author: "Sarah Mansoor",
+    role: "Quality Control Lead, Getz Pharma",
+    location: "Karachi"
+  },
+  {
+    quote: "TopTec's air filtration solutions, specifically their HEPA and V-Bank filters, have been vital for our controlled environments. Their engineering team understands the complexities of pharma manufacturing.",
+    author: "M. Faisal",
+    role: "Plant Head, Saffron Pharmaceuticals",
+    location: "Faisalabad"
+  },
+  {
+    quote: "Their turnkey approach to cleanroom setup—from design to validation—is exceptional. TopTec is more than a supplier; they are a strategic engineering partner for our growth.",
     author: "Zubair Khan",
-    role: "Lead Engineer, High-Q International",
+    role: "Projects Lead, High-Q International",
     location: "Islamabad"
+  },
+  {
+    quote: "Reliable, professional, and technically sound. TopTec’s after-sales service for laboratory and production equipment is the best we've experienced in the industry.",
+    author: "Kamran Malik",
+    role: "Maintenance Manager, Bosch Pharmaceuticals",
+    location: "Karachi"
   }
 ];
 
 const clientLogos = Object.values(import.meta.glob('../assets/clients/*.{png,jpg,jpeg,svg,webp}', { eager: true, import: 'default' }));
 
 const PartnersSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [itemsToShow, setItemsToShow] = useState(3);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) setItemsToShow(1);
+      else if (window.innerWidth < 1024) setItemsToShow(2);
+      else setItemsToShow(3);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const maxIndex = testimonials.length - itemsToShow;
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+  };
+
   // Split logos into two rows for the marquee
   const half = Math.ceil(clientLogos.length / 2);
   const row1 = clientLogos.slice(0, half);
@@ -43,27 +86,63 @@ const PartnersSection = () => {
               <span className="text-[#4A93C4]">Leading Pharma Firms.</span>
             </h2>
           </div>
-          <p className="text-lg text-[#5f6368] leading-relaxed max-w-sm">
-            Dozens of laboratories and pharmaceutical facilities across the country rely on TopTec for their critical infrastructure.
-          </p>
+          <div className="flex items-center gap-4">
+            <button 
+              onClick={prevSlide}
+              className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center hover:bg-[#4A93C4] hover:text-white hover:border-[#4A93C4] transition-all duration-300 cursor-pointer"
+              aria-label="Previous testimonial"
+            >
+              <ChevronLeft size={24} />
+            </button>
+            <button 
+              onClick={nextSlide}
+              className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center hover:bg-[#4A93C4] hover:text-white hover:border-[#4A93C4] transition-all duration-300 cursor-pointer"
+              aria-label="Next testimonial"
+            >
+              <ChevronRight size={24} />
+            </button>
+          </div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-20">
-          {testimonials.map((t, idx) => (
-            <div key={idx} className="bg-white p-10 rounded-4xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col h-full group">
-              <div className="mb-8">
-                <Quote size={40} className="text-[#4A93C4]/20 group-hover:text-[#4A93C4] transition-colors duration-500" />
+        {/* Shifting Testimonials Slider */}
+        <div className="relative mb-24 overflow-hidden py-8 px-4">
+          <motion.div 
+            className="flex gap-8 items-stretch"
+            animate={{ x: `-${currentIndex * (100 / itemsToShow)}%` }}
+            transition={{ type: "spring", stiffness: 100, damping: 20 }}
+          >
+            {testimonials.map((t, idx) => (
+              <div 
+                key={idx} 
+                style={{ width: itemsToShow === 1 ? '100%' : itemsToShow === 2 ? 'calc(50% - 16px)' : 'calc(33.333% - 21.333px)' }}
+                className="shrink-0 bg-white p-10 rounded-4xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col group min-h-[450px] h-full"
+              >
+                <div className="mb-6">
+                  <Quote size={40} className="text-[#4A93C4]/20 group-hover:text-[#4A93C4] transition-colors duration-500" />
+                </div>
+                <p className="text-[#202124] text-lg leading-relaxed mb-4 italic">
+                  "{t.quote}"
+                </p>
+                <div className="pt-4 border-t border-gray-50 mt-auto">
+                  <div className="font-bold text-[#202124]">{t.author}</div>
+                  <div className="text-sm text-[#5f6368]">{t.role}</div>
+                  <div className="text-xs font-bold text-[#4A93C4] mt-1 uppercase tracking-widest">{t.location}</div>
+                </div>
               </div>
-              <p className="text-[#202124] text-lg leading-relaxed mb-8 grow">
-                "{t.quote}"
-              </p>
-              <div className="pt-8 border-t border-gray-50 mt-auto">
-                <div className="font-bold text-[#202124]">{t.author}</div>
-                <div className="text-sm text-[#5f6368]">{t.role}</div>
-                <div className="text-xs font-bold text-[#4A93C4] mt-1 uppercase tracking-widest">{t.location}</div>
-              </div>
-            </div>
-          ))}
+            ))}
+          </motion.div>
+
+          {/* Pagination Dots */}
+          <div className="flex justify-center mt-12 gap-3">
+            {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentIndex(i)}
+                className={`h-2.5 rounded-full transition-all duration-500 ${currentIndex === i ? 'w-10 bg-[#4A93C4]' : 'w-2.5 bg-gray-300 hover:bg-gray-400'}`}
+                aria-label={`Go to slide ${i + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Client Logos Marquee Section */}
@@ -112,3 +191,4 @@ const PartnersSection = () => {
 };
 
 export default PartnersSection;
+
