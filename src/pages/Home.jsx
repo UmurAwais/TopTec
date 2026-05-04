@@ -5,7 +5,7 @@ import CategorySection from '../components/CategorySection';
 import ProductCarousel from '../components/ProductCarousel';
 // import StatsSection from '../components/StatsSection';
 import ProcessSection from '../components/ProcessSection';
-import ComplianceSection from '../components/ComplianceSection';
+import WhyChooseUs from '../components/WhyChooseUs';
 import PartnersSection from '../components/PartnersSection';
 import InsightsSection from '../components/InsightsSection';
 import ContactSection from '../components/ContactSection';
@@ -25,7 +25,7 @@ const Home = () => {
         <ProductCarousel />
         {/* <StatsSection /> */}
         <ProcessSection />
-        <ComplianceSection />
+        <WhyChooseUs />
         <PartnersSection />
         <InsightsSection />
         <ContactSection />
