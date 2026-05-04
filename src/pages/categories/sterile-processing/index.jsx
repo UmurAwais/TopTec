@@ -1,6 +1,7 @@
 import React from 'react';
 import CategoryPage from '../CategoryPage';
 import { Layers } from 'lucide-react';
+import cleanRoomBanner from '../../../assets/clean room banner.webp';
 
 import { sterileProcessingProducts } from '../../../data/sterile-processing';
 
@@ -22,7 +23,7 @@ const SterileProcessing = () => {
       title="Clean Room Solutions"
       description="Advanced modular cleanroom partition systems, airtight doors, and specialized flooring. We provide complete turnkey solutions from design to validation, ensuring ISO Grade and CGMP compliance for pharmaceutical, electronic, and healthcare industries."
       icon={<Layers size={32} />}
-      image="/slider/slide2.webp"
+      image={cleanRoomBanner}
       subcategories={subcategories}
       products={sterileProcessingProducts}
     />
