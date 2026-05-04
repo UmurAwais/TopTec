@@ -10,7 +10,7 @@ export const searchData = [
   { name: 'Laboratory Furniture', type: 'Category', href: '/categories/laboratory-furniture' },
   { name: 'Production Machinery', type: 'Category', href: '/categories/production-machinery' },
   { name: 'Laboratory Equipment', type: 'Category', href: '/categories/laboratory-equipment' },
-  { name: 'Sterile Processing', type: 'Category', href: '/categories/sterile-processing' },
+  { name: 'Clean Room', type: 'Category', href: '/categories/sterile-processing' },
   { name: 'HVAC Systems', type: 'Category', href: '/categories/hvac-systems' },
 
   // Subcategories - Air Filters

@@ -281,7 +281,7 @@ const Navbar = () => {
       ]
     },
     { 
-      name: 'Sterile Processing', 
+      name: 'Clean Room', 
       href: '/categories/sterile-processing',
       subcategories: [
         { name: 'Cleanroom Panels (Puf / Pir / Modular)', href: '/sterile/panels' },

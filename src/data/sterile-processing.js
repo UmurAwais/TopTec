@@ -2,7 +2,7 @@ export const sterileProcessingProducts = [
   {
     slug: 'pure-entry-air-shower',
     name: 'Pure-Entry Air Shower',
-    category: 'Sterile Processing',
+    category: 'Clean Room',
     description: 'Dual-side entry air shower with HEPA-filtered vertical airflow and interlocking doors.',
     image: '/slider/cleanroom-hall.jpg',
     features: [
@@ -23,7 +23,7 @@ export const sterileProcessingProducts = [
   {
     slug: 'dynamic-pass-box-plus',
     name: 'Dynamic Pass Box Plus',
-    category: 'Sterile Processing',
+    category: 'Clean Room',
     description: 'Self-cleaning pass-through hatch with UV sterilization and electromagnetic interlocking.',
     image: '/slider/cleanroom-suit.jpg',
     features: [
@@ -44,7 +44,7 @@ export const sterileProcessingProducts = [
   {
     slug: 'crystal-floor-epoxy-kit',
     name: 'Crystal-Floor Epoxy Kit',
-    category: 'Sterile Processing',
+    category: 'Clean Room',
     description: 'Self-leveling pharmaceutical grade epoxy flooring system with anti-bacterial properties.',
     image: '/slider/corridor.jpg',
     features: [
@@ -65,7 +65,7 @@ export const sterileProcessingProducts = [
   {
     slug: 'pharma-light-panel',
     name: 'Pharma-Light Panel',
-    category: 'Sterile Processing',
+    category: 'Clean Room',
     description: 'IP65 rated recessed cleanroom LED light panels with bottom-opening access.',
     image: '/slider/slide2.webp',
     features: [
@@ -86,7 +86,7 @@ export const sterileProcessingProducts = [
   {
     slug: 'hermetic-sliding-door',
     name: 'Hermetic Sliding Door',
-    category: 'Sterile Processing',
+    category: 'Clean Room',
     description: 'High-seal automatic sliding doors for positive/negative pressure maintenance.',
     image: '/slider/cleanroom-hall.jpg',
     features: [
@@ -107,7 +107,7 @@ export const sterileProcessingProducts = [
   {
     slug: 'modular-wall-panel-system',
     name: 'Modular Wall Panel System',
-    category: 'Sterile Processing',
+    category: 'Clean Room',
     description: 'Quick-install PIR insulated panels with powder-coated antimicrobial finish.',
     image: '/slider/lab-work.jpg',
     features: [

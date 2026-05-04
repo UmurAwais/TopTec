@@ -10,7 +10,7 @@ const relatedCategories = [
   { title: 'Laboratory Furniture', icon: <Building2 size={20} />, slug: 'laboratory-furniture' },
   { title: 'Production Machinery', icon: <Settings size={20} />, slug: 'production-machinery' },
   { title: 'Laboratory Equipment', icon: <FlaskConical size={20} />, slug: 'laboratory-equipment' },
-  { title: 'Sterile Processing', icon: <Layers size={20} />, slug: 'sterile-processing' },
+  { title: 'Clean Room', icon: <Layers size={20} />, slug: 'sterile-processing' },
   { title: 'HVAC Systems', icon: <Zap size={20} />, slug: 'hvac-systems' },
 ];
 

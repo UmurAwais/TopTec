@@ -34,9 +34,9 @@ const categories = [
     slug: 'laboratory-equipment'
   },
   { 
-    title: 'Sterile Processing', 
+    title: 'Clean Room', 
     icon: <Layers size={24} />, 
-    desc: 'Turnkey cleanroom panels and flooring for pharmaceutical and medical device industries.',
+    desc: 'Precision-engineered modular cleanroom systems including factory-prefabricated panels, airtight doors, and turnkey solutions for critical environments.',
     slug: 'sterile-processing'
   },
   { 

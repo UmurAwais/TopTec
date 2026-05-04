@@ -19,8 +19,8 @@ const SterileProcessing = () => {
 
   return (
     <CategoryPage 
-      title="Sterile Processing"
-      description="Modular cleanroom panels, hermetic doors, ESD flooring, and complete turnkey cleanroom construction from Grade A to Grade D."
+      title="Clean Room Solutions"
+      description="Advanced modular cleanroom partition systems, airtight doors, and specialized flooring. We provide complete turnkey solutions from design to validation, ensuring ISO Grade and CGMP compliance for pharmaceutical, electronic, and healthcare industries."
       icon={<Layers size={32} />}
       image="/slider/slide2.webp"
       subcategories={subcategories}
