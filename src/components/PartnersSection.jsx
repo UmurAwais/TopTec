@@ -22,7 +22,14 @@ const testimonials = [
   }
 ];
 
+const clientLogos = Object.values(import.meta.glob('../assets/clients/*.{png,jpg,jpeg,svg,webp}', { eager: true, import: 'default' }));
+
 const PartnersSection = () => {
+  // Split logos into two rows for the marquee
+  const half = Math.ceil(clientLogos.length / 2);
+  const row1 = clientLogos.slice(0, half);
+  const row2 = clientLogos.slice(half);
+
   return (
     <section className="py-24 bg-[#F8F9FA]">
       <div className="container mx-auto px-8 lg:px-16">
@@ -59,19 +66,44 @@ const PartnersSection = () => {
           ))}
         </div>
 
-        {/* Client Logos Grid */}
-        <div className="bg-white rounded-[48px] p-8 lg:p-12 border border-gray-100 shadow-sm overflow-hidden">
-          <div className="text-center mb-10">
+        {/* Client Logos Marquee Section */}
+        <div className="bg-white rounded-[48px] py-12 lg:py-16 border border-gray-100 shadow-sm overflow-hidden relative">
+          <div className="text-center mb-12">
             <span className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.3em]">Authorized Engineering Partner For</span>
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
-            {/* Using text-based placeholder logos for clean corporate look */}
-            <div className="text-2xl font-black tracking-tighter text-gray-900 italic">BIO<span className="text-[#4A93C4]">PHARM</span></div>
-            <div className="text-2xl font-black tracking-tighter text-gray-900">MED<span className="text-[#EA4335]">GLOBAL</span></div>
-            <div className="text-2xl font-black tracking-tighter text-gray-900 border-2 border-gray-900 px-2 py-0.5">VACCINE-X</div>
-            <div className="text-2xl font-black tracking-tighter text-gray-900 underline decoration-[#FBBC04] decoration-4 text-center">EURO<br/>LABS</div>
-            <div className="text-2xl font-black tracking-tighter text-gray-900">PHARMA<span className="text-[#34A853]">QUEST</span></div>
-            <div className="text-2xl font-black tracking-tighter text-gray-900 italic">GENE<span className="text-[#4A93C4]">TECH</span></div>
+
+          {/* Fade Mask */}
+          <div className="absolute inset-y-0 left-0 w-32 bg-linear-to-r from-white to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute inset-y-0 right-0 w-32 bg-linear-to-l from-white to-transparent z-10 pointer-events-none"></div>
+
+          <div className="flex flex-col gap-12 pause-on-hover">
+            {/* Row 1: Scrolling Left */}
+            <div className="flex overflow-hidden group">
+              <div className="flex animate-scroll-left gap-16 md:gap-24 px-12">
+                {[...row1, ...row1].map((logo, index) => (
+                  <img 
+                    key={`row1-${index}`} 
+                    src={logo} 
+                    alt="Client Logo" 
+                    className="h-14 md:h-20 w-auto object-contain transition-all duration-300 shrink-0"
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Row 2: Scrolling Right */}
+            <div className="flex overflow-hidden group">
+              <div className="flex animate-scroll-right gap-16 md:gap-24 px-12">
+                {[...row2, ...row2].map((logo, index) => (
+                  <img 
+                    key={`row2-${index}`} 
+                    src={logo} 
+                    alt="Client Logo" 
+                    className="h-14 md:h-20 w-auto object-contain transition-all duration-300 shrink-0"
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
