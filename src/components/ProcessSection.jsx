@@ -1,5 +1,6 @@
 import React from 'react';
 import { ClipboardCheck, Construction, Settings2, ShieldCheck, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const steps = [
   {
@@ -86,15 +87,18 @@ const ProcessSection = () => {
         </div>
 
         {/* Call to Action Bar */}
-        <div className="mt-20 p-8 lg:p-12 bg-[#202124] rounded-4xl flex flex-col lg:flex-row items-center justify-between gap-8 group cursor-pointer">
+        <Link 
+          to="/contact"
+          className="mt-20 p-8 lg:p-12 bg-[#202124] rounded-4xl flex flex-col lg:flex-row items-center justify-between gap-8 group cursor-pointer"
+        >
           <div>
             <h4 className="text-2xl lg:text-3xl font-medium text-white mb-2">Starting a new project?</h4>
             <p className="text-gray-400">Get a detailed feasibility study from Pakistan’s leading cleanroom engineering specialists.</p>
           </div>
-          <button className="px-10 py-5 bg-[#4A93C4] text-white rounded-full font-bold text-lg hover:bg-[#3b7ba8] transition-all active:scale-95 flex items-center gap-3 cursor-pointer">
+          <div className="px-10 py-5 bg-[#4A93C4] text-white rounded-full font-bold text-lg group-hover:bg-[#3b7ba8] transition-all active:scale-95 flex items-center gap-3 cursor-pointer">
             Consult Our Engineers <ArrowRight size={20} />
-          </button>
-        </div>
+          </div>
+        </Link>
       </div>
     </section>
   );
