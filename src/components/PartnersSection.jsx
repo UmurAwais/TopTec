@@ -164,7 +164,7 @@ const PartnersSection = () => {
                     key={`row1-${index}`} 
                     src={logo} 
                     alt="Client Logo" 
-                    className="h-14 md:h-20 w-auto object-contain transition-all duration-300 shrink-0"
+                    className="h-14 md:h-24 w-auto object-contain transition-all duration-300 shrink-0"
                   />
                 ))}
               </div>
