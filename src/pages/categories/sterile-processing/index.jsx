@@ -21,7 +21,7 @@ const SterileProcessing = () => {
   return (
     <CategoryPage 
       title="Clean Room Solutions"
-      description="Advanced modular cleanroom partition systems, airtight doors, and specialized flooring. We provide complete turnkey solutions from design to validation, ensuring ISO Grade and CGMP compliance for pharmaceutical, electronic, and healthcare industries."
+      description={`TopTec is a leading provider of modular cleanroom solutions, offering advanced partition systems, airtight doors, and specialized antimicrobial flooring. We deliver comprehensive turnkey projects—from design and fabrication to validation and commissioning—ensuring full compliance with ISO, CGMP, and WHO standards.\n\nBy combining innovative materials with precision engineering, we create contamination-controlled environments essential for pharmaceutical and biotechnology research. Since 2016, TopTec has ensured that sterile facilities are built for high performance, long-term durability, and absolute safety.`}
       icon={<Layers size={32} />}
       image={cleanRoomBanner}
       subcategories={subcategories}

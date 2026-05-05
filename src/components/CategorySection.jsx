@@ -36,7 +36,7 @@ const categories = [
   { 
     title: 'Clean Room', 
     icon: <Layers size={24} />, 
-    desc: 'Precision-engineered modular cleanroom systems including factory-prefabricated panels, airtight doors, and turnkey solutions for critical environments.',
+    desc: 'Complete modular cleanroom solutions featuring prefabricated panels, high-performance airtight doors, and antimicrobial flooring. We provide end-to-end turnkey engineering services, including design, installation, and rigorous validation.',
     slug: 'sterile-processing'
   },
   { 
