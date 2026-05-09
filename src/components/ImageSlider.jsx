@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import cleanRoomImg from '../assets/clean room.webp';
-import cleanRoomMobileImg from '../assets/clean room mobile.webp';
-import lab from '../assets/lab.webp';
-import labMobile from '../assets/lab mobile.webp'
-import furniture from '../assets/furniture.webp'
-import furnitureMobile from '../assets/furniture mobile.webp'
+import cleanRoomImg from '../assets/clean room.jpeg';
+import cleanRoomMobileImg from '../assets/clean room mobile.jpeg';
+import lab from '../assets/lab.jpeg';
+import labMobile from '../assets/lab mobile.jpeg'
+import furniture from '../assets/furniture.jpeg'
+import furnitureMobile from '../assets/furniture mobile.jpeg'
 
 const ImageSlider = ({ 
   images = [], 
